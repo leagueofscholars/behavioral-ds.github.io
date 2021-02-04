@@ -52,5 +52,5 @@ social:
 #                  "Visitors",
 #                  "Alumni"]
 user_groups:
-- Honours Students
+- Alumni
 ---

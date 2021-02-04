@@ -58,5 +58,5 @@ social:
 #                  "Visitors",
 #                  "Alumni"]
 user_groups:
-- Researchers
+- Alumni
 ---

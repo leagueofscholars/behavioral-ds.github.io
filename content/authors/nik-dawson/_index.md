@@ -65,5 +65,5 @@ social:
 #                  "Visitors",
 #                  "Alumni"]
 user_groups:
-- PhD Students
+- Alumni
 ---
