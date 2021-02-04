@@ -1,11 +1,47 @@
+@article{Dawson2021,
+    abstract = {In Australia and beyond, journalism is reportedly an industry in crisis, a crisis exacerbated by COVID-19. However, the evidence revealing the crisis is often anecdotal or limited in scope. In this unprecedented longitudinal research, we draw on data from the Australian journalism jobs market from January 2012 until March 2020. Using Data Science and Machine Learning techniques, we analyse two distinct data sets: job advertisements (ads) data comprising 3,698 journalist job ads from a corpus of over 6.7 million Australian job ads; and official employment data from the Australian Bureau of Statistics. Having matched and analysed both sources, we address both the demand for and supply of journalists in Australia over this critical period. The data show that the crisis is real, but there are also surprises. Counter-intuitively, the number of journalism job ads in Australia rose from 2012 until 2016, before falling into decline. Less surprisingly, for the entire period studied the figures reveal extreme volatility, characterised by large and erratic fluctuations. The data also clearly show that COVID-19 has significantly worsened the crisis. We can also tease out more granular findings, including: that there are now more women than men journalists in Australia, but that gender inequity is worsening, with women journalists getting younger and worse-paid just as men journalists are, on average, getting older and better-paid; that, despite the crisis besetting the industry, the demand for journalism skills has increased; and that the skills sought by journalism job ads increasingly include social media and generalist communications.},
+    archivePrefix = {arXiv},
+    arxivId = {2008.12459},
+    author = {Dawson, Nikolas and Molitorisz, Sacha and Rizoiu, Marian-Andrei and Fray, Peter},
+    eprint = {2008.12459},
+    journal = {Journalism},
+    title = {{Layoffs, Inequity and COVID-19: A Longitudinal Study of the Journalism Jobs Crisis in Australia from 2012 to 2020}},
+    URL_paper = {https://arxiv.org/pdf/2008.12459.pdf},
+    year = {2021}
+}
+
+@inproceedings{Largeron2021,
+    abstract = {This paper studies the dynamics of opinion formation and polarization in social media. First, we present a methodological approach to visualize the dynamics of discussion topics, and to track users as they navigate the different topics and form opinions. Second, we investigate whether the stance of users with respect to contentious subjects is influenced by the online discussions that they are exposed to, and by the interactions with users supporting different stances. We setup a series of predictive exercises, in which users are described using several posting activity features capturing their overall activity levels, their posting success, the reactions their posts attract from users of different stances, and the types of discussions in which they engage. Given the user description at the present time, the purpose is to predict the user stance in the future. On a dataset of discussions about Brexit on the Reddit platform, we show that the activity features constantly outperform the textual baseline, confirming the link between exposure to discussion and opinion. We find that the most informative features relay to the stance composition of the discussion that users prefer to engage into.},
+    author = {Largeron, Christine and Mardale, Andrei and Rizoiu, Marian-Andrei},
+    booktitle = {Symposium on Intelligent Data Analysis (IDA'21)},
+    title = {{Linking User Opinion Dynamics and Online Discussions}},
+    year = {2021},
+    URL_paper = {https://arxiv.org/pdf/2101.09852.pdf},
+    URL_code = {https://github.com/behavioral-ds/online-opinion-dynamics}
+}
+
+@inproceedings{Ram2021a,
+    abstract = {The impact of online social media on societal events and institutions is profound, and with the rapid increases in user uptake, we are just starting to understand its ramifications. Social scientists and practitioners who model online discourse as a proxy for real-world behavior often curate large social media datasets. A lack of available tooling aimed at non-data science experts frequently leaves this data (and the insights it holds) underutilized. Here, we propose birdspotter – a tool to analyze and label Twitter users –, and birdspotter.ml – an exploratory visualizer for the computed metrics. birdspotter provides an end-to-end analysis pipeline, from the processing of pre-collected Twitter data to general-purpose labeling of users and estimating their social influence, within a few lines of code. The package features tutorials and detailed documentation. We also illustrate how to train birdspotter into a fully-fledged bot detector that achieves better than state-of-the-art performances without making Twitter API calls, and we showcase its usage in an exploratory analysis of a topical COVID-19 dataset.},
+    author = {Ram, Rohit and Kong, Quyu and Rizoiu, Marian-Andrei},
+    booktitle = {ACM International Conference on Web Search and Data Mining (WSDM '21)},
+    doi = {10.1145/3437963.3441695},
+    pages = {1--4},
+    publisher = {ACM},
+    title = {{Birdspotter: A Tool for Analyzing and Labeling Twitter Users}},
+    year = {2021},
+    URL_paper = {https://arxiv.org/pdf/2012.02370.pdf},
+    URL_code = {https://github.com/behavioral-ds/BirdSpotter}
+}
+
 @inproceedings{kong2021,
     abstract = {Modeling online discourse dynamics is a core activity in understanding the spread of information, both offline and online, and emergent online behavior. There is currently a disconnect between the practitioners of online social media analysis -- usually social, political and communication scientists -- and the accessibility to tools capable of examining online discussions of users. Here we present evently, a tool for modeling online reshare cascades, and particularly retweet cascades, using self-exciting processes. It provides a comprehensive set of functionalities for processing raw data from Twitter public APIs, modeling the temporal dynamics of processed retweet cascades and characterizing online users with a wide range of diffusion measures. This tool is designed for researchers with a wide range of computer expertise, and it includes tutorials and detailed documentation. We illustrate the usage of evently with an end-to-end analysis of online user behavior on a topical dataset relating to COVID-19. We show that, by characterizing users solely based on how their content spreads online, we can disentangle influential users and online bots.},
     address = {Jerusalem, Israel},
     author = {Kong, Quyu and Ram, Rohit and Rizoiu, Marian-Andrei},
-    booktitle = {ACM International Conference on Web Search and Data Mining (WSDM), Demo},
-    URL_paper = {https://arxiv.org/abs/2006.06167},
+    booktitle = {ACM International Conference on Web Search and Data Mining (WSDM'21)},
+    URL_paper = {https://arxiv.org/pdf/2006.06167.pdf},
     title = {{evently: A Toolkit for Analyzing Online Users via Reshare Cascade Modeling}},
     year = {2021},
+    doi = {10.1145/3437963.3441708},
     URL_code = {https://github.com/behavioral-ds/evently}
 }
 
@@ -251,7 +287,7 @@
 @inproceedings{kong2020modeling,
     title={Modeling Information Cascades with Self-exciting Processes via Generalized Epidemic Models},
     author={Kong, Quyu and Rizoiu, Marian-Andrei and Xie, Lexing},
-    booktitle={ACM International Conference on Web Search and Data Mining (WSDM)},
+    booktitle={ACM International Conference on Web Search and Data Mining (WSDM'20)},
     year={2020},
     abstract = {Epidemic models and self-exciting processes are two types of models used to describe diffusion phenomena online and offline. These models were originally developed in different scientific communities, and their commonalities are under-explored. This work establishes, for the first time, a general connection between the two model classes via three new mathematical components. The first is a generalized version of stochastic Susceptible-Infected-Recovered (SIR) model with arbitrary recovery time distributions; the second is the relationship between the (latent and arbitrary) recovery time distribution, recovery hazard function, and the infection kernel of self-exciting processes; the third includes methods for simulating, fitting, evaluating and predicting the generalized process. On three large Twitter diffusion datasets, we conduct goodness-of-fit tests and holdout log-likelihood evaluation of self-exciting processes with three infection kernels --- exponential, power-law and Tsallis Q-exponential. We show that the modeling performance of the infection kernels varies with respect to the temporal structures of diffusions, and also with respect to user behavior, such as the likelihood of being bots. We further improve the prediction of popularity by combining two models that are identified as complementary by the goodness-of-fit tests.},
     url_Paper = {https://arxiv.org/abs/1910.05451},
