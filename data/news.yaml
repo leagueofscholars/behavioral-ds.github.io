@@ -23,3 +23,5 @@ item:
     description: " :page_facing_up: [Andrei](authors/ma-rizoiu/)'s paper [Linking User Opinion Dynamics and Online Discussions](https://arxiv.org/abs/2101.09852) (together with French collaborators [Christine Largeron](https://perso.univ-st-etienne.fr/largeron/) and Andrei Mardale) just got accepted in [IDA'21](https://ida2021.org/)." 
   - date: '2021-01-22'
     description: " [Nik](authors/nik-dawson/) just submitted his PhD thesis today! This the completion of a great journey. Congrats!" 
+  - date: '2021-02-11'
+    description: "Check our videos for demonstrating the tools, [Birdspotter](https://www.youtube.com/watch?v=52HwHAiK1rs) and [evently](https://www.youtube.com/watch?v=zSMHol0qsy4)! They will be presented at WSDM'21." 
