@@ -18,6 +18,10 @@ organizations:
 - name: University of Technology Sydney
 
 # Short bio (displayed in user profile at end of posts)
+body: | 
+
+  **Next position after UTS:** Alex started a PhD at the Australian National University, under the supervision of Lexing Xie and Richard Nock.
+  
 bio: Alexander is a research assistant studying information diffusion and Hawkes processes at University of Technology Sydney. He also works with Data61 and the Australian National University on fairness and boosting.
 
 interests:
