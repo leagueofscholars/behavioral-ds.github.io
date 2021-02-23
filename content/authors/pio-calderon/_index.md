@@ -17,6 +17,13 @@ organizations:
 - name: University of Technology Sydney
 
 # Short bio (displayed in user profile at end of posts)
+body: | 
+  I am a Ph.D. student at the University of Technology Sydney, supervised by Dr. Marian Andrei-Rizoiu. My research interests revolve around (1) modeling how information and influence bleed across different online platforms, and (2) how we can leverage these models in social media marketing.
+
+  Prior to joining the Behavioral Data Science lab, I was a data scientist at the marketing AI startup Neuro Flash, where I helped brands optimize their marketing message and gain better insight on consumer understanding using a mix of NLP and image models. I also served as a data scientist and consultant at the fintech startup Ayannah, wherein I initiated efforts to leverage their transactional data (i.e. remittance  and airtime credits) to better understand the profile and usage patterns of their customer base.
+
+  I usually spend my free time watching movies and playing long, story-driven Japanese RPGs. I'm also an avid traveler and love going on solo backpacking trips to explore new cultures. I'm constantly thinking about how I can applying data science tools to analyze popular media. When I have the time, I blog about my travels and data experiments on my [blog](https://piocalderon.github.io/).
+
 bio: I am a Ph.D. student at the University of Technology Sydney, supervised by Dr. Marian Andrei-Rizoiu. My research interests revolve around (1) modeling how information and influence bleed across different online platforms, and (2) how we can leverage these models in social media marketing.
 
 interests:
