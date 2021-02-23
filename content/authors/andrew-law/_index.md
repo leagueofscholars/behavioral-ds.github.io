@@ -17,7 +17,7 @@ organizations:
 - name: Australian National University
 
 # Short bio (displayed in user profile at end of posts)
-bio: I am an undergraduate student currently studying a bachelor of Advanced Computing at the ANU and undertaking an honours project under the supervision of Dr. Marian-Andrei Rizoiu. My honours research focuses on building stance detection for social media content concerning the contentious Brexit debate with the goal of uncovering the dynamics of user stance shift in online discussions.
+bio: I am an undergraduate student currently studying a bachelor of Advanced Computing at the ANU and undertaking an honours project under the supervision of Dr. Marian-Andrei Rizoiu. My honours research focuses on building stance detection for social media content concerning the contentious Brexit debate with the goal of uncovering the dynamics of user stance shift in online discussions of contentious issues.
 
 interests:
 - Machine Learning
