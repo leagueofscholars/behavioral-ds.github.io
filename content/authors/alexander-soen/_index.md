@@ -10,7 +10,8 @@ authors:
 superuser: false
 
 # Role/position
-role: Researcher
+<!--role: Researcher-->
+role: PhD student @ ANU
 
 # Organizations/Affiliations
 organizations:

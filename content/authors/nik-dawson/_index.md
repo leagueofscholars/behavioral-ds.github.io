@@ -10,10 +10,12 @@ authors:
 superuser: false
 
 # Role/position
-role: PhD student
+role: Senior Research Associate @ Faethm AI
+<!--role: PhD student-->
 
 # Organizations/Affiliations
 organizations:
+- name: (current) Faethm AI
 - name: University of Technology Sydney
 
 # Short bio (displayed in user profile at end of posts)
