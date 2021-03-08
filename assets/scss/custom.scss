@@ -502,3 +502,8 @@ label.margin-toggle:not(.sidenote-number) {
         width: 100%;
     }
 }
+
+// hide wired icon appearances in publications page
+.if {
+    display: none;
+}

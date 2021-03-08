@@ -1,33 +1,29 @@
 ---
 # Display name
-name: Kriti Tripathi
+name: Duy Khuu
 
 # Username (this should match the folder name)
 authors:
-- kriti-tripathi
+- duy-khuu
 
 # Is this the primary user of the site?
 superuser: false
 
 # Role/position
-role: Undergraduate Honours student @ ANU
+role: Undergraduate Honours student
 
 # Organizations/Affiliations
 organizations:
 - name: Australian National University
 
 # Short bio (displayed in user profile at end of posts)
-body: | 
-
-  **Next position after UTS:** Kriti continued her undergraduate studies at the Australian National University.
-  
-bio: I am an undergraduate student at The Australian National University undertaking a double degree in Bachelor of Advanced Computing (Honours)/Bachelor of Science (Theoretical Physics, Astronomy & Astrophysics). I am supervised by Dr Marian-Andrei Rizoiu. My current research focuses on profiling information warfare on social media which I am exploring via a case study using the data from the 2019 Australian Elections. Within my research, I am looking at being able to characterize the spread of misinformation on social media, identify the opinion leaders that drove the conversations during the 2019 elections online on Twitter and explore how this misinformation has spread to traditional media like radio and newspaper. 
+bio: I am an undergraduate student at The Australian National University currently studying a double degree in Bachelor of Advanced Computing and Bachelor of Actuarial Studies, supervised by Dr Marian-Andrei Rizoiu. My research involves looking into opinion polarisation dynamics - specifically concerning the Brexit debate on social media. The main aim is to detect stance shifts along with determining if a user's future stance can be predicted based on the other users they have interacted with (who may have varying stances) and types of discussions they have been exposed to.
 
 interests:
+- Machine Learning
+- Social Data Science 
 - Artificial Intelligence
-- Machine Learning 
-- Social Data Science
-- Computational Physics/Astrophysics 
+- Statistics
 
 
 # Social/Academic Networking
@@ -37,7 +33,7 @@ interests:
 social:
  - icon: envelope
    icon_pack: fas
-   link: "mailto:kriti.tripathi@anu.edu.au"
+   link: "mailto:duy.khuu@anu.edu.au"
   
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
@@ -54,5 +50,5 @@ social:
 #                  "Visitors",
 #                  "Alumni"]
 user_groups:
-- Alumni
+- Honours Students
 ---
