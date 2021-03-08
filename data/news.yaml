@@ -2,26 +2,26 @@
 # the news get re-ordered, so does not matter where you add entries. For sanity reasons, let's add new items at the end.
 item:
   - date: '2020-10-06'
-    description: '[Andrei](authors/ma-rizoiu/) gave an [interview on the Panorama radio show](http://syn.org.au/news-talks-11-boom-misinformation-across-social-media/) about the ways misinformation spreads through social media and how it affects consumers. Panorama is the flagship news and current affairs show of the youth-run SYN Media, broadcasting from Melbourne.'
+    description: '[Andrei](../authors/ma-rizoiu/) gave an [interview on the Panorama radio show](http://syn.org.au/news-talks-11-boom-misinformation-across-social-media/) about the ways misinformation spreads through social media and how it affects consumers. Panorama is the flagship news and current affairs show of the youth-run SYN Media, broadcasting from Melbourne.'
   - date: '2020-11-26'
-    description: '[Nik](authors/nik-dawson/) (and [Andrei](authors/ma-rizoiu/)) gave an invited talk at the [Reserve Bank of Australia](https://www.rba.gov.au/) on career transitions and managing labour supply and demand.'
+    description: '[Nik](../authors/nik-dawson/) (and [Andrei](../authors/ma-rizoiu/)) gave an invited talk at the [Reserve Bank of Australia](https://www.rba.gov.au/) on career transitions and managing labour supply and demand.'
   - date: '2020-08-01'
-    description: " :page_facing_up: [Quyu](authors/quyu-kong/) will present his paper [Describing and Predicting Online Items with Reshare Cascades via Dual Mixture Self-exciting Processes](https://arxiv.org/abs/2001.11132) at [CIKM 2020](https://www.cikm2020.org/). Congrats Quyu!"
+    description: " :page_facing_up: [Quyu](../authors/quyu-kong/) will present his paper [Describing and Predicting Online Items with Reshare Cascades via Dual Mixture Self-exciting Processes](https://arxiv.org/abs/2001.11132) at [CIKM 2020](https://www.cikm2020.org/). Congrats Quyu!"
   - date: '2020-07-01'
     description: " :smile: Behavioral Data Science's website is up!"  
   - date: '2020-09-28'
-    description: "[Andrei](authors/ma-rizoiu/) won the PitchFest organised by the [NSW Smart Sensing Network]() and [Klarrio](https://klarrio.com/) with an idea of detection of disinformation campaigns in social media. Next, developing a prototype with Klarrio."
+    description: "[Andrei](../authors/ma-rizoiu/) won the PitchFest organised by the [NSW Smart Sensing Network]() and [Klarrio](https://klarrio.com/) with an idea of detection of disinformation campaigns in social media. Next, developing a prototype with Klarrio."
   - date: '2020-10-01'
-    description: "[Dima Galat](authors/dima-galat/) joins the group. He will be undertaking his PhD research on cognitive bias detection from text, with an application to detecting and countering mis- and dis-information. Welcome Dima!" 
+    description: "[Dima Galat](../authors/dima-galat/) joins the group. He will be undertaking his PhD research on cognitive bias detection from text, with an application to detecting and countering mis- and dis-information. Welcome Dima!" 
   - date: '2020-11-03'
-    description: " :page_facing_up: [Nik](authors/nik-dawson/) will present his paper [Predicting Skill Shortages in Labor Markets: A Machine Learning Approach](http://arxiv.org/abs/2004.01311) at the [Workshop on Human-in-the-Loop Methods and Future of Work in BigData -- HMData'20](https://humanmachinedata.org/) collocated with [BigData'20](https://bigdataieee.org/BigData2020/). Congrats Nik!" 
+    description: " :page_facing_up: [Nik](../authors/nik-dawson/) will present his paper [Predicting Skill Shortages in Labor Markets: A Machine Learning Approach](http://arxiv.org/abs/2004.01311) at the [Workshop on Human-in-the-Loop Methods and Future of Work in BigData -- HMData'20](https://humanmachinedata.org/) collocated with [BigData'20](https://bigdataieee.org/BigData2020/). Congrats Nik!" 
   - date: '2020-12-01'
-    description: " :page_facing_up: Two demo papers accepted for WSDM'21! [Rohit](authors/rohit-ram/) and [Quyu](authors/quyu-kong/), each had a demo paper accepted for presentation, describing their libraries BirdSpotter and [evently](/softwaretool/evently/), respectively. Congrats!" 
+    description: " :page_facing_up: Two demo papers accepted for WSDM'21! [Rohit](../authors/rohit-ram/) and [Quyu](../authors/quyu-kong/), each had a demo paper accepted for presentation, describing their libraries BirdSpotter and [evently](/softwaretool/evently/), respectively. Congrats!" 
   - date: '2021-01-19'
-    description: " :page_facing_up: [Nik](authors/nik-dawson/)'s and [Andrei](authors/ma-rizoiu/)'s paper [Layoffs, Inequity and COVID-19: A Longitudinal Study of the Journalism Jobs Crisis in Australia from 2012 to 2020](https://arxiv.org/abs/2008.12459) (together with [Sasha Molitorisz](https://profiles.uts.edu.au/Sacha.Molitorisz) and [Peter Fray](https://www.crikey.com.au/author/peter-fray/)) just got accepted in the prestigious journal _[Journalism](https://journals.sagepub.com/home/jou)_."
+    description: " :page_facing_up: [Nik](../authors/nik-dawson/)'s and [Andrei](../authors/ma-rizoiu/)'s paper [Layoffs, Inequity and COVID-19: A Longitudinal Study of the Journalism Jobs Crisis in Australia from 2012 to 2020](https://arxiv.org/abs/2008.12459) (together with [Sasha Molitorisz](https://profiles.uts.edu.au/Sacha.Molitorisz) and [Peter Fray](https://www.crikey.com.au/author/peter-fray/)) just got accepted in the prestigious journal _[Journalism](https://journals.sagepub.com/home/jou)_."
   - date: '2021-01-24'
-    description: " :page_facing_up: [Andrei](authors/ma-rizoiu/)'s paper [Linking User Opinion Dynamics and Online Discussions](https://arxiv.org/abs/2101.09852) (together with French collaborators [Christine Largeron](https://perso.univ-st-etienne.fr/largeron/) and Andrei Mardale) just got accepted in [IDA'21](https://ida2021.org/)." 
+    description: " :page_facing_up: [Andrei](../authors/ma-rizoiu/)'s paper [Linking User Opinion Dynamics and Online Discussions](https://arxiv.org/abs/2101.09852) (together with French collaborators [Christine Largeron](https://perso.univ-st-etienne.fr/largeron/) and Andrei Mardale) just got accepted in [IDA'21](https://ida2021.org/)." 
   - date: '2021-01-22'
-    description: " [Nik](authors/nik-dawson/) just submitted his PhD thesis today! This the completion of a great journey. Congrats!" 
+    description: " [Nik](../authors/nik-dawson/) just submitted his PhD thesis today! This the completion of a great journey. Congrats!" 
   - date: '2021-02-11'
     description: "Check our videos for demonstrating the tools, [Birdspotter](https://www.youtube.com/watch?v=52HwHAiK1rs) and [evently](https://www.youtube.com/watch?v=zSMHol0qsy4)! They will be presented at WSDM'21." 
