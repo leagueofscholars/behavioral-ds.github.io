@@ -1,10 +1,13 @@
 from pytimeNSW import pytimeNSW
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, date
 import pandas as pd
 import random
+import hashlib
 
- 
-date_object = date(2021, 3, 29)
+seed = int(hashlib.sha1(str("BDS Reading").encode("utf-8")).hexdigest(), 16) % (10 ** 4)
+random.seed(seed)
+
+date_object = date(2021, 4, 5)
 date_object += timedelta(days=1-date_object.isoweekday())
 slots = []
 while date_object.year == 2021:
@@ -13,7 +16,7 @@ while date_object.year == 2021:
     date_object += timedelta(days=7)
     
 
-names = ["Quyu Kong", "Marian-Andrei Rizoiu", "Alexander Soen", "Rohit Ram", 
+names = ["Quyu Kong", "Marian-Andrei Rizoiu", "Thomas Willinghanm", "Rohit Ram", 
          "Pio Calderon", "Andrew Law", "Duy Khuu", "Frankie Yuan", "Dima Galat"]
 
 sched = pd.DataFrame(columns=["date", "presenter"])
