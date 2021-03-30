@@ -16,20 +16,20 @@ while date_object.year == 2021:
     date_object += timedelta(days=7)
     
 
-names = ["Quyu Kong", "Marian-Andrei Rizoiu", "Dima Galat","Thomas Willinghanm", "Rohit Ram", 
-         "Pio Calderon", "Andrew Law",   "Duy Khuu", "Frankie Yuan"]
+names = ["Quyu Kong", "Marian-Andrei Rizoiu", "Dima Galat", "Thomas Willinghanm", 
+         "Rohit Ram", "Pio Calderon", "Andrew Law",   "Duy Khuu", "Frankie Yuan"]
 
 sched = pd.DataFrame(columns=["date", "presenter"])
 sched["date"] = slots
 q = names.copy()
 for i in sched.index:
     if q == []:
-        #q = sorted(names)
         q = names.copy()
     name = q.pop(random.randrange(len(q)))
     
     sched.loc[i, "presenter"] = name
     
+    # if last person in the n-th q is selected first in n+1-th q, select again 
     if i != 0:
         while sched.loc[i - 1, "presenter"] == name:
             q.append(name)
