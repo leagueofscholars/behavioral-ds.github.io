@@ -18,3 +18,15 @@ jobs:
         cname: www.behavioral-ds.ml
         branch: main
         hugoVersion: extended_0.60.1
+        
+    - name: Webhook on failure
+      if: ${{ failure() }}
+      uses: rtCamp/action-slack-notify@v2
+      env:
+        SLACK_CHANNEL: general
+        SLACK_COLOR: ${{ job.status }}
+        SLACK_ICON: https://github.com/github.png?size=48
+        SLACK_MESSAGE: 'Failed to deploy'
+        SLACK_TITLE: Fail!
+        SLACK_USERNAME: GitHub
+        SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
