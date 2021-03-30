@@ -16,40 +16,38 @@ design:
 | Date  | Presenter    | Paper         | Why should we care | Conference | Repo | Blogs
  | ----- | ------------ | ------------- | ------------------ | ---------- | ----- | -----
  | 29/03 | Dima Galat    | [Making Monolingual Sentence Embeddings Multilingual using Knowledge Distillation](https://www.aclweb.org/anthology/2020.emnlp-main.365.pdf) | Good introduction to student-teacher models and forcing the vector mapping | EMNLP 2020 | [1](https://github.com/UKPLab/sentence-transformers/blob/384508914f6a41335dc0144f971e7ca928769df2/examples/training/distillation/README.md), [2](https://github.com/UKPLab/sentence-transformers/blob/e745cca8a05b07b5daea96b64828d14f1b241715/examples/training/multilingual/README.md) | [1](https://towardsdatascience.com/a-complete-guide-to-transfer-learning-from-english-to-other-languages-using-sentence-embeddings-8c427f8804a9)
- |29/03|Dima Galat||||
- |12/04|Duy Khuu||||
- |19/04|Andrew Law||||
- |26/04|Thomas Willingham||||
- |3/05|Pio Calderon||||
- |10/05|Frankie Yuan||||
- |17/05|Quyu Kong||||
- |24/05|Rohit Ram||||
- |31/05|Marian-Andrei Rizoiu||||
- |14/06|Rohit Ram||||
- |21/06|Quyu Kong||||
- |28/06|Thomas Willingham||||
- |5/07|Dima Galat||||
- |12/07|Duy Khuu||||
- |19/07|Andrew Law||||
- |26/07|Frankie Yuan||||
- |2/08|Pio Calderon||||
- |9/08|Marian-Andrei Rizoiu||||
- |16/08|Andrew Law||||
- |23/08|Dima Galat||||
- |30/08|Marian-Andrei Rizoiu||||
- |6/09|Quyu Kong||||
- |13/09|Frankie Yuan||||
- |20/09|Pio Calderon||||
- |27/09|Rohit Ram||||
- |11/10|Thomas Willingham||||
- |18/10|Duy Khuu||||
- |25/10|Quyu Kong||||
- |1/11|Rohit Ram||||
- |8/11|Pio Calderon||||
- |15/11|Marian-Andrei Rizoiu||||
- |22/11|Thomas Willingham||||
- |29/11|Andrew Law||||
- |6/12|Frankie Yuan||||
- |13/12|Dima Galat||||
- |20/12|Duy Khuu||||
-
+|12/04|Duy Khuu||||
+|19/04|Andrew Law||||
+|26/04|Thomas Willinghanm||||
+|3/05|Marian-Andrei Rizoiu||||
+|10/05|Rohit Ram||||
+|17/05|Frankie Yuan||||
+|24/05|Quyu Kong||||
+|31/05|Pio Calderon||||
+|14/06|Thomas Willinghanm||||
+|21/06|Frankie Yuan||||
+|28/06|Pio Calderon||||
+|5/07|Duy Khuu||||
+|12/07|Quyu Kong||||
+|19/07|Andrew Law||||
+|26/07|Dima Galat||||
+|2/08|Rohit Ram||||
+|9/08|Marian-Andrei Rizoiu||||
+|16/08|Andrew Law||||
+|23/08|Quyu Kong||||
+|30/08|Thomas Willinghanm||||
+|6/09|Duy Khuu||||
+|13/09|Pio Calderon||||
+|20/09|Frankie Yuan||||
+|27/09|Dima Galat||||
+|11/10|Rohit Ram||||
+|18/10|Marian-Andrei Rizoiu||||
+|25/10|Thomas Willinghanm||||
+|1/11|Duy Khuu||||
+|8/11|Pio Calderon||||
+|15/11|Marian-Andrei Rizoiu||||
+|22/11|Quyu Kong||||
+|29/11|Frankie Yuan||||
+|6/12|Andrew Law||||
+|13/12|Rohit Ram||||
+|20/12|Dima Galat||||
