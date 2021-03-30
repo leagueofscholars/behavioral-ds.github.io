@@ -16,5 +16,5 @@ jobs:
       with:
         githubToken: ${{ secrets.DEPLOY_TOKEN }}
         cname: www.behavioral-ds.ml
-        branch: master
+        branch: main
         hugoVersion: extended_0.60.1
