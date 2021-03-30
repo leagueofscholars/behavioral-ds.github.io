@@ -19,7 +19,7 @@ design:
  |29/03|Dima Galat||||
  |12/04|Duy Khuu||||
  |19/04|Andrew Law||||
- |26/04|Alexander Soen||||
+ |26/04|Thomas Willingham||||
  |3/05|Pio Calderon||||
  |10/05|Frankie Yuan||||
  |17/05|Quyu Kong||||
@@ -27,7 +27,7 @@ design:
  |31/05|Marian-Andrei Rizoiu||||
  |14/06|Rohit Ram||||
  |21/06|Quyu Kong||||
- |28/06|Alexander Soen||||
+ |28/06|Thomas Willingham||||
  |5/07|Dima Galat||||
  |12/07|Duy Khuu||||
  |19/07|Andrew Law||||
@@ -41,13 +41,13 @@ design:
  |13/09|Frankie Yuan||||
  |20/09|Pio Calderon||||
  |27/09|Rohit Ram||||
- |11/10|Alexander Soen||||
+ |11/10|Thomas Willingham||||
  |18/10|Duy Khuu||||
  |25/10|Quyu Kong||||
  |1/11|Rohit Ram||||
  |8/11|Pio Calderon||||
  |15/11|Marian-Andrei Rizoiu||||
- |22/11|Alexander Soen||||
+ |22/11|Thomas Willingham||||
  |29/11|Andrew Law||||
  |6/12|Frankie Yuan||||
  |13/12|Dima Galat||||
