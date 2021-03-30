@@ -1,4 +1,141 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Behavioral Data Science</title><link>https://www.behavioral-ds.ml/authors/rohit-ram/</link><atom:link href="https://www.behavioral-ds.ml/authors/rohit-ram/index.xml" rel="self" type="application/rss+xml"/><description>Behavioral Data Science</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>2021</copyright><lastBuildDate>Thu, 12 Nov 2020 00:00:00 +0000</lastBuildDate><image><url>https://www.behavioral-ds.ml/img/logo.png</url><title>Behavioral Data Science</title><link>https://www.behavioral-ds.ml/authors/rohit-ram/</link></image><item><title>Causal Inference: A basic taster</title><link>https://www.behavioral-ds.ml/blogpost/causal_inference_taster/</link><pubDate>Thu, 12 Nov 2020 00:00:00 +0000</pubDate><guid>https://www.behavioral-ds.ml/blogpost/causal_inference_taster/</guid><description>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Behavioral Data Science</title><link>https://www.behavioral-ds.ml/authors/rohit-ram/</link><atom:link href="https://www.behavioral-ds.ml/authors/rohit-ram/index.xml" rel="self" type="application/rss+xml"/><description>Behavioral Data Science</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>2021</copyright><lastBuildDate>Tue, 09 Mar 2021 00:00:00 +0000</lastBuildDate><image><url>https://www.behavioral-ds.ml/img/logo.png</url><title>Behavioral Data Science</title><link>https://www.behavioral-ds.ml/authors/rohit-ram/</link></image><item><title>birdspotter: A toolkit for analyzing and labelling Twitter users</title><link>https://www.behavioral-ds.ml/softwaretool/birdspotter/</link><pubDate>Tue, 09 Mar 2021 00:00:00 +0000</pubDate><guid>https://www.behavioral-ds.ml/softwaretool/birdspotter/</guid><description>&lt;img src="https://www.behavioral-ds.ml/img/birdspotter_logo.png" alt="Birdspotter Logo" width="200"/>
+&lt;!-- Motivation -->
+&lt;!-- Framing: Problem -> Solution -->
+&lt;!-- Context -->
+&lt;p>Social media platforms, although relatively new, host millions of users and billions of interactions daily. As tied as we are to these platforms, they profoundly impact our social institutions through phenomena such as disinformation, political polarization, and social bots.&lt;/p>
+&lt;!-- Problem -->
+&lt;p>Researchers are increasingly interested in trying to form an understanding of phenomena and their implications. Social scientists, political scientists, and data practitioners alike curate expansive datasets to combat these potentially adverse effects on our society; however, they lack the appropriate tooling.&lt;/p>
+&lt;!-- Solution -->
+&lt;p>&lt;code>birdspotter&lt;/code> is an &lt;strong>easy-to-use&lt;/strong> tool that models Twitter users&amp;rsquo; attributes and labels them. It comes prepackaged with a &lt;strong>state-of-the-art bot detector&lt;/strong> and an &lt;strong>influence quantification&lt;/strong> system based on tweet dynamics. &lt;code>birdspotter&lt;/code> features a generalized user labeler, which can be retrained easily with the engineered features to address a variety of use cases. Also, &lt;a href="http://birdspotter.ml/">birdspotter.ml&lt;/a> is a web application that can be utilized to explore datasets and derive a narrative around a dataset.&lt;/p>
+&lt;p>In this post, I'll showcase the basic usage of &lt;code>birdspotter&lt;/code> and &lt;a href="http://birdspotter.ml/">birdspotter.ml&lt;/a>.&lt;/p>
+&lt;h2 id="installation">Installation&lt;/h2>
+&lt;p>The package can be installed in the canonical python way:&lt;/p>
+&lt;pre>&lt;code class="language-{bash}">pip install birdspotter
+&lt;/code>&lt;/pre>
+&lt;h2 id="getting-a-dataset">Getting a dataset&lt;/h2>
+&lt;p>The Twitter T&amp;amp;Cs restrict the sharing of tweet data directly online; however, they do allow the sharing of tweet-ids, which can be converted to full tweet data through a process called &lt;em>hydration&lt;/em>. Tools like &lt;a href="https://github.com/DocNow/twarc">twarc&lt;/a> can be used to hydrate a Tweet ID dataset. The resulting dataset will be in &lt;code>jsonl&lt;/code> (line delimited &lt;code>json&lt;/code>) format, which &lt;code>birdspotter&lt;/code> accepts directly.&lt;/p>
+&lt;p>In the below examples, we use two datasets; a collection of COVID-19 related tweets from January 31st, 2020 [1], and a collection of tweets about politicians on Twitter [2].&lt;/p>
+&lt;p>The politicians&amp;rsquo; dataset was acquired through the following process (and a similar process was taken for the COVID-19 dataset):&lt;/p>
+&lt;pre>&lt;code class="language-{bash}">pip install twarc
+wget http://twitterpoliticians.org./downloads/base/all_tweet_ids.csv
+twarc hydrate all_tweet_ids.csv &amp;gt; tweets.jsonl
+&lt;/code>&lt;/pre>
+&lt;h2 id="basic-usage">Basic Usage&lt;/h2>
+&lt;p>The code below imports the main class &lt;code>Birdspotter&lt;/code>, extracts the tweets from their standard format, labels the users with the default bot detector and influence, and reformats the retweet cascades into a tidier format.&lt;/p>
+&lt;pre>&lt;code class="language-{python}">## Import birdspotter
+from birdspotter import BirdSpotter
+## Extracts the tweets from the raw jsonl [https://github.com/echen102/COVID-19-TweetIDs]
+bs = BirdSpotter('covid19.jsonl')
+## Uses the default bot labeller and influence quantification systems
+bs.getLabeledUsers()
+## Formats the retweet cascades, such that expected retweet structures can extracted
+bs.getCascadesDataFrame()
+## Access the botness labels and influence scores
+bs.featureDataframe[['botness', 'influence']]
+&lt;/code>&lt;/pre>
+&lt;p>From here, the dataset is readily profile-able:&lt;/p>
+&lt;pre>&lt;code class="language-{python}">botness_dist = sns.histplot(data=bs.featureDataframe, x=&amp;quot;botness&amp;quot;)
+influence_eccdf = sns.ecdfplot(data=bs.featureDataframe, x=&amp;quot;influence&amp;quot;, complementary=True).set(xscale=&amp;quot;log&amp;quot;, yscale=&amp;quot;log&amp;quot;)
+&lt;/code>&lt;/pre>
+&lt;p>&lt;img src="https://www.behavioral-ds.ml/img/covid_profile.png" alt="COVID Dataset Profile: (Left) The distribution of bot scores of users; (Right) The ECCDF of influence scores of users, showing a long-tailed (rich-gets-richer) paradigm">&lt;/p>
+&lt;h2 id="the-visualizer">The visualizer&lt;/h2>
+&lt;p>An alternative way to profile a dataset is the use &lt;a href="http://birdspotter.ml">&lt;code>birdspotter.ml&lt;/code>&lt;/a>, which facilitates dataset exploration and narrative construction.&lt;/p>
+&lt;p>&lt;img src="https://www.behavioral-ds.ml/img/auspol_teaser.png" alt="birdspotter.ml visualizer: The various components shown include the scatterplot panel (Left), the user information panel (Top Right), and the retweet cascades panel (Bottom Right)">&lt;/p>
+&lt;p>The visualizer features a scatterplot (on the left) of influence and botness for a sample of users and the population density. The colors represent the hashtags (a proxy for the topic) that the users most tweet about in the dataset. Users within the scatterplot are hoverable and selectable, and their information populates in the components on the right.&lt;/p>
+&lt;p>The top right component shows information and metrics about the selected user and links the user's profile.&lt;/p>
+&lt;p>The bottom right component shows the retweet cascades where a user has participated and highlights their participation. The points represent the follower counts (social capital) of users and their retweets/tweets&amp;rsquo; timing. The points are also hoverable and selectable.&lt;/p>
+&lt;h2 id="customising-the-labeller">Customising the labeller&lt;/h2>
+&lt;p>By default, the labeler is trained as a bot detection system, comparable to the state-of-the-art &lt;a href="https://botometer.osome.iu.edu/">&lt;code>botometer&lt;/code>&lt;/a>. Notable, &lt;code>birdspotter&lt;/code> is provided in an offline package and can be applied at scale, while &lt;code>botometer&lt;/code> is accessible only via an online API, which is often prohibitively rate-limited.&lt;/p>
+&lt;p>&lt;code>birdspotter&lt;/code> is a versatile tool and can be utilized by practitioners for a variety of use-cases. For example, we could train the labeler to identify political leaning. This process is a bit involved, so we summarise it below;&lt;/p>
+&lt;ol>
+&lt;li>We hydrate some tweets from the Twitter Parlimentarian Database&lt;/li>
+&lt;li>We filter the tweets to include only &lt;strong>Australian Politicians&lt;/strong>.&lt;/li>
+&lt;li>We &lt;strong>label right-wing partied politicians positively&lt;/strong>, and others negatively (with &lt;code>bs_pol.getBotAnnotationTemplate&lt;/code> for example)&lt;/li>
+&lt;li>We &lt;strong>retrain &lt;code>birdspotter&lt;/code>&lt;/strong> with these new labels and label all users (i.e., including users the politicians retweeted) using the new model&lt;/li>
+&lt;/ol>
+&lt;!-- ```{python class.source = 'fold-hide'} -->
+&lt;!-- # This is the guts of the code; it does what is described above -->
+&lt;!-- politicians = pd.read_csv('./full_member_info.csv', encoding='utf16') -->
+&lt;!-- politicians_aus = politicians[politicians['country'] == 'Australia'] -->
+&lt;!-- politicians_aus_available = politicians_aus[~politicians_aus['uid'].isnull()] -->
+&lt;!-- def classify_party(party_id): -->
+&lt;!-- mapping = { -->
+&lt;!-- 464 : 1, # Liberal Party of Australia -->
+&lt;!-- 465 : -1, # Australian Labor Party -->
+&lt;!-- 467 : 1, # The Nationals -->
+&lt;!-- 468 : 0, # Nick Xenophon Team -->
+&lt;!-- 469 : -1, # Australian Greens -->
+&lt;!-- 471 : np.nan, -->
+&lt;!-- 475 : 1, # Katter's Australian Party -->
+&lt;!-- } -->
+&lt;!-- return mapping[party_id] -->
+&lt;!-- politicians_aus_available['isright'] = politicians_aus_available['party_id'].apply(classify_party) -->
+&lt;!-- politicians_aus_available['user_id'] = politicians_aus_available['uid'].astype(int).astype(str) -->
+&lt;!-- politicians_aus_available = politicians_aus_available.set_index('user_id') -->
+&lt;!-- with open('./tweets.jsonl', 'r') as rf, open('./aus_tweets.jsonl', 'w') as wf: -->
+&lt;!-- for line in tqdm(rf): -->
+&lt;!-- try: -->
+&lt;!-- j = json.loads(line) -->
+&lt;!-- if j['user']['id_str'] in politicians_aus_available['uid'].astype(int).astype(str).values: -->
+&lt;!-- wf.write(json.dumps(j) + '\n') -->
+&lt;!-- except Exception as e: -->
+&lt;!-- print(j) -->
+&lt;!-- print(e) -->
+&lt;!-- break -->
+&lt;!-- bs = BirdSpotter('aus_tweets.jsonl') -->
+&lt;!-- bs.getLabeledUsers() -->
+&lt;!-- bs.getCascadesDataFrame() -->
+&lt;!-- with open('bs_aus_module.pk', 'wb') as wf: -->
+&lt;!-- pk.dump(bs,wf, protocol=4) -->
+&lt;!-- bs.featureDataframe['isright'] = politicians_aus_available['isright'] -->
+&lt;!-- ground_truth = bs.featureDataframe[~bs.featureDataframe['isright'].isnull()][['isright']] -->
+&lt;!-- ground_truth['isbot'] = ground_truth['isright'] == 1 -->
+&lt;!-- ground_truth = ground_truth[~ground_truth.index.duplicated()] -->
+&lt;!-- data = bs.featureDataframe.copy()[bs.featureDataframe.index.isin(ground_truth.index)] -->
+&lt;!-- data = data[~data.index.duplicated()] -->
+&lt;!-- del data['isright'] -->
+&lt;!-- del data['botness'] -->
+&lt;!-- del data['influence'] -->
+&lt;!-- del data['cascade_membership'] -->
+&lt;!-- data = data[list(data.columns[data.dtypes != 'object'])] -->
+&lt;!-- data['isbot'] = ground_truth['isbot'].loc[data.index] -->
+&lt;!-- with open('pol_training_data.pickle', 'wb') as wf: -->
+&lt;!-- pk.dump(data,wf, protocol=4) -->
+&lt;!-- from birdspotter import BirdSpotter -->
+&lt;!-- import pickle as pk -->
+&lt;!-- # bs_pol = BirdSpotter('aus_tweets.jsonl') -->
+&lt;!-- with open('bs_aus_module.pk', 'rb') as rf: -->
+&lt;!-- bs_pol = pk.load(rf) -->
+&lt;!-- print("Loaded module") -->
+&lt;!-- bs_pol.trainClassifierModel('pol_training_data.pickle') -->
+&lt;!-- print("finished training") -->
+&lt;!-- del bs_pol.featureDataframe['botness'] -->
+&lt;!-- print("removed botness column") -->
+&lt;!-- bs_pol.getBotness() -->
+&lt;!-- bs_pol.getLabeledUsers() -->
+&lt;!-- print("got labels") -->
+&lt;!-- with open('pol_booster.pickle', 'wb') as wf: -->
+&lt;!-- pk.dump(bs_pol.booster, wf, protocol=4) -->
+&lt;!-- print("pickled booster") -->
+&lt;!-- with open('aus_pol_bs_module.pickle', 'wb') as wf: -->
+&lt;!-- pk.dump(bs_pol, wf, protocol=4) -->
+&lt;!-- with open('pol_booster.pickle', 'wb') as wf: -->
+&lt;!-- pk.dump(bs.booster, wf, protocol=4) -->
+&lt;!-- ``` -->
+&lt;!-- This is context: -->
+&lt;!-- I want to start with the opportunity namely the analysis of large amounts of population data tranparently showing the interactions and discourse of people, allowing practictioners to model important applications in society. I also want to highlight the research issues which require investigation, namely social bots, misinformation, polarization, etc. -->
+&lt;!-- This is content -->
+&lt;!-- I then want to move into the problem, namely that there is a lack of tooling to analyse these huge swaths of data -->
+&lt;pre>&lt;code class="language-{python}">bs_pol = BirdSpotter('aus_tweets.jsonl')
+bs_pol.trainClassifierModel('pol_training_data.pickle')
+bs_pol.getLabeledUsers()
+&lt;/code>&lt;/pre>
+&lt;p>On this limited of Australian politicians dataset, a 10-fold CV of &lt;code>birdspotter&lt;/code> garners an average AUC (Area under ROC) of 0.986.&lt;/p>
+&lt;h2 id="conclusion">Conclusion&lt;/h2>
+&lt;p>&lt;code>birdspotter&lt;/code> aims to democratize social analyzes that were once the domain of machine learning experts, generating insights and understanding of online phenomena and mitigating their potentially adverse effects on our society. This post shows how &lt;code>birdspotter&lt;/code> can be used in both a simple and advanced way to recover such insights.&lt;/p>
+&lt;h2 id="references">References&lt;/h2>
+&lt;p>[1] Chen, E. et al. 2020. Tracking social media discourse about the covid-19 pandemic: Development of a public coronavirus twitter data set. JMIR Public Health and Surveillance. 6, 2 (2020), e19273.&lt;/p>
+&lt;p>[2] Vliet, L. van et al. 2020. The twitter parliamentarian database: Analyzing twitter politics across 26 countries. PloS one. 15, 9 (2020), e0237073.&lt;/p></description></item><item><title>Causal Inference: A basic taster</title><link>https://www.behavioral-ds.ml/blogpost/causal_inference_taster/</link><pubDate>Thu, 12 Nov 2020 00:00:00 +0000</pubDate><guid>https://www.behavioral-ds.ml/blogpost/causal_inference_taster/</guid><description>
 &lt;script src="index_files/header-attrs/header-attrs.js">&lt;/script>
 &lt;link href="index_files/anchor-sections/anchor-sections.css" rel="stylesheet" />
 &lt;script src="index_files/anchor-sections/anchor-sections.js">&lt;/script>
