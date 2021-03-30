@@ -16,7 +16,7 @@ jobs:
       with:
         githubToken: ${{ secrets.DEPLOY_TOKEN }}
         cname: www.behavioral-ds.ml
-        branch: main
+        branch: master
         hugoVersion: extended_0.60.1
         
     - name: Webhook on failure
