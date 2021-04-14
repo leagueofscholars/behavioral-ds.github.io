@@ -17,7 +17,7 @@ design:
  | ----- | ------------ | ------------- | ------------------ | ---------- | ----- | -----
  | 29/03 | Dima Galat    | [Making Monolingual Sentence Embeddings Multilingual using Knowledge Distillation](https://www.aclweb.org/anthology/2020.emnlp-main.365.pdf) | Good introduction to student-teacher models and forcing the vector mapping | EMNLP 2020 | [1](https://github.com/UKPLab/sentence-transformers/blob/384508914f6a41335dc0144f971e7ca928769df2/examples/training/distillation/README.md), [2](https://github.com/UKPLab/sentence-transformers/blob/e745cca8a05b07b5daea96b64828d14f1b241715/examples/training/multilingual/README.md) | [1](https://towardsdatascience.com/a-complete-guide-to-transfer-learning-from-english-to-other-languages-using-sentence-embeddings-8c427f8804a9)
 |12/04|Duy Khuu|[In defense of pseudo-labeling: An uncertainty-aware pseudo-label selection framework for semi-supervised learning](https://arxiv.org/pdf/2101.06329.pdf)|Introduction to pseudo-labeling and its potential issues, along with a proposal for a better performing variant| ICLR 2021| 
-|19/04|Andrew Law||||
+|19/04|Andrew Law| [ConStance: Modeling Annotation Contexts to Improve Stance Classification](https://www.aclweb.org/anthology/D17-1116.pdf)|Introduction to issues with manual data annotation and proposes a model for reasoning about annotations with different contexts|EMNLP 2017|||
 |26/04|Thomas Willinghanm||||
 |3/05|Marian-Andrei Rizoiu|[Adversarial vulnerabilities of human decision-making](https://www.pnas.org/content/117/46/29221)|Adversarial learning to guide sequential human decision making|PNAS'20|[1](https://github.com/adezfouli/decision_adv)
 |10/05|Rohit Ram||||
