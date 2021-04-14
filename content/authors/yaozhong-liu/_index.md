@@ -10,7 +10,7 @@ authors:
 superuser: false
 
 # Role/position
-role: Undergraduate Honours student
+role: Undergraduate Honours student @ ANU
 
 # Organizations/Affiliations
 organizations:
@@ -18,6 +18,10 @@ organizations:
 - name: University of Technology Sydney
 
 # Short bio (displayed in user profile at end of posts)
+body: | 
+
+  **Next position after UTS:** Yaozhong continued his undergraduate studies at the Australian National University.
+ 
 bio: I am currently a undergradute student in Australian National University,devoting to complete bachelor's degree of Advanced Computing in College of Engineering & Computer Science. My honours project is about extracting emerging skills in online labour market which mainly applies Named Entity Recognition (NER) under the supervision of Dr. Marian-Andrei Rizoiu.
 
 interests:
