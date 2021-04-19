@@ -15,7 +15,6 @@
   function getNavBarHeight() {
     let $navbar = $('#navbar-main');
     let navbar_offset = $navbar.outerHeight();
-    console.debug('Navbar height: ' + navbar_offset);
     return navbar_offset;
   }
 
