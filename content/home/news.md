@@ -8,6 +8,7 @@ active: true  # Activate this widget? true/false
 weight: 50  # Order that this section will appear.
 
 title: "Recent News"
+subtitle: "[see news archive](news)"
 
 limit: 5
 main_page: true
