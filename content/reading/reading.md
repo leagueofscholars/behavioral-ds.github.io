@@ -20,7 +20,7 @@ design:
 |19/04|Andrew Law| [ConStance: Modeling Annotation Contexts to Improve Stance Classification](https://www.aclweb.org/anthology/D17-1116.pdf)|Introduction to issues with manual data annotation and proposes a model for reasoning about annotations with different contexts|EMNLP 2017|||
 |26/04|Thomas Willinghanm||||
 |3/05|Marian-Andrei Rizoiu|[Adversarial vulnerabilities of human decision-making](https://www.pnas.org/content/117/46/29221)|Adversarial learning to guide sequential human decision making|PNAS'20|[1](https://github.com/adezfouli/decision_adv)
-|10/05|Rohit Ram||||
+|10/05|Rohit Ram|[The Social Dynamics of Language Change in Online Networks](https://www.microsoft.com/en-us/research/publication/the-social-dynamics-of-language-change-in-online-networks/)|Tracks language change through social influence and determines importance of (diverse) features to social influence using Parametric Hawkes|SocInfo'16|
 |17/05|Frankie Yuan||||
 |24/05|Quyu Kong||||
 |31/05|Pio Calderon||||
