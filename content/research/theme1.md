@@ -7,8 +7,8 @@ headless = false  # This file represents a page section.
 active = true  # Activate this widget? true/false
 weight = 1  # Order that this section will appear.
 
-title = "Online information spread, influence and attention"
-subtitle = "Desc"
+title = "Information spread, influence and attention"
+subtitle = "We build theoretical models to investigate how content gets online attention, who adopts it, and who can influence the process."
 
 [content]
   # Page type to display. E.g. post, talk, or publication.

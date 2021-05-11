@@ -20,7 +20,7 @@
 
 # navigations to different themes, requires manual update in case of change-of-theme
 [[main]]
-  name = "Online information spread, influence and attention"
+  name = "Information spread, influence and attention"
   url = "/research/#theme1"
   weight = 1
   parent = "Research"

@@ -8,7 +8,7 @@ active = true  # Activate this widget? true/false
 weight = 2  # Order that this section will appear.
 
 title = "Disinformation and online problematic content"
-subtitle = "Desc"
+subtitle = "We develop methods to detect and address weaponised disinformation and problematic content (hate speech, misinformation, conspiracy theories, anti-minority rhetoric)."
 
 [content]
   # Page type to display. E.g. post, talk, or publication.

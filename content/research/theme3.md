@@ -8,7 +8,7 @@ active = true  # Activate this widget? true/false
 weight = 3  # Order that this section will appear.
 
 title = "The labour markets of tomorrow"
-subtitle = "Desc"
+subtitle = "Our research proposes adaptative and personalised methods to help workers transition into new occupations by accounting for their experience and personality profiles."
 
 [content]
   # Page type to display. E.g. post, talk, or publication.
