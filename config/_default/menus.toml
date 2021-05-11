@@ -13,25 +13,34 @@
   url = "/publication"
   weight = 20
 
-#[[main]]
-#  name = "Research"
-#  url = "/research"
-#  weight = 30
+[[main]]
+  name = "Research"
+  url = "/research"
+  weight = 30
+
+# navigations to different themes, requires manual update in case of change-of-theme
+[[main]]
+  name = "Online information spread, influence and attention"
+  url = "/research/#theme1"
+  weight = 1
+  parent = "Research"
 
 [[main]]
-  name = "Blog"
-  url = "/post"
-  weight = 40
+  name = "Disinformation and online problematic content"
+  url = "/research/#theme2"
+  weight = 2
+  parent = "Research"
+
+[[main]]
+  name = "The labour markets of tomorrow"
+  url = "/research/#theme3"
+  weight = 3
+  parent = "Research"
 
 [[main]]
   name = "News"
   url = "/news"
   weight = 50
-
-[[main]]
-  name = "Software"
-  url = "/tool"
-  weight = 55
 
 [[main]]
   name = "Reading"

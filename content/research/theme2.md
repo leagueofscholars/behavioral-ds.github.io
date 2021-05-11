@@ -5,15 +5,14 @@
 widget = "pages"  # See https://sourcethemes.com/academic/docs/page-builder/
 headless = false  # This file represents a page section.
 active = true  # Activate this widget? true/false
-weight = 1  # Order that this section will appear.
-hide_title = true
+weight = 2  # Order that this section will appear.
 
-title = "Blog posts"
-subtitle = ""
+title = "Disinformation and online problematic content"
+subtitle = "Desc"
 
 [content]
   # Page type to display. E.g. post, talk, or publication.
-  page_type = "blogpost"
+  page_type = "theme2_content"
   
   # Choose how much pages you would like to display (0 = all pages)
   count = 0
@@ -38,6 +37,7 @@ subtitle = ""
   #   3 = Card
   #   4 = Citation (publication only)
   view = 2
+  columns = 2
   
 [design.background]
   # Apply a background color, gradient, or image.

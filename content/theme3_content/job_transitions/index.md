@@ -3,8 +3,9 @@ title: "Job Transitions in a Time of Automation and Labour Market Crises"
 subtitle: "originally posted on [LinkedIn](https://www.linkedin.com/pulse/job-transitions-time-automation-labour-market-crises-nik-dawson/?trackingId=9ZZTfWVpQK66a4V9QTaONg%3D%3D)"
 authors: 
   - Nik Dawson (edited by Marian-Andrei Rizoiu)
-categories: [blogpost]
+categories: [Paper]
 commentable: true
+summary: "We build a machine learning-based recommender system that can accurately predict the probability of transitioning between occupations."
 date: "2021-02-04"
 image:
   focal_point: "Center"
