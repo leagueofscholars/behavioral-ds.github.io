@@ -3,12 +3,13 @@ title: "User Analysis on reshare cascades about COVID-19"
 authors:
   - Quyu Kong, Rohit Ram
 date: "2020-12-03"
-categories: [blogpost]
+categories: [Software]
 commentable: true
 image:
   placement: 1
   focal_point: "Center"
   preview_only: true
+summary: "In this tutorial, we apply two novel tools (BirdSpotter and Evently) for analyzing Twitter users on a COVID-19 retweet dataset."
 
 links:
 - icon: github-alt

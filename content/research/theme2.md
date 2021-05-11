@@ -7,8 +7,8 @@ headless = false  # This file represents a page section.
 active = true  # Activate this widget? true/false
 weight = 2  # Order that this section will appear.
 
-title = "Theme 2"
-subtitle = "Social media influence is a marketing term that describes an individual's ability to affect other people's thinking in a social online community"
+title = "Disinformation and online problematic content"
+subtitle = "Desc"
 
 [content]
   # Page type to display. E.g. post, talk, or publication.

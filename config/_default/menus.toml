@@ -20,37 +20,27 @@
 
 # navigations to different themes, requires manual update in case of change-of-theme
 [[main]]
-  name = "Theme1"
+  name = "Online information spread, influence and attention"
   url = "/research/#theme1"
   weight = 1
   parent = "Research"
 
 [[main]]
-  name = "Theme2"
+  name = "Disinformation and online problematic content"
   url = "/research/#theme2"
   weight = 2
   parent = "Research"
 
 [[main]]
-  name = "Theme3"
+  name = "The labour markets of tomorrow"
   url = "/research/#theme3"
   weight = 3
   parent = "Research"
 
 [[main]]
-  name = "Blog"
-  url = "/post"
-  weight = 40
-
-[[main]]
   name = "News"
   url = "/news"
   weight = 50
-
-[[main]]
-  name = "Software"
-  url = "/tool"
-  weight = 55
 
 [[main]]
   name = "Reading"

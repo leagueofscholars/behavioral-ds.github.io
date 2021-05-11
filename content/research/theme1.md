@@ -7,8 +7,8 @@ headless = false  # This file represents a page section.
 active = true  # Activate this widget? true/false
 weight = 1  # Order that this section will appear.
 
-title = "Theme 1"
-subtitle = "Information diffusion is a key aspect of interest for those who, for commercial reasons, want to get the right publicity to the right people"
+title = "Online information spread, influence and attention"
+subtitle = "Desc"
 
 [content]
   # Page type to display. E.g. post, talk, or publication.
