@@ -1,0 +1,170 @@
+---
+title: "Causal Inference: A basic taster"
+authors:
+  - Rohit Ram
+date: "2020-11-12"
+output:
+  html_document:
+    keep_tex: true
+css: tufte.css
+bibliography: ["causal.bib"]
+link-citations: true
+categories: [blogpost]
+commentable: true
+image:
+  placement: 1
+  focal_point: "Center"
+  preview_only: true
+---
+
+<script src="index_files/header-attrs/header-attrs.js"></script>
+<link href="index_files/anchor-sections/anchor-sections.css" rel="stylesheet" />
+<script src="index_files/anchor-sections/anchor-sections.js"></script>
+  <link rel="stylesheet" href="tufte.css" type="text/css" />
+
+
+<p>Most statistics students will be familiar with the phrase “correlation isn’t causation,” however, this doesn’t feature strongly in the remainder of their educations. To overcome this hurdle, the researchers’ best practice in experimental design is the randomized controlled trial. However, there are only specific experiments that we can perform. For example, to test the whether smoking causes cancer, we can’t force subjects to smoke. <label for="tufte-mn-" class="margin-toggle">⊕</label><input type="checkbox" id="tufte-mn-" class="margin-toggle"><span class="marginnote">In the 1950s the tobacco companies argued that there could be some confounding factor (a gene) which smokers and lung cancer patients shared.</span> In general, restricting ourselves to experimental studies to determine causation is incredibly limiting (especially for data scientists). We want to make the same causal conclusions from observational studies and those from experimental studies. We can do that by studying causal inference.</p>
+<div id="simpsons" class="section level2">
+<h2>Simpson’s Paradox</h2>
+An example of the importance of understanding causal relationships is given by Simpson’s Paradox <span class="citation">(<a href="#ref-simpson1951interpretation" role="doc-biblioref">Simpson 1951</a>)</span>, which describes a peculiar phenomenon that can present in data sets, where a correlation between two variables is present in one direction but reverses in each stratum of the data. The paradox expressed best through an example:
+<label for="tufte-mn-" class="margin-toggle">⊕</label><input type="checkbox" id="tufte-mn-" class="margin-toggle"><span class="marginnote">This appears to suggest that the more someone exercises, the higher their cholesterol is! This is absurd!</span>
+<div class="figure"><span id="fig:simpsons-before"></span>
+<img src="./index_files/figure-html/simpsons-before-1.png" alt="The results of an experiment, where x-axis represents how much exercise an individual does in hours, and y-axis represents cholestral measurment for the same individual." width="672" />
+<p class="caption">
+Figure 1: The results of an experiment, where x-axis represents how much exercise an individual does in hours, and y-axis represents cholestral measurment for the same individual.
+</p>
+</div>
+Figure <a href="#fig:simpsons-before">1</a> shows a positive correlation in an experiment that measures individuals’ exercise per week and cholesterol. At first glance, this seems absurd, but when we partition the data by another causal variable, this seems reasonable:
+<div class="figure"><span id="fig:simpsons-after"></span>
+<img src="index_files/figure-html/simpsons-after-1.png" alt="The same results as the experiment above, partioned by age" width="672" />
+<p class="caption">
+Figure 2: The same results as the experiment above, partioned by age
+</p>
+</div>
+<p><label for="tufte-mn-" class="margin-toggle">⊕</label><input type="checkbox" id="tufte-mn-" class="margin-toggle"><span class="marginnote">(Also note, we have fabricated the data, although these relationships are quite plausible)</span>
+Understanding the full causal story is essential. Without an entire causal narrative, we might recommend inappropriate interventions; for example, a doctor might prescribe less exercise to reduce cholesterol in the case above.</p>
+<p>To deduce such causal stories, we need to apply the methodology of causal inference.</p>
+</div>
+<div id="structural-equation-models-and-causal-graphs" class="section level2">
+<h2>Structural Equation Models and Causal Graphs</h2>
+<p>A structural equation model (SEM) is a set of equations representing the relationship between variables. For example, the equations which generated the data from <a href="#simpsons">the Simpson’s paradox example</a>, are given as:
+<span class="math display">\[
+\begin{align*} 
+age &amp;= U_1 \\
+exercise &amp;= \frac{1}{13}*age + U_2 \\
+cholesteral &amp;= -4*exercise + age + U_3  
+\end{align*}
+\]</span>
+We can think of <span class="math inline">\(U_1\)</span>, <span class="math inline">\(U_2\)</span>, and <span class="math inline">\(U_3\)</span> as specific unobserved exogenous variables of an individual, which generate their endogenous variables (something like error terms).</p>
+<p>A causal graph is a DAG which describes the existence of relationships between variables in a model. An edge <code>x -&gt; y</code> represents the relationship <code>x</code> directly causes <code>y</code>. Consequently, causal graphs can represent SEMs:
+<img src="index_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+<p>Indeed this graph shows how age confounds the effect of exercise on cholesterol.</p>
+</div>
+<div id="do-calculus" class="section level2">
+<h2>Do-calculus</h2>
+<p><span class="citation"><a href="#ref-pearl1995causal" role="doc-biblioref">Pearl</a> (<a href="#ref-pearl1995causal" role="doc-biblioref">1995</a>)</span> outline a method to remove this confounding (and other similar scenarios) using do-calculus. Outlining the specifics of do-calculus is beyond the scope of this blog post (but for interested readers, we suggest <span class="citation">(<a href="#ref-pearl2016causal" role="doc-biblioref">Pearl, Glymour, and Jewell 2016</a>)</span>). In brief, do-calculus introduces the <span class="math inline">\(do()\)</span> operator, which acts as an intervention and fixes a variable to a particular constant. For example, consider a similar binary situation to <a href="#simpsons">the Simpson’s paradox example</a>, where <em>exer</em> is a binary variable true if the individual is active, <em>chol</em> is a binary variable true if the individual has high cholesterol, and <em>age</em> is a binary variable true if the individual is over 60.</p>
+<pre class="r"><code>bin_simpsons_data &lt;- simpsons_data %&gt;%
+  mutate(age = age &gt; 60) %&gt;% # Binarize the age, so those over 60 are True, and under 60 are False
+  mutate(exer = exercise&gt;mean(exercise)) %&gt;% # Binarize the exercise level, so those above the average are True, and under are False
+  mutate(chol = cholesteral&gt;mean(cholesteral)) # Binarize the cholesteral level, so those above the average are True, and under are False</code></pre>
+<p>We ask the same experimental question; does exercise reduce cholesterol. A naive approach would be to compute the effect as <span class="math inline">\(P(chol | exer = 1) - P(chol | exer = 0)=\)</span> 0.168, where <span class="math inline">\(P(chol | exer)\)</span> is computed by filtering the data according to <em>exer</em>. Taking this approach, we would erroneously observe that the effect was positive since those who exercise more are also old and more likely to have high cholesterol.</p>
+<p>The experimental best practice approach would be to perform a randomized controlled trial (RCT). A random selection of individuals are assigned to <em>do</em> a high exercise regiment and the others <em>do</em> a low exercise regiment (regardless of age). The RCT implicitly removes the natural tendency of exercise to vary with age and allows researchers to observe the causal effect of exercise on cholesterol. When using data generated in such a fashion, increases/decreases in the probability of having high cholesterol caused by exercise are given by <span class="math inline">\(P_{RCT}(chol | exer = 1) - P_{RCT}(chol | exer = 0)\)</span>. This metric is known as the Average Causal Effect (ACE), sometimes called the Average Treatment Effect. Note that by conditioning on <span class="math inline">\(exer=x\)</span>, with data generated by an RCT, researchers are essentially limiting the data used to estimate <span class="math inline">\(P_{RCT}(chol | exer = x)\)</span>, to individuals who were <strong>forced</strong> to <em>do</em> an exercise regiment <span class="math inline">\(x\)</span>. The <em>do</em> here represents forcing individuals to take an intervention value, regardless of their natural tendency, and this is captured by the <span class="math inline">\(do()\)</span> operator. In this case, <span class="math inline">\(P(chol | do(exer = x)) = P_{RCT}(chol | exer = x)\)</span>, since the data was generated with an RCT. However, RCTs can be prohibitively expensive (both in time and money) and might not be necessary to tease out a causal effect.</p>
+<p>We would still like to estimate the ACE, <span class="math inline">\(P(chol | do(exer = 1)) - P(chol | do(exer = 0))\)</span>, by using data that wasn’t generated from an RCT. By using the <span class="math inline">\(do()\)</span> operator here, we aim to disassociate <em>exer</em> from its natural tendency with <em>age</em> and effectively perform a graph surgery:</p>
+<p><img src="index_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<p><span class="citation"><a href="#ref-pearl2016causal" role="doc-biblioref">Pearl, Glymour, and Jewell</a> (<a href="#ref-pearl2016causal" role="doc-biblioref">2016</a>)</span> provide an adjustment formula for just this scenario:
+<span class="math display">\[
+P(y|do(x)) = \sum_z \frac{P(X=x, Y=y, PA=z)}{P(X=x| PA=z)}
+\]</span>
+where <span class="math inline">\(X\)</span> represents the variable we are acting on, <span class="math inline">\(Y\)</span> the variable we measure results from, and <span class="math inline">\(PA\)</span> the parents of <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> or more generally any nodes that satisfy the back-door criterion (which we will introduce later). Note this allows us to derive the causal effect, as if we had generated data with an RCT, using only probabilities estimated from data not generated by an RCT.</p>
+<p>As such we compute our ACE for the binary scenario:</p>
+<pre class="r"><code># The Joint Distribution P(age, exer, chol) i.e. P(x,y,z)
+p_aec &lt;- bin_simpsons_data %&gt;% 
+  count(age, exer, chol) %&gt;%
+  mutate(freq = n/sum(n))
+
+# The Marginal Distribution P(age) i.e. P(z)
+p_a &lt;- bin_simpsons_data %&gt;% 
+  count(age) %&gt;%
+  mutate(freq = n/sum(n))
+
+# The Marginal Distribution P(age, exer) i.e. P(x, z)
+p_ea &lt;- bin_simpsons_data %&gt;% 
+  count(age, exer) %&gt;%
+  mutate(freq = n/sum(n))
+
+# The Conditional Mariginal Distribution P(exer | age) i.e. P(x | z)
+p_e_a &lt;- p_a %&gt;%  
+  right_join(p_ea, by=&quot;age&quot;) %&gt;%
+  mutate(freq = freq.y/freq.x) %&gt;%
+  select(age, exer, freq)
+
+# The Intervention Distribution P(chol | do(exer)) i.e. P(y | do(x))
+probabilities &lt;- data.table(p_aec %&gt;% 
+  left_join(p_e_a, by=c(&quot;age&quot;, &quot;exer&quot;)) %&gt;%
+  mutate(freq = freq.x/freq.y) %&gt;%
+  select(age, exer, chol, freq) %&gt;% 
+  filter(chol) # We are only concerned with what cause high cholestral
+)
+
+# The average causal effect of exer on chol
+ACE &lt;- sum(probabilities[exer==T, freq]) - sum(probabilities[exer==F, freq]) </code></pre>
+<p>This procedure leads to a negative ACE of -0.175, which shows the causal effect of going from high to low exercise on the probability of getting high cholesterol.</p>
+<p>A natural question that follows from this example is, under what conditions can we use such adjustments to achieve an identifiable causal effect.</p>
+</div>
+<div id="d-seperation" class="section level2">
+<h2>d-seperation</h2>
+<p>To understand common scenarios where the effect of variable <span class="math inline">\(X\)</span> on <span class="math inline">\(Y\)</span> is identifiable within a causal graph, we must first introduce the concept of d-separation, also known as blocking. A pair of variable <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> are said to be blocked if they are conditionally independent, given a set of nodes <span class="math inline">\(Z\)</span>. There are three graph types, which are essential for blocking:</p>
+<p><img src="index_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+<p>In the chain scenario, <span class="math inline">\(X \sim Y\)</span> is blocked by conditioning on <span class="math inline">\(Z={M}\)</span>. This is sometimes refered to as the mediation scenario, which we will address further in <a href="#front-door">the front-door criterion</a>.</p>
+<p><img src="index_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+<p>In the fork scenario, <span class="math inline">\(X \sim Y\)</span> is blocked by conditioning on <span class="math inline">\(Z={Z}\)</span>. This is sometimes refered to as the confounder scenario, which is the situation in <a href="#simpsons">the simpson’s paradox example</a>.</p>
+<p><img src="index_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
+<p>Finally, in the collider scenario, <span class="math inline">\(X \sim Y\)</span> is blocked by <em>not</em> conditioning on <span class="math inline">\(Z={M}\)</span>. The idea that <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>, which are independent, to begin with, can become conditionally dependant is unintuitive. One way to think about this is that we are sharing information received from $ Y $ with $ X $ through $ M $ when we condition on $ M $. For a more thorough investigation into this phenomenon, refer to <span class="citation">(<a href="#ref-pearl2016causal" role="doc-biblioref">Pearl, Glymour, and Jewell 2016</a>)</span>.</p>
+<p>A path is said to be blocked by <span class="math inline">\(Z\)</span> if it contains a chain or fork with its middle node in <span class="math inline">\(Z\)</span> or a collider with its middle node not in <span class="math inline">\(Z\)</span>.</p>
+<p>We are now ready to introduce the main criteria for which we can perform adjustments.</p>
+</div>
+<div id="the-backdoor" class="section level2">
+<h2>The Backdoor</h2>
+
+<div class="definition">
+<span id="def:unnamed-chunk-10" class="definition"><strong>Definition 1  (The Backdoor Criterion)  </strong></span>A set of nodes <span class="math inline">\(Z\)</span>, given a DAG <span class="math inline">\(G\)</span> and a pair of nodes <span class="math inline">\((X,Y)\)</span>, is said to satisfy the backdoor criterion if no node in <span class="math inline">\(Z\)</span> is a descendant of <span class="math inline">\(X\)</span>, and <span class="math inline">\(Z\)</span> blocks all paths between <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>, which contain arrows into <span class="math inline">\(X\)</span>.
+</div>
+<p>If there exists are set of nodes why satisfy the backdoor criterion, then the effect of <span class="math inline">\(X\)</span> on <span class="math inline">\(Y\)</span> is identifiable and given by:
+<span class="math display">\[
+P(y|do(x)) = \sum_z \frac{P(X=x, Y=y, Z=z)}{P(X=x| Z=z)}
+\]</span></p>
+<p>The backdoor criterion stops undue influence through the <em>backdoor</em> paths; it leaves direct paths between <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>, and it blocks spurious paths.</p>
+<p>It is clear that { <em>age</em> } satisfies these conditions to be a backdoor adjustment set in the example above.</p>
+<p><img src="index_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
+</div>
+<div id="front-door" class="section level2">
+<h2>The Front-door</h2>
+<p>There are notably common scenarios where this doesn’t work. For example, consider a constructed causal mediation situation, as follows:
+<img src="index_files/figure-html/unnamed-chunk-12-1.png" width="672" /></p>
+<p>In this case we cannot use the backdoor criterion, to detect the effect of <em>smoking</em> on <em>cancer</em> because <em>tar</em> is a descendant of <em>smoking</em>, and there exists no direct link between <em>smoking</em> and <em>cancer</em>. We must use instead the frontdoor criterion:</p>
+
+<div class="definition">
+<span id="def:unnamed-chunk-13" class="definition"><strong>Definition 2  (The Frontdoor Criterion)  </strong></span>A set of nodes <span class="math inline">\(Z\)</span>, given a DAG <span class="math inline">\(G\)</span> and a pair of nodes <span class="math inline">\((X,Y)\)</span>, is said to satisfy the frontdoor criterion if; <span class="math inline">\(Z\)</span> intercepts all direct paths from <span class="math inline">\(X\)</span> to <span class="math inline">\(Y\)</span>, all paths between <span class="math inline">\(X\)</span> and <span class="math inline">\(Z\)</span> are blocked, and all backdoor paths between <span class="math inline">\(Y\)</span> and <span class="math inline">\(Z\)</span> are blocked by <span class="math inline">\(X\)</span>.
+</div>
+<p>If there exists are set of nodes <span class="math inline">\(Z\)</span> which satisfy the frontdoor criterion, and <span class="math inline">\(P(x, z)&gt;0\)</span>, then the effect of <span class="math inline">\(X\)</span> on <span class="math inline">\(Y\)</span> is identifiable and given by:
+<span class="math display">\[
+P(y|do(x)) = \sum_z P(z|x) \sum_{x^\prime} P(y|x^\prime, z)P(x^\prime)
+\]</span>
+In our smoking scenario, we see that by adjusting for <em>tar</em> , we can observe the effect of <em>smoking</em> on <em>cancer</em>.</p>
+</div>
+<div id="conclusion" class="section level2">
+<h2>Conclusion</h2>
+<p>The above briefly outlines a core motivation for studying causal inference and causal stories. We summarise some of the underlying theory of causal inference and show practical methodology through the <em>frontdoor</em> and <em>backdoor</em> criterion for determining causal effects through entirely observational studies.</p>
+<p>There are notable aspects of causal inference we have omitted from this taster. The most gaping is the lack of an explanation for the powerful tool of counterfactuals. We have only presented binary examples here (aside from our motivating example); however, perhaps the most common and useful causal inference application is to continuous examples using regression with linear models. Ultimately, we decided this was beyond causal inference taster’s scope and were more deserving of their own articles. Again, for the interested reader, we recommend <span class="citation"><a href="#ref-pearl2016causal" role="doc-biblioref">Pearl, Glymour, and Jewell</a> (<a href="#ref-pearl2016causal" role="doc-biblioref">2016</a>)</span>, which adds links to many other resources.</p>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-pearl1995causal" class="csl-entry">
+Pearl, Judea. 1995. <span>“Causal Diagrams for Empirical Research.”</span> <em>Biometrika</em> 82 (4): 669–88.
+</div>
+<div id="ref-pearl2016causal" class="csl-entry">
+Pearl, Judea, Madelyn Glymour, and Nicholas P Jewell. 2016. <em>Causal Inference in Statistics: A Primer</em>. John Wiley &amp; Sons.
+</div>
+<div id="ref-simpson1951interpretation" class="csl-entry">
+Simpson, Edward H. 1951. <span>“The Interpretation of Interaction in Contingency Tables.”</span> <em>Journal of the Royal Statistical Society: Series B (Methodological)</em> 13 (2): 238–41.
+</div>
+</div>
+</div>
