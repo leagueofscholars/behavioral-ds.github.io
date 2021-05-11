@@ -155,4 +155,161 @@ and Morgan &amp;amp; Claypool.&lt;br>
 [3] Mishra, S., Rizoiu, M. A., &amp;amp; Xie, L. (2016, October). Feature
 driven and point process approaches for popularity prediction. In Proceedings of the 25th ACM International on Conference on Information and Knowledge Management (pp. 1069-1078). ACM.&lt;br>
 [4] Kong, Q., Rizoiu, M. A., &amp;amp; Xie, L. (2019). Modeling Information
+Cascades with Self-exciting Processes via Generalized Epidemic Models. arXiv preprint arXiv:1910.05451.&lt;/p></description></item><item><title>evently: simulation, fitting of Hawkes processes</title><link>https://www.behavioral-ds.ml/theme1_content/evently/</link><pubDate>Tue, 12 Nov 2019 00:00:00 +0000</pubDate><guid>https://www.behavioral-ds.ml/theme1_content/evently/</guid><description>&lt;h2 id="introduction">Introduction&lt;/h2>
+&lt;p>This package is designed for simulating and fitting the Hawkes processes
+and the HawkesN processes with several options of kernel functions.
+Currently, it assumes univariate processes without background event
+rates. Prior knowledge about the models is assumed in the following
+tutorial and please refer to [1] and [2] for details about the
+models.&lt;/p>
+&lt;pre>&lt;code class="language-r">library(evently)
+&lt;/code>&lt;/pre>
+&lt;h2 id="installation-and-dependencies">Installation and dependencies&lt;/h2>
+&lt;p>Several dependencies
+(&lt;a href="https://cran.r-project.org/web/packages/poweRlaw/poweRlaw.pdf">poweRlaw&lt;/a>,
+&lt;a href="https://ampl.com/">AMPL&lt;/a>,
+&lt;a href="https://www.coin-or.org/Ipopt/documentation/">Ipopt&lt;/a>) are required for
+running this package. These dependencies will be installed automatically
+by R or by following instructions upon package load.&lt;/p>
+&lt;p>Install the package by executing&lt;/p>
+&lt;pre>&lt;code class="language-r">if (!require('devtools')) install.packages('devtools')
+devtools::install_github('behavioral-ds/evently')
+&lt;/code>&lt;/pre>
+&lt;h2 id="simulating-cascades">Simulating cascades&lt;/h2>
+&lt;p>Let’s first simulate 100 event cascades of the &lt;strong>Hawkes process with an
+exponential kernel function&lt;/strong> (please refer to the &lt;a href="#available-models">Available
+models&lt;/a> for models and their abbreviations in the
+package) with a given parameter set, &lt;img src="https://latex.codecogs.com/png.latex?%5Ckappa%20%3D%200.9%2C%20%5Ctheta%20%3D%201" alt="\\kappa = 0.9, \\theta= 1" title="\kappa = 0.9, \theta = 1">. For each simulation, we only simulate
+until 5 seconds. The resulted cascades are placed in a single &lt;code>list&lt;/code>
+where each cascade is a &lt;code>data.frame&lt;/code>.&lt;/p>
+&lt;pre>&lt;code class="language-r">set.seed(4)
+sim_no &amp;lt;- 100
+data &amp;lt;- generate_hawkes_event_series(par = c(K = 0.9, theta = 1), model_type = 'EXP', Tmax = 5, sim_no = sim_no)
+# alternatively, `generate_hawkes_event_series` also accepts a model class object
+# e.g.
+# model &amp;lt;- new_hawkes_model(par = c(K = 0.9, theta = 1), model_type = 'EXP')
+# generate_hawkes_event_series(model = model, Tmax = 5, sim_no = sim_no)
+head(data[[1]])
+&lt;/code>&lt;/pre>
+&lt;pre>&lt;code>## magnitude time
+## 1 1 0.0000000
+## 2 1 0.5941959
+## 3 1 1.4712411
+## 4 1 1.6105430
+## 5 1 1.7855535
+## 6 1 1.8883869
+&lt;/code>&lt;/pre>
+&lt;p>A simulated process is represented by a &lt;code>data.frame&lt;/code> where each row is
+an event. &lt;code>time&lt;/code> indicates the event happening time, while &lt;code>magnitude&lt;/code>
+is the event mark information which is always 1 if &lt;code>model_type&lt;/code> is an
+unmarked model. In the context of retweet diffusion cascades, the first
+row is the original tweet and all following events are its retweets.
+&lt;code>time&lt;/code> records the relative time (in second) of each retweet to the
+original tweet and &lt;code>magnitude&lt;/code> is the follows’ count of the user who
+retweeted.&lt;/p>
+&lt;h2 id="fitting-a-model-on-data">Fitting a model on data&lt;/h2>
+&lt;p>We can then fit on the cascades simulated in the previous section. After
+providing the &lt;code>data&lt;/code> and &lt;code>model_type&lt;/code>, the fitting procedure will spawn
+10 AMPL optimization procedures with different parameter
+inistializations due to the non-convexity of some likelihood functions.
+Among the 10 fitted model, the one giving the best likelihood value will
+be returned. To make the fitting procedure faster, we can specify the
+number of &lt;code>cores&lt;/code> to be used for fitting them in
+parallel.&lt;/p>
+&lt;pre>&lt;code class="language-r">fitted_model &amp;lt;- fit_series(data, model_type = 'EXP', observation_time = 5, cores = 10)
+fitted_model
+&lt;/code>&lt;/pre>
+&lt;pre>&lt;code>## Model: EXP
+## No. of cascades: 100
+## init_par
+## K 7.92e+00; theta 1.32e+00
+## par
+## K 8.51e-01; theta 1.06e+00
+## Neg Log Likelihood: 285.488
+## lower_bound
+## K 1.00e-100; theta 1.00e-100
+## upper_bound
+## K 1.00e+04; theta 3.00e+02
+## convergence: 0
+&lt;/code>&lt;/pre>
+&lt;h2 id="available-models">Available models&lt;/h2>
+&lt;p>There are 8 models available so far in this
+package:&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th align="center">Model&lt;/th>
+&lt;th align="center">Abbreviation (model_type)&lt;/th>
+&lt;th align="center">Intensity Function&lt;/th>
+&lt;th align="center">Parameters&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td align="center">Hawkes process with an exponential kernel function&lt;/td>
+&lt;td align="center">EXP&lt;/td>
+&lt;td align="center">&lt;img src="https://latex.codecogs.com/png.latex?%5Ckappa%5Csum_%7Bt_i%20%3C%20t%7D%20%5Ctheta%20e%5E%7B-%5Ctheta%20%28t-t_i%29%7D" alt="\\kappa\\sum\_{t\_i \&lt; t} \\theta e^{-\\theta (t-t\_i)}" title="\kappa\sum_{t_i &amp;lt; t} \theta e^{-\theta (t-t_i)}">&lt;/td>
+&lt;td align="center">K,theta&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td align="center">Hawkes process with a power-law kernel function&lt;/td>
+&lt;td align="center">PL&lt;/td>
+&lt;td align="center">&lt;img src="https://latex.codecogs.com/png.latex?%5Ckappa%5Csum_%7Bt_i%20%3C%20t%7D%20%28t-t_i%20%2B%20c%29%5E%7B-%281%2B%5Ctheta%29%7D" alt="\\kappa\\sum\_{t\_i \&lt; t} (t-t\_i + c)^{-(1+\\theta)}" title="\kappa\sum_{t_i &amp;lt; t} (t-t_i + c)^{-(1+\theta)}">&lt;/td>
+&lt;td align="center">K,c,theta&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td align="center">HawkesN process with an exponential kernel function&lt;/td>
+&lt;td align="center">EXPN&lt;/td>
+&lt;td align="center">&lt;img src="https://latex.codecogs.com/png.latex?%5Ckappa%5Cfrac%7BN-N_t%7D%7BN%7D%5Csum_%7Bt_i%20%3C%20t%7D%20%5Ctheta%20e%5E%7B-%5Ctheta%20%28t-t_i%29%7D" alt="\\kappa\\frac{N-N\_t}{N}\\sum\_{t\_i \&lt; t} \\theta e^{-\\theta (t-t\_i)}" title="\kappa\frac{N-N_t}{N}\sum_{t_i &amp;lt; t} \theta e^{-\theta (t-t_i)}">&lt;/td>
+&lt;td align="center">K,theta,N&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td align="center">HawkesN process with a power-law kernel function&lt;/td>
+&lt;td align="center">PLN&lt;/td>
+&lt;td align="center">&lt;img src="https://latex.codecogs.com/png.latex?%5Ckappa%5Cfrac%7BN-N_t%7D%7BN%7D%5Csum_%7Bt_i%20%3C%20t%7D%20%28t-t_i%20%2B%20c%29%5E%7B-%281%2B%5Ctheta%29%7D" alt="\\kappa\\frac{N-N\_t}{N}\\sum\_{t\_i \&lt; t} (t-t\_i + c)^{-(1+\\theta)}" title="\kappa\frac{N-N_t}{N}\sum_{t_i &amp;lt; t} (t-t_i + c)^{-(1+\theta)}">&lt;/td>
+&lt;td align="center">K,c,theta,N&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td align="center">Marked Hawkes process with an exponential kernel function&lt;/td>
+&lt;td align="center">mEXP&lt;/td>
+&lt;td align="center">&lt;img src="https://latex.codecogs.com/png.latex?%5Ckappa%5Csum_%7Bt_i%20%3C%20t%7D%20%5Ctheta%20m_i%5E%7B%5Cbeta%7D%20e%5E%7B-%5Ctheta%20%28t-t_i%29%7D" alt="\\kappa\\sum\_{t\_i \&lt; t} \\theta m\_i^{\\beta} e^{-\\theta (t-t\_i)}" title="\kappa\sum_{t_i &amp;lt; t} \theta m_i^{\beta} e^{-\theta (t-t_i)}">&lt;/td>
+&lt;td align="center">K,beta,theta&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td align="center">Marked Hawkes process with a power-law kernel function&lt;/td>
+&lt;td align="center">mPL&lt;/td>
+&lt;td align="center">&lt;img src="https://latex.codecogs.com/png.latex?%5Ckappa%5Csum_%7Bt_i%20%3C%20t%7D%20m_i%5E%7B%5Cbeta%7D%20%28t-t_i%20%2B%20c%29%5E%7B-%281%2B%5Ctheta%29%7D" alt="\\kappa\\sum\_{t\_i \&lt; t} m\_i^{\\beta} (t-t\_i + c)^{-(1+\\theta)}" title="\kappa\sum_{t_i &amp;lt; t} m_i^{\beta} (t-t_i + c)^{-(1+\theta)}">&lt;/td>
+&lt;td align="center">K,beta,c,theta&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td align="center">Marked HawkesN process with an exponential kernel function&lt;/td>
+&lt;td align="center">mEXPN&lt;/td>
+&lt;td align="center">&lt;img src="https://latex.codecogs.com/png.latex?%5Ckappa%5Cfrac%7BN-N_t%7D%7BN%7D%5Csum_%7Bt_i%20%3C%20t%7D%20%5Ctheta%20m_i%5E%7B%5Cbeta%7D%20e%5E%7B-%5Ctheta%20%28t-t_i%29%7D" alt="\\kappa\\frac{N-N\_t}{N}\\sum\_{t\_i \&lt; t} \\theta m\_i^{\\beta} e^{-\\theta (t-t\_i)}" title="\kappa\frac{N-N_t}{N}\sum_{t_i &amp;lt; t} \theta m_i^{\beta} e^{-\theta (t-t_i)}">&lt;/td>
+&lt;td align="center">K,beta,theta,N&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td align="center">Marked HawkesN process with a power-law kernel function&lt;/td>
+&lt;td align="center">mPLN&lt;/td>
+&lt;td align="center">&lt;img src="https://latex.codecogs.com/png.latex?%5Ckappa%5Cfrac%7BN-N_t%7D%7BN%7D%5Csum_%7Bt_i%20%3C%20t%7D%20m_i%5E%7B%5Cbeta%7D%28t-t_i%20%2B%20c%29%5E%7B-%281%2B%5Ctheta%29%7D" alt="\\kappa\\frac{N-N\_t}{N}\\sum\_{t\_i \&lt; t} m\_i^{\\beta}(t-t\_i + c)^{-(1+\\theta)}" title="\kappa\frac{N-N_t}{N}\sum_{t_i &amp;lt; t} m_i^{\beta}(t-t_i + c)^{-(1+\theta)}">&lt;/td>
+&lt;td align="center">K,beta,c,theta,N&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h2 id="acknowledgement">Acknowledgement&lt;/h2>
+&lt;p>The development of this package is supported by the Green Policy grant
+from the National Security College, Crawford School, ANU.&lt;/p>
+&lt;h2 id="license">License&lt;/h2>
+&lt;p>Both dataset and code are distributed under the &lt;a href="https://creativecommons.org/licenses/by-nc/4.0/">Creative Commons
+Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)
+license&lt;/a>. If you
+require a different license, please contact us at &lt;a href="mailto:Quyu.Kong@anu.edu.au">Quyu.Kong@anu.edu.au&lt;/a>
+or &lt;a href="mailto:Marian-Andrei@rizoiu.eu">Marian-Andrei@rizoiu.eu&lt;/a>.&lt;/p>
+&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>[1] Rizoiu, M. A., Lee, Y., Mishra, S., &amp;amp; Xie, L. (2017, December). Hawkes processes for events in social media. In Frontiers of Multimedia Research (pp. 191-218). Association for Computing Machinery
+and Morgan &amp;amp; Claypool.&lt;br>
+[2] Rizoiu, M. A., Mishra, S., Kong, Q., Carman, M., &amp;amp; Xie, L.
+(2018, April). SIR-Hawkes: Linking epidemic models and Hawkes processes to model diffusions in finite populations. In Proceedings of the 2018 World Wide Web Conference (pp. 419-428). International World Wide Web Conferences Steering Committee.&lt;br>
+[3] Mishra, S., Rizoiu, M. A., &amp;amp; Xie, L. (2016, October). Feature
+driven and point process approaches for popularity prediction. In Proceedings of the 25th ACM International on Conference on Information and Knowledge Management (pp. 1069-1078). ACM.&lt;br>
+[4] Kong, Q., Rizoiu, M. A., &amp;amp; Xie, L. (2019). Modeling Information
 Cascades with Self-exciting Processes via Generalized Epidemic Models. arXiv preprint arXiv:1910.05451.&lt;/p></description></item></channel></rss>

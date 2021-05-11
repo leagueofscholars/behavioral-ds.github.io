@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Testing | Behavioral Data Science</title><link>https://www.behavioral-ds.ml/theme2_content/</link><atom:link href="https://www.behavioral-ds.ml/theme2_content/index.xml" rel="self" type="application/rss+xml"/><description>Testing</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>2021</copyright><lastBuildDate>Tue, 09 Mar 2021 00:00:00 +0000</lastBuildDate><image><url>https://www.behavioral-ds.ml/img/logo.png</url><title>Testing</title><link>https://www.behavioral-ds.ml/theme2_content/</link></image><item><title>birdspotter: A toolkit for analyzing and labelling Twitter users</title><link>https://www.behavioral-ds.ml/theme2_content/birdspotter/</link><pubDate>Tue, 09 Mar 2021 00:00:00 +0000</pubDate><guid>https://www.behavioral-ds.ml/theme2_content/birdspotter/</guid><description>&lt;img src="https://www.behavioral-ds.ml/img/birdspotter_logo.png" alt="Birdspotter Logo" width="200"/>
+&lt;!-- Motivation -->
+&lt;!-- Framing: Problem -> Solution -->
+&lt;!-- Context -->
+&lt;p>Social media platforms, although relatively new, host millions of users and billions of interactions daily. As tied as we are to these platforms, they profoundly impact our social institutions through phenomena such as disinformation, political polarization, and social bots.&lt;/p>
+&lt;!-- Problem -->
+&lt;p>Researchers are increasingly interested in trying to form an understanding of phenomena and their implications. Social scientists, political scientists, and data practitioners alike curate expansive datasets to combat these potentially adverse effects on our society; however, they lack the appropriate tooling.&lt;/p>
+&lt;!-- Solution -->
+&lt;p>&lt;code>birdspotter&lt;/code> is an &lt;strong>easy-to-use&lt;/strong> tool that models Twitter users&amp;rsquo; attributes and labels them. It comes prepackaged with a &lt;strong>state-of-the-art bot detector&lt;/strong> and an &lt;strong>influence quantification&lt;/strong> system based on tweet dynamics. &lt;code>birdspotter&lt;/code> features a generalized user labeler, which can be retrained easily with the engineered features to address a variety of use cases. Also, &lt;a href="http://birdspotter.ml/">birdspotter.ml&lt;/a> is a web application that can be utilized to explore datasets and derive a narrative around a dataset.&lt;/p>
+&lt;p>In this post, I'll showcase the basic usage of &lt;code>birdspotter&lt;/code> and &lt;a href="http://birdspotter.ml/">birdspotter.ml&lt;/a>.&lt;/p>
+&lt;h2 id="installation">Installation&lt;/h2>
+&lt;p>The package can be installed in the canonical python way:&lt;/p>
+&lt;pre>&lt;code class="language-{bash}">pip install birdspotter
+&lt;/code>&lt;/pre>
+&lt;h2 id="getting-a-dataset">Getting a dataset&lt;/h2>
+&lt;p>The Twitter T&amp;amp;Cs restrict the sharing of tweet data directly online; however, they do allow the sharing of tweet-ids, which can be converted to full tweet data through a process called &lt;em>hydration&lt;/em>. Tools like &lt;a href="https://github.com/DocNow/twarc">twarc&lt;/a> can be used to hydrate a Tweet ID dataset. The resulting dataset will be in &lt;code>jsonl&lt;/code> (line delimited &lt;code>json&lt;/code>) format, which &lt;code>birdspotter&lt;/code> accepts directly.&lt;/p>
+&lt;p>In the below examples, we use two datasets; a collection of COVID-19 related tweets from January 31st, 2020 [1], and a collection of tweets about politicians on Twitter [2].&lt;/p>
+&lt;p>The politicians&amp;rsquo; dataset was acquired through the following process (and a similar process was taken for the COVID-19 dataset):&lt;/p>
+&lt;pre>&lt;code class="language-{bash}">pip install twarc
+wget http://twitterpoliticians.org./downloads/base/all_tweet_ids.csv
+twarc hydrate all_tweet_ids.csv &amp;gt; tweets.jsonl
+&lt;/code>&lt;/pre>
+&lt;h2 id="basic-usage">Basic Usage&lt;/h2>
+&lt;p>The code below imports the main class &lt;code>Birdspotter&lt;/code>, extracts the tweets from their standard format, labels the users with the default bot detector and influence, and reformats the retweet cascades into a tidier format.&lt;/p>
+&lt;pre>&lt;code class="language-{python}">## Import birdspotter
+from birdspotter import BirdSpotter
+## Extracts the tweets from the raw jsonl [https://github.com/echen102/COVID-19-TweetIDs]
+bs = BirdSpotter('covid19.jsonl')
+## Uses the default bot labeller and influence quantification systems
+bs.getLabeledUsers()
+## Formats the retweet cascades, such that expected retweet structures can extracted
+bs.getCascadesDataFrame()
+## Access the botness labels and influence scores
+bs.featureDataframe[['botness', 'influence']]
+&lt;/code>&lt;/pre>
+&lt;p>From here, the dataset is readily profile-able:&lt;/p>
+&lt;pre>&lt;code class="language-{python}">botness_dist = sns.histplot(data=bs.featureDataframe, x=&amp;quot;botness&amp;quot;)
+influence_eccdf = sns.ecdfplot(data=bs.featureDataframe, x=&amp;quot;influence&amp;quot;, complementary=True).set(xscale=&amp;quot;log&amp;quot;, yscale=&amp;quot;log&amp;quot;)
+&lt;/code>&lt;/pre>
+&lt;p>&lt;img src="https://www.behavioral-ds.ml/img/covid_profile.png" alt="COVID Dataset Profile: (Left) The distribution of bot scores of users; (Right) The ECCDF of influence scores of users, showing a long-tailed (rich-gets-richer) paradigm">&lt;/p>
+&lt;h2 id="the-visualizer">The visualizer&lt;/h2>
+&lt;p>An alternative way to profile a dataset is the use &lt;a href="http://birdspotter.ml">&lt;code>birdspotter.ml&lt;/code>&lt;/a>, which facilitates dataset exploration and narrative construction.&lt;/p>
+&lt;p>&lt;img src="https://www.behavioral-ds.ml/img/auspol_teaser.png" alt="birdspotter.ml visualizer: The various components shown include the scatterplot panel (Left), the user information panel (Top Right), and the retweet cascades panel (Bottom Right)">&lt;/p>
+&lt;p>The visualizer features a scatterplot (on the left) of influence and botness for a sample of users and the population density. The colors represent the hashtags (a proxy for the topic) that the users most tweet about in the dataset. Users within the scatterplot are hoverable and selectable, and their information populates in the components on the right.&lt;/p>
+&lt;p>The top right component shows information and metrics about the selected user and links the user's profile.&lt;/p>
+&lt;p>The bottom right component shows the retweet cascades where a user has participated and highlights their participation. The points represent the follower counts (social capital) of users and their retweets/tweets&amp;rsquo; timing. The points are also hoverable and selectable.&lt;/p>
+&lt;h2 id="customising-the-labeller">Customising the labeller&lt;/h2>
+&lt;p>By default, the labeler is trained as a bot detection system, comparable to the state-of-the-art &lt;a href="https://botometer.osome.iu.edu/">&lt;code>botometer&lt;/code>&lt;/a>. Notable, &lt;code>birdspotter&lt;/code> is provided in an offline package and can be applied at scale, while &lt;code>botometer&lt;/code> is accessible only via an online API, which is often prohibitively rate-limited.&lt;/p>
+&lt;p>&lt;code>birdspotter&lt;/code> is a versatile tool and can be utilized by practitioners for a variety of use-cases. For example, we could train the labeler to identify political leaning. This process is a bit involved, so we summarise it below;&lt;/p>
+&lt;ol>
+&lt;li>We hydrate some tweets from the Twitter Parlimentarian Database&lt;/li>
+&lt;li>We filter the tweets to include only &lt;strong>Australian Politicians&lt;/strong>.&lt;/li>
+&lt;li>We &lt;strong>label right-wing partied politicians positively&lt;/strong>, and others negatively (with &lt;code>bs_pol.getBotAnnotationTemplate&lt;/code> for example)&lt;/li>
+&lt;li>We &lt;strong>retrain &lt;code>birdspotter&lt;/code>&lt;/strong> with these new labels and label all users (i.e., including users the politicians retweeted) using the new model&lt;/li>
+&lt;/ol>
+&lt;!-- ```{python class.source = 'fold-hide'} -->
+&lt;!-- # This is the guts of the code; it does what is described above -->
+&lt;!-- politicians = pd.read_csv('./full_member_info.csv', encoding='utf16') -->
+&lt;!-- politicians_aus = politicians[politicians['country'] == 'Australia'] -->
+&lt;!-- politicians_aus_available = politicians_aus[~politicians_aus['uid'].isnull()] -->
+&lt;!-- def classify_party(party_id): -->
+&lt;!-- mapping = { -->
+&lt;!-- 464 : 1, # Liberal Party of Australia -->
+&lt;!-- 465 : -1, # Australian Labor Party -->
+&lt;!-- 467 : 1, # The Nationals -->
+&lt;!-- 468 : 0, # Nick Xenophon Team -->
+&lt;!-- 469 : -1, # Australian Greens -->
+&lt;!-- 471 : np.nan, -->
+&lt;!-- 475 : 1, # Katter's Australian Party -->
+&lt;!-- } -->
+&lt;!-- return mapping[party_id] -->
+&lt;!-- politicians_aus_available['isright'] = politicians_aus_available['party_id'].apply(classify_party) -->
+&lt;!-- politicians_aus_available['user_id'] = politicians_aus_available['uid'].astype(int).astype(str) -->
+&lt;!-- politicians_aus_available = politicians_aus_available.set_index('user_id') -->
+&lt;!-- with open('./tweets.jsonl', 'r') as rf, open('./aus_tweets.jsonl', 'w') as wf: -->
+&lt;!-- for line in tqdm(rf): -->
+&lt;!-- try: -->
+&lt;!-- j = json.loads(line) -->
+&lt;!-- if j['user']['id_str'] in politicians_aus_available['uid'].astype(int).astype(str).values: -->
+&lt;!-- wf.write(json.dumps(j) + '\n') -->
+&lt;!-- except Exception as e: -->
+&lt;!-- print(j) -->
+&lt;!-- print(e) -->
+&lt;!-- break -->
+&lt;!-- bs = BirdSpotter('aus_tweets.jsonl') -->
+&lt;!-- bs.getLabeledUsers() -->
+&lt;!-- bs.getCascadesDataFrame() -->
+&lt;!-- with open('bs_aus_module.pk', 'wb') as wf: -->
+&lt;!-- pk.dump(bs,wf, protocol=4) -->
+&lt;!-- bs.featureDataframe['isright'] = politicians_aus_available['isright'] -->
+&lt;!-- ground_truth = bs.featureDataframe[~bs.featureDataframe['isright'].isnull()][['isright']] -->
+&lt;!-- ground_truth['isbot'] = ground_truth['isright'] == 1 -->
+&lt;!-- ground_truth = ground_truth[~ground_truth.index.duplicated()] -->
+&lt;!-- data = bs.featureDataframe.copy()[bs.featureDataframe.index.isin(ground_truth.index)] -->
+&lt;!-- data = data[~data.index.duplicated()] -->
+&lt;!-- del data['isright'] -->
+&lt;!-- del data['botness'] -->
+&lt;!-- del data['influence'] -->
+&lt;!-- del data['cascade_membership'] -->
+&lt;!-- data = data[list(data.columns[data.dtypes != 'object'])] -->
+&lt;!-- data['isbot'] = ground_truth['isbot'].loc[data.index] -->
+&lt;!-- with open('pol_training_data.pickle', 'wb') as wf: -->
+&lt;!-- pk.dump(data,wf, protocol=4) -->
+&lt;!-- from birdspotter import BirdSpotter -->
+&lt;!-- import pickle as pk -->
+&lt;!-- # bs_pol = BirdSpotter('aus_tweets.jsonl') -->
+&lt;!-- with open('bs_aus_module.pk', 'rb') as rf: -->
+&lt;!-- bs_pol = pk.load(rf) -->
+&lt;!-- print("Loaded module") -->
+&lt;!-- bs_pol.trainClassifierModel('pol_training_data.pickle') -->
+&lt;!-- print("finished training") -->
+&lt;!-- del bs_pol.featureDataframe['botness'] -->
+&lt;!-- print("removed botness column") -->
+&lt;!-- bs_pol.getBotness() -->
+&lt;!-- bs_pol.getLabeledUsers() -->
+&lt;!-- print("got labels") -->
+&lt;!-- with open('pol_booster.pickle', 'wb') as wf: -->
+&lt;!-- pk.dump(bs_pol.booster, wf, protocol=4) -->
+&lt;!-- print("pickled booster") -->
+&lt;!-- with open('aus_pol_bs_module.pickle', 'wb') as wf: -->
+&lt;!-- pk.dump(bs_pol, wf, protocol=4) -->
+&lt;!-- with open('pol_booster.pickle', 'wb') as wf: -->
+&lt;!-- pk.dump(bs.booster, wf, protocol=4) -->
+&lt;!-- ``` -->
+&lt;!-- This is context: -->
+&lt;!-- I want to start with the opportunity namely the analysis of large amounts of population data tranparently showing the interactions and discourse of people, allowing practictioners to model important applications in society. I also want to highlight the research issues which require investigation, namely social bots, misinformation, polarization, etc. -->
+&lt;!-- This is content -->
+&lt;!-- I then want to move into the problem, namely that there is a lack of tooling to analyse these huge swaths of data -->
+&lt;pre>&lt;code class="language-{python}">bs_pol = BirdSpotter('aus_tweets.jsonl')
+bs_pol.trainClassifierModel('pol_training_data.pickle')
+bs_pol.getLabeledUsers()
+&lt;/code>&lt;/pre>
+&lt;p>On this limited of Australian politicians dataset, a 10-fold CV of &lt;code>birdspotter&lt;/code> garners an average AUC (Area under ROC) of 0.986.&lt;/p>
+&lt;h2 id="conclusion">Conclusion&lt;/h2>
+&lt;p>&lt;code>birdspotter&lt;/code> aims to democratize social analyzes that were once the domain of machine learning experts, generating insights and understanding of online phenomena and mitigating their potentially adverse effects on our society. This post shows how &lt;code>birdspotter&lt;/code> can be used in both a simple and advanced way to recover such insights.&lt;/p>
+&lt;h2 id="references">References&lt;/h2>
+&lt;p>[1] Chen, E. et al. 2020. Tracking social media discourse about the covid-19 pandemic: Development of a public coronavirus twitter data set. JMIR Public Health and Surveillance. 6, 2 (2020), e19273.&lt;/p>
+&lt;p>[2] Vliet, L. van et al. 2020. The twitter parliamentarian database: Analyzing twitter politics across 26 countries. PloS one. 15, 9 (2020), e0237073.&lt;/p></description></item><item><title>User Analysis on reshare cascades about COVID-19</title><link>https://www.behavioral-ds.ml/theme2_content/user_analysis/</link><pubDate>Thu, 03 Dec 2020 00:00:00 +0000</pubDate><guid>https://www.behavioral-ds.ml/theme2_content/user_analysis/</guid><description>&lt;p>We demonstrate in this blog post a tutorial on applying the tools for analyzing online information diffusions about Twitter users, &lt;a href="https://github.com/behavioral-ds/BirdSpotter">&lt;code>birdspotter&lt;/code>&lt;/a> and &lt;a href="https://github.com/behavioral-ds/evently">&lt;code>evently&lt;/code>&lt;/a>.&lt;/p>
+&lt;h2 id="dataset">Dataset&lt;/h2>
+&lt;p>In this tutorial, we apply two tools for analyzing Twitter users, on a COVID-19 retweet dataset. The dataset
+is curated by Chen, et al. One can obtain a copy of the tweet IDs from
+their &lt;a href="https://github.com/echen102/COVID-19-TweetIDs">project&lt;/a>. We
+only use the 31st of Janury sample of the whole dataset for
+demonstration purpose. The tweets can be recovered by &lt;code>hydration&lt;/code>
+from their IDs. We note that some tweets might have been deleted and in
+the end we manage to get 69.2% (1,489,877) of the original tweets.&lt;/p>
+&lt;h2 id="tools">Tools&lt;/h2>
+&lt;p>While &lt;code>BirdSpotter&lt;/code> captures the social influence and botness of Twitter
+users, &lt;code>evently&lt;/code> specifically models the temporal dynamics of online
+information diffusion. We leverage information provided by the tools to
+study the users in the COVID19 dataset.&lt;/p>
+&lt;pre>&lt;code class="language-r">library(evently)
+library(reticulate)
+birdspotter &amp;lt;- import('birdspotter')
+&lt;/code>&lt;/pre>
+&lt;h2 id="preprocessing-tweets">Preprocessing tweets&lt;/h2>
+&lt;p>At this step, we seek to extract diffusion cascades from the &lt;code>COVID-19&lt;/code>
+dataset for analyzing user influence and botness. A diffusion cascade
+consist of an initial tweet posted by a Twitter user and followed then
+by a sereis of retweets. A function provided by &lt;code>evently&lt;/code> allows one to
+obtain cascades from JSON formatted raw tweets. On the other hand, we
+initialize a &lt;code>BirdSpotter&lt;/code> instance and compute the influence and
+botness scores for all users in the
+dataset.&lt;/p>
+&lt;pre>&lt;code class="language-r">cascades &amp;lt;- parse_raw_tweets_to_cascades('corona_2020_01_31.jsonl', keep_user = T, keep_absolute_time = T)
+bs &amp;lt;- birdspotter$BirdSpotter('corona_2020_01_31.jsonl')
+labeled_users &amp;lt;- bs$getLabeledUsers()[, c('user_id', 'botness', 'influence')]
+&lt;/code>&lt;/pre>
+&lt;p>As we cannot publish &lt;code>corona_2020_01_31.jsonl&lt;/code> due to Twitter TOC, we
+have stored the results and load them below&lt;/p>
+&lt;pre>&lt;code class="language-r">load('corona_2020_01_31.rda')
+labeled_users &amp;lt;- read.csv('corona_31_botness_influence.csv', stringsAsFactors = F,
+colClasses=c(&amp;quot;character&amp;quot;,rep(&amp;quot;numeric&amp;quot;,3)))
+&lt;/code>&lt;/pre>
+&lt;p>We note that all user IDs have been encrypted. After obtaining the
+results, let’s first conduct some simple measurements on users and
+cascades.&lt;/p>
+&lt;pre>&lt;code class="language-r">library(ggplot2)
+# check the density of these two values
+mean_bot &amp;lt;- mean(labeled_users$botness, na.rm = T)
+ggplot(labeled_users, aes(botness)) +
+stat_density(geom = 'line') +
+geom_vline(xintercept = mean_bot, linetype=2, color = 'red') +
+geom_text(data=data.frame(), aes(x = mean_bot, y = 2, label= sprintf('mean: %s', round(mean_bot, 2))), color= 'red', angle=90, vjust=-0.11)
+&lt;/code>&lt;/pre>
+&lt;p>&lt;img src="README_files/figure-gfm/unnamed-chunk-4-1.png" alt="">&lt;!-- -->&lt;/p>
+&lt;pre>&lt;code class="language-r">mean_inf &amp;lt;- mean(labeled_users$influence)
+ggplot(labeled_users) +
+stat_ecdf(aes(influence, 1 - ..y..)) +
+scale_x_log10() +
+scale_y_log10() +
+ylab('CCDF') +
+geom_vline(xintercept = mean_inf, linetype=2, color = 'red') +geom_text(data=data.frame(), aes(x = mean_inf, y = 1e-3, label= sprintf('mean: %s', round(mean_inf, 2))), color= 'red', angle=90, vjust=-0.11)
+&lt;/code>&lt;/pre>
+&lt;pre>&lt;code>## Warning: Transformation introduced infinite values in continuous y-axis
+&lt;/code>&lt;/pre>
+&lt;p>&lt;img src="README_files/figure-gfm/unnamed-chunk-4-2.png" alt="">&lt;!-- -->&lt;/p>
+&lt;pre>&lt;code class="language-r">mean_value &amp;lt;- mean(sapply(cascades, nrow))
+ggplot(data.frame(size = sapply(cascades, nrow))) +
+stat_ecdf(aes(size, 1 - ..y..)) +
+scale_x_log10() + scale_y_log10() +
+geom_vline(xintercept = mean_value, linetype=2, color = 'red') +
+geom_text(data=data.frame(), aes(x = mean_value, y = 1e-3, label= sprintf('mean: %s', round(mean_value, 2))), color= 'red', angle=90, vjust=-0.11) +
+xlab('cascade size') +
+ylab('CCDF')
+&lt;/code>&lt;/pre>
+&lt;pre>&lt;code>## Warning: Transformation introduced infinite values in continuous y-axis
+&lt;/code>&lt;/pre>
+&lt;p>&lt;img src="README_files/figure-gfm/unnamed-chunk-4-3.png" alt="">&lt;!-- -->&lt;/p>
+&lt;pre>&lt;code class="language-r">mean_value2 &amp;lt;- mean(sapply(cascades, function(c) c$time[nrow(c)]))
+ggplot(data.frame(time = sapply(cascades, function(c) c$time[nrow(c)]))) +
+stat_ecdf(aes(time, 1 - ..y..)) +
+scale_x_continuous(trans = 'log1p', breaks = c(0, 100, 10000, 1000000), labels = c('0', '1e2', '1e4', '1e6')) +
+scale_y_log10() +
+geom_vline(xintercept = mean_value2, linetype=2, color = 'red') +
+geom_text(data=data.frame(), aes(x = mean_value2, y = 1e-3, label= sprintf('mean: %s', round(mean_value2, 2))), color= 'red', angle=90, vjust=-0.11) +
+xlab('cascade final event time')+
+ylab('CCDF')
+&lt;/code>&lt;/pre>
+&lt;pre>&lt;code>## Warning: Transformation introduced infinite values in continuous y-axis
+&lt;/code>&lt;/pre>
+&lt;p>&lt;img src="README_files/figure-gfm/unnamed-chunk-4-4.png" alt="">&lt;!-- -->&lt;/p>
+&lt;pre>&lt;code class="language-r">mean_value &amp;lt;- mean(labeled_users$activity)
+ggplot(data.frame(size = labeled_users$activity)) +
+stat_ecdf(aes(size, 1 - ..y..)) +
+scale_x_log10() +
+scale_y_log10() +
+geom_vline(xintercept = mean_value, linetype=2, color = 'red') +
+geom_text(data=data.frame(), aes(x = mean_value, y = 1e-3, label= sprintf('mean: %s', round(mean_value, 2))), color= 'red', angle=90, vjust=-0.11) + xlab('user activity')+ ylab('CCDF')
+&lt;/code>&lt;/pre>
+&lt;pre>&lt;code>## Warning: Transformation introduced infinite values in continuous y-axis
+&lt;/code>&lt;/pre>
+&lt;p>&lt;img src="README_files/figure-gfm/unnamed-chunk-4-5.png" alt="">&lt;!-- -->&lt;/p>
+&lt;h2 id="retrain-the-bot-detector">Retrain the bot detector&lt;/h2>
+&lt;p>If one find the botness scores are not accurate, &lt;code>birdspotter&lt;/code> provides
+a relabeling tool and a retrain API to learn from the given relabeled
+dataset&lt;/p>
+&lt;pre>&lt;code class="language-r"># output a file for mannual labeling
+bs$getBotAnnotationTemplate('users_to_label.csv')
+# Once annotated the botness detector can be trained with
+bs$trainClassifierModel('users_to_label.csv')
+&lt;/code>&lt;/pre>
+&lt;h2 id="fit-user-posted-cacsades-with-evently">Fit user posted cacsades with &lt;code>evently&lt;/code>&lt;/h2>
+&lt;p>We model a group of cascades initiated by a particular user jointly and
+treat the fitted model as a characterization of the user. In this
+example, we select two users for comparison.&lt;/p>
+&lt;pre>&lt;code class="language-r">selected_users &amp;lt;- c('369686755237813560', '174266868073402929')
+# fit Hawkes process on cascades initiated by the selected users
+user_cascades_fitted &amp;lt;- lapply(selected_users, function(user) {
+# select cascades that are initiated by the &amp;quot;selected_user&amp;quot;
+selected_cascades &amp;lt;- Filter(function(cascade) cascade$user[[1]] == user, cascades)
+# obtain the observation times;
+# note 1580515200 is 1st Feb when the observation stopped
+# as we only observed until the end of 31st Jan
+times &amp;lt;- 1580515200 - sapply(selected_cascades, function(cas) cas$absolute_time[1])
+# fit a model on the selected cascades;
+fit_series(data = selected_cascades, model_type = 'mPL', observation_time = times, cores = 10)
+})
+user_cascades_SEISMIC_fitted &amp;lt;- lapply(selected_users, function(user) {
+selected_cascades &amp;lt;- Filter(function(cascade) cascade$user[[1]] == user, cascades)
+times &amp;lt;- 1580515200 - sapply(selected_cascades, function(cas) cas$absolute_time[1])
+fit_series(data = selected_cascades, model_type = 'SEISMIC',
+observation_time = times)
+})
+# check the fitted kernel functions
+plot_kernel_function(user_cascades_fitted) +
+scale_color_discrete(labels = c(&amp;quot;@BobOngHugots&amp;quot;, &amp;quot;@Jaefans_Global&amp;quot;))
+&lt;/code>&lt;/pre>
+&lt;p>&lt;img src="README_files/figure-gfm/unnamed-chunk-6-1.png" alt="">&lt;!-- -->&lt;/p>
+&lt;p>The plot shows the fitted kernel functions of these two users which
+reflect their time-decaying influence of attracting followers to reshare
+their posts. We then demonstrate how to simulate new cascades&lt;/p>
+&lt;pre>&lt;code class="language-r">set.seed(134841)
+user_magnitude &amp;lt;- Filter(function(cascade) cascade$user[[1]] == selected_users[[1]], cascades)[[1]]$magnitude[1]
+# simulate a new cascade from @BobOngHugots
+sim_cascade &amp;lt;- generate_series(user_cascades_fitted[[1]], M = user_magnitude)
+plot_event_series(cascade = sim_cascade, model = user_cascades_fitted[[1]])
+&lt;/code>&lt;/pre>
+&lt;p>&lt;img src="README_files/figure-gfm/unnamed-chunk-7-1.png" alt="">&lt;!-- -->&lt;/p>
+&lt;pre>&lt;code class="language-r">selected_cascade &amp;lt;- Filter(function(cascade) cascade$user[1] == selected_users[[1]], cascades)[[1]]
+selected_time &amp;lt;- user_cascades_fitted[[1]]$observation_time[1]
+# simulate a cascade with a &amp;quot;selected_cascade&amp;quot; from @BobOngHugots
+sim_cascade &amp;lt;- generate_series(user_cascades_fitted[[1]], M = user_magnitude,
+init_history = selected_cascade)
+sprintf('%s new events simulated after cascade',
+nrow(sim_cascade[[1]]) - nrow(selected_cascade))
+&lt;/code>&lt;/pre>
+&lt;pre>&lt;code>## [1] &amp;quot;25 new events simulated after cascade&amp;quot;
+&lt;/code>&lt;/pre>
+&lt;pre>&lt;code class="language-r">predict_final_popularity(user_cascades_fitted[[1]],
+selected_cascade, selected_time)
+&lt;/code>&lt;/pre>
+&lt;pre>&lt;code>## [1] 458.303
+&lt;/code>&lt;/pre>
+&lt;pre>&lt;code class="language-r"># predict with SEISMIC model, assume we have fitted the SEISMIC model
+predict_final_popularity(user_cascades_SEISMIC_fitted[[1]],
+selected_cascade, selected_time)
+&lt;/code>&lt;/pre>
+&lt;pre>&lt;code>## [1] 729.923
+&lt;/code>&lt;/pre>
+&lt;pre>&lt;code class="language-r">get_branching_factor(user_cascades_fitted[[1]])
+&lt;/code>&lt;/pre>
+&lt;pre>&lt;code>## [1] 0.7681281
+&lt;/code>&lt;/pre>
+&lt;pre>&lt;code class="language-r">get_viral_score(user_cascades_fitted[[1]])
+&lt;/code>&lt;/pre>
+&lt;pre>&lt;code>## [1] 7.407763
+&lt;/code>&lt;/pre>
+&lt;h2 id="visualize-users-in-a-latent-space">Visualize users in a latent space&lt;/h2>
+&lt;p>We show a visualization of top 300 users posted most tweets using the
+features returned by &lt;code>evently&lt;/code> along with the botness and influence
+scores from &lt;code>birdspotter&lt;/code>.&lt;/p>
+&lt;pre>&lt;code class="language-r"># obtain observation times here again
+times &amp;lt;- 1580515200 - sapply(cascades, function(cas) cas$absolute_time[1])
+# indicate the grouping of each cascade with the user who started the cascade
+names(cascades) &amp;lt;- sapply(cascades, function(cas) cas$user[1])
+# fit Hawkes processes on all cascades first
+fitted_corona &amp;lt;- group_fit_series(cascades, model_type = 'mPL', observation_time = times)
+&lt;/code>&lt;/pre>
+&lt;p>The fitting procedure takes quite long so we again load the pre-fitted
+models here&lt;/p>
+&lt;pre>&lt;code class="language-r">load('fitted_models.rda')
+# choose the top 300 users who started most cacsades
+selected_users &amp;lt;- labeled_users$user_id[labeled_users$user_id %in%
+names(sort(sapply(fitted_corona, length), decreasing = T)[seq(300)])]
+# gather the stats for these users
+user_influences &amp;lt;- labeled_users$influence[labeled_users$user_id %in% selected_users]
+user_botness &amp;lt;- labeled_users$botness[labeled_users$user_id %in% selected_users]
+fitted_corona_selected &amp;lt;- fitted_corona[selected_users]
+# get the features
+features &amp;lt;- generate_features(fitted_corona_selected)
+# compute distances between users using manhattan distance
+features &amp;lt;- features[, -1] # remove the user id column
+distances &amp;lt;- dist(features, method = 'manhattan')
+library(tsne)
+positions &amp;lt;- tsne(distances, k = 2)
+&lt;/code>&lt;/pre>
+&lt;pre>&lt;code>## sigma summary: Min. : 0.34223375605395 |1st Qu. : 0.457223801885988 |Median : 0.489891425900637 |Mean : 0.500483006369232 |3rd Qu. : 0.538593613780411 |Max. : 0.676779919259545 |
+## Epoch: Iteration #100 error is: 14.1961110881254
+## Epoch: Iteration #200 error is: 0.490122133064818
+## Epoch: Iteration #300 error is: 0.474257867010761
+## Epoch: Iteration #400 error is: 0.472067779170087
+## Epoch: Iteration #500 error is: 0.471844181155159
+## Epoch: Iteration #600 error is: 0.471798834134577
+## Epoch: Iteration #700 error is: 0.471783207059971
+## Epoch: Iteration #800 error is: 0.471632929621924
+## Epoch: Iteration #900 error is: 0.47087861882558
+## Epoch: Iteration #1000 error is: 0.470873765976829
+&lt;/code>&lt;/pre>
+&lt;pre>&lt;code class="language-r">df &amp;lt;- data.frame(x = positions[,1], y = positions[,2],
+influence = user_influences, botness = user_botness)
+df &amp;lt;- cbind(df, data.frame(botornot = ifelse(df$botness &amp;gt; 0.6, 'Bot', 'Not Bot')))
+ggplot(df, aes(x, y, color = influence, shape = botornot, size = botornot)) +
+geom_point() +
+scale_shape_manual(values = c(15,1)) +
+scale_size_manual(values = c(1.5, 1.2)) +
+scale_color_gradient(low = '#56B1F7', high = '#132B43', trans = 'log10') +
+theme_void() + labs(size = NULL, shape = NULL) +
+theme(legend.direction = 'horizontal', legend.position = c(0.8, 0.2),
+legend.key.size = unit(.3, 'cm'), legend.text = element_text(size = 6),
+legend.title = element_text(size = 6), legend.spacing = unit(.05, 'cm'))
+&lt;/code>&lt;/pre>
+&lt;p>&lt;img src="README_files/figure-gfm/unnamed-chunk-10-1.png" alt="">&lt;!-- -->&lt;/p></description></item></channel></rss>

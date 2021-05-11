@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Behavioral Data Science</title><link>https://www.behavioral-ds.ml/</link><atom:link href="https://www.behavioral-ds.ml/index.xml" rel="self" type="application/rss+xml"/><description>Behavioral Data Science</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>2021</copyright><lastBuildDate>Tue, 09 Mar 2021 00:00:00 +0000</lastBuildDate><image><url>https://www.behavioral-ds.ml/img/logo.png</url><title>Behavioral Data Science</title><link>https://www.behavioral-ds.ml/</link></image><item><title>birdspotter: A toolkit for analyzing and labelling Twitter users</title><link>https://www.behavioral-ds.ml/softwaretool/birdspotter/</link><pubDate>Tue, 09 Mar 2021 00:00:00 +0000</pubDate><guid>https://www.behavioral-ds.ml/softwaretool/birdspotter/</guid><description>&lt;img src="https://www.behavioral-ds.ml/img/birdspotter_logo.png" alt="Birdspotter Logo" width="200"/>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Behavioral Data Science</title><link>https://www.behavioral-ds.ml/</link><atom:link href="https://www.behavioral-ds.ml/index.xml" rel="self" type="application/rss+xml"/><description>Behavioral Data Science</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>2021</copyright><lastBuildDate>Tue, 09 Mar 2021 00:00:00 +0000</lastBuildDate><image><url>https://www.behavioral-ds.ml/img/logo.png</url><title>Behavioral Data Science</title><link>https://www.behavioral-ds.ml/</link></image><item><title>birdspotter: A toolkit for analyzing and labelling Twitter users</title><link>https://www.behavioral-ds.ml/theme2_content/birdspotter/</link><pubDate>Tue, 09 Mar 2021 00:00:00 +0000</pubDate><guid>https://www.behavioral-ds.ml/theme2_content/birdspotter/</guid><description>&lt;img src="https://www.behavioral-ds.ml/img/birdspotter_logo.png" alt="Birdspotter Logo" width="200"/>
 &lt;!-- Motivation -->
 &lt;!-- Framing: Problem -> Solution -->
 &lt;!-- Context -->
@@ -135,7 +135,7 @@ bs_pol.getLabeledUsers()
 &lt;p>&lt;code>birdspotter&lt;/code> aims to democratize social analyzes that were once the domain of machine learning experts, generating insights and understanding of online phenomena and mitigating their potentially adverse effects on our society. This post shows how &lt;code>birdspotter&lt;/code> can be used in both a simple and advanced way to recover such insights.&lt;/p>
 &lt;h2 id="references">References&lt;/h2>
 &lt;p>[1] Chen, E. et al. 2020. Tracking social media discourse about the covid-19 pandemic: Development of a public coronavirus twitter data set. JMIR Public Health and Surveillance. 6, 2 (2020), e19273.&lt;/p>
-&lt;p>[2] Vliet, L. van et al. 2020. The twitter parliamentarian database: Analyzing twitter politics across 26 countries. PloS one. 15, 9 (2020), e0237073.&lt;/p></description></item><item><title>Job Transitions in a Time of Automation and Labour Market Crises</title><link>https://www.behavioral-ds.ml/blogpost/job_transitions/</link><pubDate>Thu, 04 Feb 2021 00:00:00 +0000</pubDate><guid>https://www.behavioral-ds.ml/blogpost/job_transitions/</guid><description>&lt;p>&lt;strong>Summary:&lt;/strong>&lt;/p>
+&lt;p>[2] Vliet, L. van et al. 2020. The twitter parliamentarian database: Analyzing twitter politics across 26 countries. PloS one. 15, 9 (2020), e0237073.&lt;/p></description></item><item><title>Job Transitions in a Time of Automation and Labour Market Crises</title><link>https://www.behavioral-ds.ml/theme3_content/job_transitions/</link><pubDate>Thu, 04 Feb 2021 00:00:00 +0000</pubDate><guid>https://www.behavioral-ds.ml/theme3_content/job_transitions/</guid><description>&lt;p>&lt;strong>Summary:&lt;/strong>&lt;/p>
 &lt;ul>
 &lt;li>We build a machine learning-based &lt;em>Job Transitions Recommender System&lt;/em> that can accurately predict the probability of transitioning between occupations. We showcase the system for workers forced to transition between jobs.&lt;/li>
 &lt;li>The system is based on a novel data-driven method to measure the similarity between occupations based on their underlying skill profiles and real-time job ads.&lt;/li>
@@ -174,7 +174,7 @@ bs_pol.getLabeledUsers()
 &lt;p>While the future of work remains unclear, change is inevitable. New technologies, economic crises, and other factors will continue to shift labour demands causing workers to move between jobs. If labour transitions occur efficiently, significant productivity and equity benefits arise at all levels of the labour market; if transitions are slow, or fail, significant costs are borne to both the State and the individual. Therefore, it's in the interests of workers, firms, and governments that labour transitions are efficient and effective. The methods and systems we put forward here could significantly improve the achievement of these goals.&lt;/p>
 &lt;p>For the full technical details, please read the &lt;a href="https://arxiv.org/abs/2011.11801">pre-print&lt;/a>.&lt;/p>
 &lt;p>&lt;strong>Acknowledgements&lt;/strong>&lt;/p>
-&lt;p>We thank &lt;a href="https://www.linkedin.com/in/bleditaska?lipi=urn%3Ali%3Apage%3Ad_flagship3_pulse_read%3Bvr7rCfoNTVGsSR9hhmd%2FhQ%3D%3D">Bledi Taska&lt;/a> and &lt;a href="https://ca.linkedin.com/in/dmiskulin">Davor Miskulin&lt;/a> from Burning Glass Technologies for generously providing the job advertisements data for this research and for their valuable feedback. We also thank &lt;a href="https://fr.linkedin.com/in/broecke-stijn-36ba2048">Stijn Broecke&lt;/a> and other colleagues from the OECD for their ongoing input and guidance in the development of this work.&lt;/p></description></item><item><title>User Analysis on reshare cascades about COVID-19</title><link>https://www.behavioral-ds.ml/blogpost/user_analysis/</link><pubDate>Thu, 03 Dec 2020 00:00:00 +0000</pubDate><guid>https://www.behavioral-ds.ml/blogpost/user_analysis/</guid><description>&lt;p>We demonstrate in this blog post a tutorial on applying the tools for analyzing online information diffusions about Twitter users, &lt;a href="https://github.com/behavioral-ds/BirdSpotter">&lt;code>birdspotter&lt;/code>&lt;/a> and &lt;a href="https://github.com/behavioral-ds/evently">&lt;code>evently&lt;/code>&lt;/a>.&lt;/p>
+&lt;p>We thank &lt;a href="https://www.linkedin.com/in/bleditaska?lipi=urn%3Ali%3Apage%3Ad_flagship3_pulse_read%3Bvr7rCfoNTVGsSR9hhmd%2FhQ%3D%3D">Bledi Taska&lt;/a> and &lt;a href="https://ca.linkedin.com/in/dmiskulin">Davor Miskulin&lt;/a> from Burning Glass Technologies for generously providing the job advertisements data for this research and for their valuable feedback. We also thank &lt;a href="https://fr.linkedin.com/in/broecke-stijn-36ba2048">Stijn Broecke&lt;/a> and other colleagues from the OECD for their ongoing input and guidance in the development of this work.&lt;/p></description></item><item><title>User Analysis on reshare cascades about COVID-19</title><link>https://www.behavioral-ds.ml/theme2_content/user_analysis/</link><pubDate>Thu, 03 Dec 2020 00:00:00 +0000</pubDate><guid>https://www.behavioral-ds.ml/theme2_content/user_analysis/</guid><description>&lt;p>We demonstrate in this blog post a tutorial on applying the tools for analyzing online information diffusions about Twitter users, &lt;a href="https://github.com/behavioral-ds/BirdSpotter">&lt;code>birdspotter&lt;/code>&lt;/a> and &lt;a href="https://github.com/behavioral-ds/evently">&lt;code>evently&lt;/code>&lt;/a>.&lt;/p>
 &lt;h2 id="dataset">Dataset&lt;/h2>
 &lt;p>In this tutorial, we apply two tools for analyzing Twitter users, on a COVID-19 retweet dataset. The dataset
 is curated by Chen, et al. One can obtain a copy of the tweet IDs from
@@ -399,7 +399,7 @@ theme(legend.direction = 'horizontal', legend.position = c(0.8, 0.2),
 legend.key.size = unit(.3, 'cm'), legend.text = element_text(size = 6),
 legend.title = element_text(size = 6), legend.spacing = unit(.05, 'cm'))
 &lt;/code>&lt;/pre>
-&lt;p>&lt;img src="README_files/figure-gfm/unnamed-chunk-10-1.png" alt="">&lt;!-- -->&lt;/p></description></item><item><title>Causal Inference: A basic taster</title><link>https://www.behavioral-ds.ml/blogpost/causal_inference_taster/</link><pubDate>Thu, 12 Nov 2020 00:00:00 +0000</pubDate><guid>https://www.behavioral-ds.ml/blogpost/causal_inference_taster/</guid><description>
+&lt;p>&lt;img src="README_files/figure-gfm/unnamed-chunk-10-1.png" alt="">&lt;!-- -->&lt;/p></description></item><item><title>Causal Inference: A basic taster</title><link>https://www.behavioral-ds.ml/theme1_content/causal_inference_taster/</link><pubDate>Thu, 12 Nov 2020 00:00:00 +0000</pubDate><guid>https://www.behavioral-ds.ml/theme1_content/causal_inference_taster/</guid><description>
 &lt;script src="index_files/header-attrs/header-attrs.js">&lt;/script>
 &lt;link href="index_files/anchor-sections/anchor-sections.css" rel="stylesheet" />
 &lt;script src="index_files/anchor-sections/anchor-sections.js">&lt;/script>
@@ -698,7 +698,164 @@ and Morgan &amp;amp; Claypool.&lt;br>
 [3] Mishra, S., Rizoiu, M. A., &amp;amp; Xie, L. (2016, October). Feature
 driven and point process approaches for popularity prediction. In Proceedings of the 25th ACM International on Conference on Information and Knowledge Management (pp. 1069-1078). ACM.&lt;br>
 [4] Kong, Q., Rizoiu, M. A., &amp;amp; Xie, L. (2019). Modeling Information
-Cascades with Self-exciting Processes via Generalized Epidemic Models. arXiv preprint arXiv:1910.05451.&lt;/p></description></item><item><title>Blog</title><link>https://www.behavioral-ds.ml/post/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.behavioral-ds.ml/post/</guid><description/></item><item><title>Contact</title><link>https://www.behavioral-ds.ml/contact/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.behavioral-ds.ml/contact/</guid><description/></item><item><title>News</title><link>https://www.behavioral-ds.ml/news/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.behavioral-ds.ml/news/</guid><description/></item><item><title>People</title><link>https://www.behavioral-ds.ml/people/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.behavioral-ds.ml/people/</guid><description/></item><item><title>Publications</title><link>https://www.behavioral-ds.ml/publication/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.behavioral-ds.ml/publication/</guid><description>&lt;p>
+Cascades with Self-exciting Processes via Generalized Epidemic Models. arXiv preprint arXiv:1910.05451.&lt;/p></description></item><item><title>evently: simulation, fitting of Hawkes processes</title><link>https://www.behavioral-ds.ml/theme1_content/evently/</link><pubDate>Tue, 12 Nov 2019 00:00:00 +0000</pubDate><guid>https://www.behavioral-ds.ml/theme1_content/evently/</guid><description>&lt;h2 id="introduction">Introduction&lt;/h2>
+&lt;p>This package is designed for simulating and fitting the Hawkes processes
+and the HawkesN processes with several options of kernel functions.
+Currently, it assumes univariate processes without background event
+rates. Prior knowledge about the models is assumed in the following
+tutorial and please refer to [1] and [2] for details about the
+models.&lt;/p>
+&lt;pre>&lt;code class="language-r">library(evently)
+&lt;/code>&lt;/pre>
+&lt;h2 id="installation-and-dependencies">Installation and dependencies&lt;/h2>
+&lt;p>Several dependencies
+(&lt;a href="https://cran.r-project.org/web/packages/poweRlaw/poweRlaw.pdf">poweRlaw&lt;/a>,
+&lt;a href="https://ampl.com/">AMPL&lt;/a>,
+&lt;a href="https://www.coin-or.org/Ipopt/documentation/">Ipopt&lt;/a>) are required for
+running this package. These dependencies will be installed automatically
+by R or by following instructions upon package load.&lt;/p>
+&lt;p>Install the package by executing&lt;/p>
+&lt;pre>&lt;code class="language-r">if (!require('devtools')) install.packages('devtools')
+devtools::install_github('behavioral-ds/evently')
+&lt;/code>&lt;/pre>
+&lt;h2 id="simulating-cascades">Simulating cascades&lt;/h2>
+&lt;p>Let’s first simulate 100 event cascades of the &lt;strong>Hawkes process with an
+exponential kernel function&lt;/strong> (please refer to the &lt;a href="#available-models">Available
+models&lt;/a> for models and their abbreviations in the
+package) with a given parameter set, &lt;img src="https://latex.codecogs.com/png.latex?%5Ckappa%20%3D%200.9%2C%20%5Ctheta%20%3D%201" alt="\\kappa = 0.9, \\theta= 1" title="\kappa = 0.9, \theta = 1">. For each simulation, we only simulate
+until 5 seconds. The resulted cascades are placed in a single &lt;code>list&lt;/code>
+where each cascade is a &lt;code>data.frame&lt;/code>.&lt;/p>
+&lt;pre>&lt;code class="language-r">set.seed(4)
+sim_no &amp;lt;- 100
+data &amp;lt;- generate_hawkes_event_series(par = c(K = 0.9, theta = 1), model_type = 'EXP', Tmax = 5, sim_no = sim_no)
+# alternatively, `generate_hawkes_event_series` also accepts a model class object
+# e.g.
+# model &amp;lt;- new_hawkes_model(par = c(K = 0.9, theta = 1), model_type = 'EXP')
+# generate_hawkes_event_series(model = model, Tmax = 5, sim_no = sim_no)
+head(data[[1]])
+&lt;/code>&lt;/pre>
+&lt;pre>&lt;code>## magnitude time
+## 1 1 0.0000000
+## 2 1 0.5941959
+## 3 1 1.4712411
+## 4 1 1.6105430
+## 5 1 1.7855535
+## 6 1 1.8883869
+&lt;/code>&lt;/pre>
+&lt;p>A simulated process is represented by a &lt;code>data.frame&lt;/code> where each row is
+an event. &lt;code>time&lt;/code> indicates the event happening time, while &lt;code>magnitude&lt;/code>
+is the event mark information which is always 1 if &lt;code>model_type&lt;/code> is an
+unmarked model. In the context of retweet diffusion cascades, the first
+row is the original tweet and all following events are its retweets.
+&lt;code>time&lt;/code> records the relative time (in second) of each retweet to the
+original tweet and &lt;code>magnitude&lt;/code> is the follows’ count of the user who
+retweeted.&lt;/p>
+&lt;h2 id="fitting-a-model-on-data">Fitting a model on data&lt;/h2>
+&lt;p>We can then fit on the cascades simulated in the previous section. After
+providing the &lt;code>data&lt;/code> and &lt;code>model_type&lt;/code>, the fitting procedure will spawn
+10 AMPL optimization procedures with different parameter
+inistializations due to the non-convexity of some likelihood functions.
+Among the 10 fitted model, the one giving the best likelihood value will
+be returned. To make the fitting procedure faster, we can specify the
+number of &lt;code>cores&lt;/code> to be used for fitting them in
+parallel.&lt;/p>
+&lt;pre>&lt;code class="language-r">fitted_model &amp;lt;- fit_series(data, model_type = 'EXP', observation_time = 5, cores = 10)
+fitted_model
+&lt;/code>&lt;/pre>
+&lt;pre>&lt;code>## Model: EXP
+## No. of cascades: 100
+## init_par
+## K 7.92e+00; theta 1.32e+00
+## par
+## K 8.51e-01; theta 1.06e+00
+## Neg Log Likelihood: 285.488
+## lower_bound
+## K 1.00e-100; theta 1.00e-100
+## upper_bound
+## K 1.00e+04; theta 3.00e+02
+## convergence: 0
+&lt;/code>&lt;/pre>
+&lt;h2 id="available-models">Available models&lt;/h2>
+&lt;p>There are 8 models available so far in this
+package:&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th align="center">Model&lt;/th>
+&lt;th align="center">Abbreviation (model_type)&lt;/th>
+&lt;th align="center">Intensity Function&lt;/th>
+&lt;th align="center">Parameters&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td align="center">Hawkes process with an exponential kernel function&lt;/td>
+&lt;td align="center">EXP&lt;/td>
+&lt;td align="center">&lt;img src="https://latex.codecogs.com/png.latex?%5Ckappa%5Csum_%7Bt_i%20%3C%20t%7D%20%5Ctheta%20e%5E%7B-%5Ctheta%20%28t-t_i%29%7D" alt="\\kappa\\sum\_{t\_i \&lt; t} \\theta e^{-\\theta (t-t\_i)}" title="\kappa\sum_{t_i &amp;lt; t} \theta e^{-\theta (t-t_i)}">&lt;/td>
+&lt;td align="center">K,theta&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td align="center">Hawkes process with a power-law kernel function&lt;/td>
+&lt;td align="center">PL&lt;/td>
+&lt;td align="center">&lt;img src="https://latex.codecogs.com/png.latex?%5Ckappa%5Csum_%7Bt_i%20%3C%20t%7D%20%28t-t_i%20%2B%20c%29%5E%7B-%281%2B%5Ctheta%29%7D" alt="\\kappa\\sum\_{t\_i \&lt; t} (t-t\_i + c)^{-(1+\\theta)}" title="\kappa\sum_{t_i &amp;lt; t} (t-t_i + c)^{-(1+\theta)}">&lt;/td>
+&lt;td align="center">K,c,theta&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td align="center">HawkesN process with an exponential kernel function&lt;/td>
+&lt;td align="center">EXPN&lt;/td>
+&lt;td align="center">&lt;img src="https://latex.codecogs.com/png.latex?%5Ckappa%5Cfrac%7BN-N_t%7D%7BN%7D%5Csum_%7Bt_i%20%3C%20t%7D%20%5Ctheta%20e%5E%7B-%5Ctheta%20%28t-t_i%29%7D" alt="\\kappa\\frac{N-N\_t}{N}\\sum\_{t\_i \&lt; t} \\theta e^{-\\theta (t-t\_i)}" title="\kappa\frac{N-N_t}{N}\sum_{t_i &amp;lt; t} \theta e^{-\theta (t-t_i)}">&lt;/td>
+&lt;td align="center">K,theta,N&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td align="center">HawkesN process with a power-law kernel function&lt;/td>
+&lt;td align="center">PLN&lt;/td>
+&lt;td align="center">&lt;img src="https://latex.codecogs.com/png.latex?%5Ckappa%5Cfrac%7BN-N_t%7D%7BN%7D%5Csum_%7Bt_i%20%3C%20t%7D%20%28t-t_i%20%2B%20c%29%5E%7B-%281%2B%5Ctheta%29%7D" alt="\\kappa\\frac{N-N\_t}{N}\\sum\_{t\_i \&lt; t} (t-t\_i + c)^{-(1+\\theta)}" title="\kappa\frac{N-N_t}{N}\sum_{t_i &amp;lt; t} (t-t_i + c)^{-(1+\theta)}">&lt;/td>
+&lt;td align="center">K,c,theta,N&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td align="center">Marked Hawkes process with an exponential kernel function&lt;/td>
+&lt;td align="center">mEXP&lt;/td>
+&lt;td align="center">&lt;img src="https://latex.codecogs.com/png.latex?%5Ckappa%5Csum_%7Bt_i%20%3C%20t%7D%20%5Ctheta%20m_i%5E%7B%5Cbeta%7D%20e%5E%7B-%5Ctheta%20%28t-t_i%29%7D" alt="\\kappa\\sum\_{t\_i \&lt; t} \\theta m\_i^{\\beta} e^{-\\theta (t-t\_i)}" title="\kappa\sum_{t_i &amp;lt; t} \theta m_i^{\beta} e^{-\theta (t-t_i)}">&lt;/td>
+&lt;td align="center">K,beta,theta&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td align="center">Marked Hawkes process with a power-law kernel function&lt;/td>
+&lt;td align="center">mPL&lt;/td>
+&lt;td align="center">&lt;img src="https://latex.codecogs.com/png.latex?%5Ckappa%5Csum_%7Bt_i%20%3C%20t%7D%20m_i%5E%7B%5Cbeta%7D%20%28t-t_i%20%2B%20c%29%5E%7B-%281%2B%5Ctheta%29%7D" alt="\\kappa\\sum\_{t\_i \&lt; t} m\_i^{\\beta} (t-t\_i + c)^{-(1+\\theta)}" title="\kappa\sum_{t_i &amp;lt; t} m_i^{\beta} (t-t_i + c)^{-(1+\theta)}">&lt;/td>
+&lt;td align="center">K,beta,c,theta&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td align="center">Marked HawkesN process with an exponential kernel function&lt;/td>
+&lt;td align="center">mEXPN&lt;/td>
+&lt;td align="center">&lt;img src="https://latex.codecogs.com/png.latex?%5Ckappa%5Cfrac%7BN-N_t%7D%7BN%7D%5Csum_%7Bt_i%20%3C%20t%7D%20%5Ctheta%20m_i%5E%7B%5Cbeta%7D%20e%5E%7B-%5Ctheta%20%28t-t_i%29%7D" alt="\\kappa\\frac{N-N\_t}{N}\\sum\_{t\_i \&lt; t} \\theta m\_i^{\\beta} e^{-\\theta (t-t\_i)}" title="\kappa\frac{N-N_t}{N}\sum_{t_i &amp;lt; t} \theta m_i^{\beta} e^{-\theta (t-t_i)}">&lt;/td>
+&lt;td align="center">K,beta,theta,N&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td align="center">Marked HawkesN process with a power-law kernel function&lt;/td>
+&lt;td align="center">mPLN&lt;/td>
+&lt;td align="center">&lt;img src="https://latex.codecogs.com/png.latex?%5Ckappa%5Cfrac%7BN-N_t%7D%7BN%7D%5Csum_%7Bt_i%20%3C%20t%7D%20m_i%5E%7B%5Cbeta%7D%28t-t_i%20%2B%20c%29%5E%7B-%281%2B%5Ctheta%29%7D" alt="\\kappa\\frac{N-N\_t}{N}\\sum\_{t\_i \&lt; t} m\_i^{\\beta}(t-t\_i + c)^{-(1+\\theta)}" title="\kappa\frac{N-N_t}{N}\sum_{t_i &amp;lt; t} m_i^{\beta}(t-t_i + c)^{-(1+\theta)}">&lt;/td>
+&lt;td align="center">K,beta,c,theta,N&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h2 id="acknowledgement">Acknowledgement&lt;/h2>
+&lt;p>The development of this package is supported by the Green Policy grant
+from the National Security College, Crawford School, ANU.&lt;/p>
+&lt;h2 id="license">License&lt;/h2>
+&lt;p>Both dataset and code are distributed under the &lt;a href="https://creativecommons.org/licenses/by-nc/4.0/">Creative Commons
+Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)
+license&lt;/a>. If you
+require a different license, please contact us at &lt;a href="mailto:Quyu.Kong@anu.edu.au">Quyu.Kong@anu.edu.au&lt;/a>
+or &lt;a href="mailto:Marian-Andrei@rizoiu.eu">Marian-Andrei@rizoiu.eu&lt;/a>.&lt;/p>
+&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>[1] Rizoiu, M. A., Lee, Y., Mishra, S., &amp;amp; Xie, L. (2017, December). Hawkes processes for events in social media. In Frontiers of Multimedia Research (pp. 191-218). Association for Computing Machinery
+and Morgan &amp;amp; Claypool.&lt;br>
+[2] Rizoiu, M. A., Mishra, S., Kong, Q., Carman, M., &amp;amp; Xie, L.
+(2018, April). SIR-Hawkes: Linking epidemic models and Hawkes processes to model diffusions in finite populations. In Proceedings of the 2018 World Wide Web Conference (pp. 419-428). International World Wide Web Conferences Steering Committee.&lt;br>
+[3] Mishra, S., Rizoiu, M. A., &amp;amp; Xie, L. (2016, October). Feature
+driven and point process approaches for popularity prediction. In Proceedings of the 25th ACM International on Conference on Information and Knowledge Management (pp. 1069-1078). ACM.&lt;br>
+[4] Kong, Q., Rizoiu, M. A., &amp;amp; Xie, L. (2019). Modeling Information
+Cascades with Self-exciting Processes via Generalized Epidemic Models. arXiv preprint arXiv:1910.05451.&lt;/p></description></item><item><title>Contact</title><link>https://www.behavioral-ds.ml/contact/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.behavioral-ds.ml/contact/</guid><description/></item><item><title>News</title><link>https://www.behavioral-ds.ml/news/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.behavioral-ds.ml/news/</guid><description/></item><item><title>People</title><link>https://www.behavioral-ds.ml/people/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.behavioral-ds.ml/people/</guid><description/></item><item><title>Publications</title><link>https://www.behavioral-ds.ml/publication/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.behavioral-ds.ml/publication/</guid><description>&lt;p>
 &lt;script src="https://www.behavioral-ds.ml/js/bibtex_js.js">&lt;/script>
 &lt;bibtex src="publications.bib">&lt;/bibtex>&lt;/p>
 &lt;div style="margin-right: 10px; margin-top: -50px; float:right">
@@ -760,4 +917,4 @@ Cascades with Self-exciting Processes via Generalized Epidemic Models. arXiv pre
 &lt;/ul>
 &lt;/div>
 &lt;/div>
-&lt;/div></description></item><item><title>Reading</title><link>https://www.behavioral-ds.ml/reading/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.behavioral-ds.ml/reading/</guid><description/></item><item><title>Research</title><link>https://www.behavioral-ds.ml/research/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.behavioral-ds.ml/research/</guid><description/></item><item><title>Tool</title><link>https://www.behavioral-ds.ml/tool/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.behavioral-ds.ml/tool/</guid><description/></item></channel></rss>
+&lt;/div></description></item><item><title>Reading</title><link>https://www.behavioral-ds.ml/reading/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.behavioral-ds.ml/reading/</guid><description/></item><item><title>Research</title><link>https://www.behavioral-ds.ml/research/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.behavioral-ds.ml/research/</guid><description/></item></channel></rss>
