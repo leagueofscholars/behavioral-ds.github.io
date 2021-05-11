@@ -16,7 +16,7 @@ role: Senior Research Associate @ Faethm AI
 # Organizations/Affiliations
 organizations:
 - name: (current) Faethm AI
-- name: University of Technology Sydney
+- name: (previous) University of Technology Sydney
 
 # Short bio (displayed in user profile at end of posts)
 body: | 
@@ -24,6 +24,8 @@ body: |
   
   Prior to pursuing a PhD, Nik worked as a Measurement & Evaluation consultant for a range of International Development projects in the Middle East. He also worked as an Investment Manager for a private investment company and a Research Analyst for Social Ventures Australia on their Education and Employment investment projects. 
 
+  **Position at UTS:** Nik was a PhD student with the Behavioral Data Science lab in UTS.
+  
   **Next position after UTS:** Nik took a position of Senior Research Associate @ Faethm AI
 
 bio: Nik's Doctoral research is on the changing labour market dynamics in Australia. He analyses issues such as skill shortages, job transitions, and emerging technology adoption in the Australian labour market.
