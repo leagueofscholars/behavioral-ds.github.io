@@ -15,6 +15,8 @@ links:
   url: https://github.com/behavioral-ds/birdspotter
 ---
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/52HwHAiK1rs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 <img src="/img/birdspotter_logo.png" alt="Birdspotter Logo" width="200"/>
 
 
