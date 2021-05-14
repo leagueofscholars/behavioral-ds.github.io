@@ -140,7 +140,8 @@ Pearl, Judea, Madelyn Glymour, and Nicholas P Jewell. 2016. &lt;em>Causal Infere
 Simpson, Edward H. 1951. &lt;span>“The Interpretation of Interaction in Contingency Tables.”&lt;/span> &lt;em>Journal of the Royal Statistical Society: Series B (Methodological)&lt;/em> 13 (2): 238–41.
 &lt;/div>
 &lt;/div>
-&lt;/div></description></item><item><title>evently: simulation, fitting of Hawkes processes</title><link>https://www.behavioral-ds.ml/theme1_content/evently/</link><pubDate>Tue, 12 Nov 2019 00:00:00 +0000</pubDate><guid>https://www.behavioral-ds.ml/theme1_content/evently/</guid><description>&lt;h2 id="introduction">Introduction&lt;/h2>
+&lt;/div></description></item><item><title>evently: simulation, fitting of Hawkes processes</title><link>https://www.behavioral-ds.ml/theme1_content/evently/</link><pubDate>Tue, 12 Nov 2019 00:00:00 +0000</pubDate><guid>https://www.behavioral-ds.ml/theme1_content/evently/</guid><description>&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/zSMHol0qsy4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>&lt;/iframe>
+&lt;h2 id="introduction">Introduction&lt;/h2>
 &lt;p>This package is designed for simulating and fitting the Hawkes processes
 and the HawkesN processes with several options of kernel functions.
 Currently, it assumes univariate processes without background event

@@ -155,7 +155,8 @@ and Morgan &amp;amp; Claypool.&lt;br>
 [3] Mishra, S., Rizoiu, M. A., &amp;amp; Xie, L. (2016, October). Feature
 driven and point process approaches for popularity prediction. In Proceedings of the 25th ACM International on Conference on Information and Knowledge Management (pp. 1069-1078). ACM.&lt;br>
 [4] Kong, Q., Rizoiu, M. A., &amp;amp; Xie, L. (2019). Modeling Information
-Cascades with Self-exciting Processes via Generalized Epidemic Models. arXiv preprint arXiv:1910.05451.&lt;/p></description></item><item><title>evently: simulation, fitting of Hawkes processes</title><link>https://www.behavioral-ds.ml/theme1_content/evently/</link><pubDate>Tue, 12 Nov 2019 00:00:00 +0000</pubDate><guid>https://www.behavioral-ds.ml/theme1_content/evently/</guid><description>&lt;h2 id="introduction">Introduction&lt;/h2>
+Cascades with Self-exciting Processes via Generalized Epidemic Models. arXiv preprint arXiv:1910.05451.&lt;/p></description></item><item><title>evently: simulation, fitting of Hawkes processes</title><link>https://www.behavioral-ds.ml/theme1_content/evently/</link><pubDate>Tue, 12 Nov 2019 00:00:00 +0000</pubDate><guid>https://www.behavioral-ds.ml/theme1_content/evently/</guid><description>&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/zSMHol0qsy4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>&lt;/iframe>
+&lt;h2 id="introduction">Introduction&lt;/h2>
 &lt;p>This package is designed for simulating and fitting the Hawkes processes
 and the HawkesN processes with several options of kernel functions.
 Currently, it assumes univariate processes without background event

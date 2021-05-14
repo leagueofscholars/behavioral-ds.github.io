@@ -360,7 +360,8 @@ theme(legend.direction = 'horizontal', legend.position = c(0.8, 0.2),
 legend.key.size = unit(.3, 'cm'), legend.text = element_text(size = 6),
 legend.title = element_text(size = 6), legend.spacing = unit(.05, 'cm'))
 &lt;/code>&lt;/pre>
-&lt;p>&lt;img src="README_files/figure-gfm/unnamed-chunk-10-1.png" alt="">&lt;!-- -->&lt;/p></description></item><item><title>evently: simulation, fitting of Hawkes processes</title><link>https://www.behavioral-ds.ml/theme1_content/evently/</link><pubDate>Tue, 12 Nov 2019 00:00:00 +0000</pubDate><guid>https://www.behavioral-ds.ml/theme1_content/evently/</guid><description>&lt;h2 id="introduction">Introduction&lt;/h2>
+&lt;p>&lt;img src="README_files/figure-gfm/unnamed-chunk-10-1.png" alt="">&lt;!-- -->&lt;/p></description></item><item><title>evently: simulation, fitting of Hawkes processes</title><link>https://www.behavioral-ds.ml/theme1_content/evently/</link><pubDate>Tue, 12 Nov 2019 00:00:00 +0000</pubDate><guid>https://www.behavioral-ds.ml/theme1_content/evently/</guid><description>&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/zSMHol0qsy4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>&lt;/iframe>
+&lt;h2 id="introduction">Introduction&lt;/h2>
 &lt;p>This package is designed for simulating and fitting the Hawkes processes
 and the HawkesN processes with several options of kernel functions.
 Currently, it assumes univariate processes without background event
