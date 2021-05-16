@@ -4,7 +4,7 @@
 widget: "blank"
 headless: true 
 title: "Reading Group"
-subtitle: "A reference document used to keep track of the reading group meetings.  
+subtitle: "A reference document used to keep track of the reading group meetings.
 Pull requests are welcome. [Meeting Link]( https://utsmeet.zoom.us/j/82967712670?pwd=Z0p6S1luR1FRL2xaQTZNN2lmb3Q2dz09)"
 
 design:
@@ -21,7 +21,7 @@ design:
 |26/04|Quyu Kong|PhD conclusion talk dry-run|||
 |3/05|Marian-Andrei Rizoiu|[Adversarial vulnerabilities of human decision-making](https://www.pnas.org/content/117/46/29221)|Adversarial learning to guide sequential human decision making|PNAS'20|[1](https://github.com/adezfouli/decision_adv)
 |10/05|Rohit Ram|[The Social Dynamics of Language Change in Online Networks](https://www.microsoft.com/en-us/research/publication/the-social-dynamics-of-language-change-in-online-networks/)|Tracks language change through social influence and determines importance of (diverse) features to social influence using Parametric Hawkes|SocInfo'16|
-|17/05|Frankie Yuan|[All You Need is "Love": Evading Hate Speech Detection](https://dl.acm.org/doi/abs/10.1145/3270101.3270103)|Simple but effective adversarial attacks on word and character based hate speech classification models.|AISec 2018|
+|17/05|Frankie Yuan|[All You Need is "Love": Evading Hate Speech Detection](https://arxiv.org/abs/1808.09115)|Simple but effective adversarial attacks on word and character based hate speech classification models. [paper link](https://dl.acm.org/doi/abs/10.1145/3270101.3270103)|AISec 2018|||
 |24/05|Thomas Willinghanm||||
 |31/05|Pio Calderon||||
 |14/06|Thomas Willinghanm||||
