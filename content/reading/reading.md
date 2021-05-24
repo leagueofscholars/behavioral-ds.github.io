@@ -22,7 +22,7 @@ design:
 |3/05|Marian-Andrei Rizoiu|[Adversarial vulnerabilities of human decision-making](https://www.pnas.org/content/117/46/29221)|Adversarial learning to guide sequential human decision making|PNAS'20|[1](https://github.com/adezfouli/decision_adv)
 |10/05|Rohit Ram|[The Social Dynamics of Language Change in Online Networks](https://www.microsoft.com/en-us/research/publication/the-social-dynamics-of-language-change-in-online-networks/)|Tracks language change through social influence and determines importance of (diverse) features to social influence using Parametric Hawkes|SocInfo'16|
 |17/05|Frankie Yuan|[All You Need is "Love": Evading Hate Speech Detection](https://arxiv.org/abs/1808.09115)|Simple but effective adversarial attacks on word and character based hate speech classification models. [paper link](https://dl.acm.org/doi/abs/10.1145/3270101.3270103)|AISec 2018|||
-|24/05|Thomas Willinghanm||||
+|24/05|Thomas Willinghanm|[Generating Datasets with Pretrained Language Models](https://arxiv.org/abs/2104.07540v2)|leveraging large, well-trained generative language models (e.g GPT2) for creating labelled data to fine-tune semantic embedders and comes with code and all|Computing Research Repository|[1](https://github.com/timoschick/dino)|
 |31/05|Pio Calderon||||
 |14/06|Thomas Willinghanm||||
 |21/06|Frankie Yuan||||
