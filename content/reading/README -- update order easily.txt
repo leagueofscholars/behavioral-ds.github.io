@@ -2,9 +2,9 @@ Author: Andrei
 Why?: I could not find an easy way to shift everyone down one week due to a public holiday.
 How solved?: I created an Excel file with the same content: `Reading group schedule.xlsx`
 
-Process:
-1. Edit the Excel file accordingly 
-2. Export in CSV using TABULATOR as separator (not comma!)
-3. Paste the content of the CSV in https://donatstudios.com/CsvToMarkdownTable
-4. Take the MD and replace the content in `reading.md`
-5. (optional) remove extra white spaces by searching for "  " (two spaces) and replacing with " " (one space).
+Editor: Rohit
+Why?: I found the old process too long
+How solved?: Have Hugo read from a public google sheets, which can be updated, and displays on website.
+
+Process: 
+    1. Update https://docs.google.com/spreadsheets/d/1FBLafNllZfSx-qsxY7Mb-eWkLbFJ2JzH7K2OyWaGOBg/edit?usp=sharing

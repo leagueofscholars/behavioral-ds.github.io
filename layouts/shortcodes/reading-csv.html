@@ -1,0 +1,31 @@
+<!-- raw html -->
+<div>
+<table>
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Presenter</th>
+      <th>Paper</th>
+      <th>Why should we care</th>
+      <th>Appear in</th>
+      <th>Repo</th>
+      <th>Blogs</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{ $url := "https://docs.google.com/spreadsheets/d/1FBLafNllZfSx-qsxY7Mb-eWkLbFJ2JzH7K2OyWaGOBg/gviz/tq?tqx=out:csv&sheet=default" }}
+    {{ $sep := "," }}
+    {{ range $i, $r := getCSV $sep $url }}
+      <tr>
+        <td>{{ index $r 0 | markdownify}}</td>
+        <td>{{ index $r 1 | markdownify}}</td>
+        <td>{{ index $r 2 | markdownify}}</td>
+        <td>{{ index $r 3 | markdownify}}</td>
+        <td>{{ index $r 4 | markdownify}}</td>
+        <td>{{ index $r 5 | markdownify}}</td>
+        <td>{{ index $r 6 | markdownify}}</td>
+      </tr>
+    {{ end }}
+  </tbody>
+</table>
+</div>
