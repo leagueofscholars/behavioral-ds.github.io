@@ -4,7 +4,7 @@ How solved?: I created an Excel file with the same content: `Reading group sched
 
 Editor: Rohit
 Why?: I found the old process too long
-How solved?: Have Hugo read from a local csv which can be updated, and displays on the website.
+How solved?: Have Hugo read from a public google sheets, which can be updated, and displays on website.
 
 Process: 
-    1. Update `content/reading/reading_group_schedule.csv` , and be sure to export it with {TAB} delimiter
+    1. Update /reading_group_schedule.csv
