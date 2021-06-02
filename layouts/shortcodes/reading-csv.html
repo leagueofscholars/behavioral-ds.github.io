@@ -14,7 +14,7 @@
   </thead>
   <tbody>
     {{ $url := "/content/reading/reading_group_schedule.csv" }}
-    {{ $sep := "\t" }}
+    {{ $sep := "," }}
     {{ range $i, $r := getCSV $sep $url }}
       {{ if ne $i 0 }}
         <tr>
