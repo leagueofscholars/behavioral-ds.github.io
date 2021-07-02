@@ -12,7 +12,7 @@ image:
 summary: "More than a quarter of a century since the first commercial use of the online world, its growth is now slowing down in some key categories."
 
 links:
-- icon: github-alt
+- icon: newspaper
   icon_pack: fab
   name: The Conversation
   url: https://theconversation.com/we-spent-six-years-scouring-billions-of-links-and-found-the-web-is-both-expanding-and-shrinking-159215
