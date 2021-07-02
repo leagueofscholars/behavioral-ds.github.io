@@ -13,7 +13,7 @@ summary: "More than a quarter of a century since the first commercial use of the
 
 links:
 - icon: newspaper
-  icon_pack: fab
+  icon_pack: fa
   name: The Conversation
   url: https://theconversation.com/we-spent-six-years-scouring-billions-of-links-and-found-the-web-is-both-expanding-and-shrinking-159215
 ---
