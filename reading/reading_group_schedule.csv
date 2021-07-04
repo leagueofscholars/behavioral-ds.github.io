@@ -12,7 +12,7 @@ Date,Presenter,Paper,Why should we care,Appear in,Repo,Blogs
 14/06/21,--,No group reading. Public holiday (Queen's Birthday),,,,
 21/06/21,Quyu Kong,[Model-Agnostic Meta-Learning for Fast Adaptation of Deep Networks](https://arxiv.org/abs/1703.03400),Meta-learning allows to adapt to new tasks quickly with a few samples,ICML'17,[1](https://github.com/cbfinn/maml),
 28/06/21,"Rohit Ram, Andrew Law, and Marian-Andrei Rizoiu",3MT Series,,,,
-05/07/21,Andrew Law,,,,,
+05/07/21,Andrew Law,[Characterizing Online Discussion Using Coarse Discourse Sequences](https://research.google/pubs/pub46055.pdf),"Characterizes different types of online discussions (Q&A, arguments etc.) through analyzing patterns of discourse and produces a classifier for predicting discourse acts.",ICWSM 2017,,
 12/07/21,Rohit Ram,,,,,
 19/07/21,Duy Khuu,,,,,
 26/07/21,"Duy Khuu, Pio Calderon, and Quyu Kong",3MT Series,,,,
