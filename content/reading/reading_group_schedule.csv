@@ -14,7 +14,7 @@ Date,Presenter,Paper,Why should we care,Appear in,Repo,Blogs
 28/06/21,"Rohit Ram, Andrew Law, and Marian-Andrei Rizoiu",3MT Series,,,,
 05/07/21,Andrew Law,[Characterizing Online Discussion Using Coarse Discourse Sequences](https://research.google/pubs/pub46055.pdf),"Characterizes different types of online discussions (Q&A, arguments etc.) through analyzing patterns of discourse and produces a classifier for predicting discourse acts.",ICWSM 2017,,
 12/07/21,Rohit Ram,[A General Method to Find Highly Coordinating Communities in Social Media through Inferred Interaction Links](https://arxiv.org/pdf/2103.03409.pdf),,,,
-19/07/21,Duy Khuu,,,,,
+19/07/21,Duy Khuu,[The Benchmark Lottery](https://arxiv.org/abs/2107.07002v1),"Overview of current issues related to ranking models and benchmarks, along with proposals for how we can produce better benchmarks",Submitted to NeurIPS 2021,,
 26/07/21,"Duy Khuu, Pio Calderon, and Quyu Kong",3MT Series,,,,
 02/08/21,Pio Calderon,,,,,
 09/08/21,Frankie Yuan,,,,,
