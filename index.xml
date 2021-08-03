@@ -1,4 +1,46 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Behavioral Data Science</title><link>https://www.behavioral-ds.ml/</link><atom:link href="https://www.behavioral-ds.ml/index.xml" rel="self" type="application/rss+xml"/><description>Behavioral Data Science</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>2021</copyright><lastBuildDate>Fri, 02 Jul 2021 00:00:00 +0000</lastBuildDate><image><url>https://www.behavioral-ds.ml/img/logo.png</url><title>Behavioral Data Science</title><link>https://www.behavioral-ds.ml/</link></image><item><title>We spent six years scouring billions of links, and found the web is both expanding and shrinking</title><link>https://www.behavioral-ds.ml/blogpost/online_diversity/</link><pubDate>Fri, 02 Jul 2021 00:00:00 +0000</pubDate><guid>https://www.behavioral-ds.ml/blogpost/online_diversity/</guid><description>&lt;p>The online world is continuously expanding — always aggregating more services, more users and more activity. Last year, the number of websites registered on the &amp;ldquo;.com&amp;rdquo; domain &lt;a href="https://www.verisign.com/en_US/channel-resources/domain-registry-products/zone-file/index.xhtml">surpassed 150,000,000&lt;/a>.&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Behavioral Data Science</title><link>https://www.behavioral-ds.ml/</link><atom:link href="https://www.behavioral-ds.ml/index.xml" rel="self" type="application/rss+xml"/><description>Behavioral Data Science</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>2021</copyright><lastBuildDate>Tue, 03 Aug 2021 00:00:00 +0000</lastBuildDate><image><url>https://www.behavioral-ds.ml/img/logo.png</url><title>Behavioral Data Science</title><link>https://www.behavioral-ds.ml/</link></image><item><title>PhD Opportunity</title><link>https://www.behavioral-ds.ml/extra/phdopportunity/</link><pubDate>Tue, 03 Aug 2021 00:00:00 +0000</pubDate><guid>https://www.behavioral-ds.ml/extra/phdopportunity/</guid><description>&lt;h2 id="summary">Summary&lt;/h2>
+&lt;ul>
+&lt;li>Rare PhD opportunity for research on the Future of Work and Labour Markets applying Data Science and Machine Learning techniques&lt;/li>
+&lt;li>Mentored by leading researchers and industrials in this space&lt;/li>
+&lt;li>Access to datasets, strong industry partnerships, and international collaborations with top universities
+&lt;br/>&lt;br/>&lt;/li>
+&lt;/ul>
+&lt;h2 id="the-research-topic">The Research Topic&lt;/h2>
+&lt;p>Advances in automation technologies and labour market shocks, such as COVID-19, have elevated the importance of labour mobility issues. Therefore, identifying viable and desirable job transition pathways for individuals has been a growing area of interest. The current state of the art methods [Moro, Frank et al, Nat.Comm.’21] [Dawson et al, PLOS ONE ‘21] take a global view to estimate the dynamics of labour markets using factors such as skill similarity, location, education, experience, and industry labour flows. While these have been shown as important features for explaining job transition pathways, they implicitly assume that the changes in the occupation of an individual depend solely on their current occupation. Other works [Kern et al, PNAS’19] have shown that worker psychometric profiles (measured using Big5 feature) closely relate to their occupations. In other words, people have predispositions towards certain occupations. This project aims to build personalised recommender systems for occupation transitions that account for worker personality, previous experience and education.
+&lt;br/>&lt;br/>&lt;/p>
+&lt;h2 id="the-opportunity">The Opportunity&lt;/h2>
+&lt;p>The Behavioral Data Science lab at UTS has several openings for PhD students to research the Future of Work and labour market networks. The topics of interest are job transitions, skills analysis, and the impacts of technology on labour markets. However, we’re open to other related areas, such as impacts of personality profiles on job choice, quantifying cultural differences between labour markets, and competitive dynamics of occupations and industries. The research will apply data science and machine learning techniques to labour market data, such as job ads and employment statistics.
+&lt;br/>&lt;br/>&lt;/p>
+&lt;h2 id="what-we-offer">What We Offer&lt;/h2>
+&lt;p>This project is part of a wider collaboration with US-based universities and companies. This can open unique opportunities to research internships in both overseas academia and industry. Furthermore, you will be supported throughout your doctorate to become a first rate researcher. This will include:&lt;/p>
+&lt;ul>
+&lt;li>access to rich datasets to derive insights and real-world problems and know-how;&lt;/li>
+&lt;li>exposure to industry networks to apply your work, and possible career paths upon graduation;&lt;/li>
+&lt;li>collaboration with top international universities from our networks; and&lt;/li>
+&lt;li>a supportive peer-group of doctoral researchers with regular events and reading groups.&lt;/li>
+&lt;li>weekly meetings with supervisors to advance your research;&lt;/li>
+&lt;/ul>
+&lt;p>Once you graduate, you will have developed in-demand skills, published peer-review papers, broadened your professional network, and established yourself as an expert in the Future of Work.
+&lt;br/>&lt;br/>&lt;/p>
+&lt;h2 id="about-you">About You&lt;/h2>
+&lt;p>To be successful in this role, you will either have:&lt;/p>
+&lt;ul>
+&lt;li>a strong background in data science and applied machine learning;&lt;/li>
+&lt;li>an interest labour markets;&lt;/li>
+&lt;li>knowledge of at least one programming language, such as Python and R;&lt;/li>
+&lt;/ul>
+&lt;p>AND/OR&lt;/p>
+&lt;ul>
+&lt;li>A strong background in economics and are willing to develop your technical skills;&lt;/li>
+&lt;/ul>
+&lt;p>You will also likely have an Honours or Masters degree. However, equivalent experience coupled with a relevant Bachelor’s Degree could also be sufficient.&lt;/p>
+&lt;p>Most importantly, you will show a great deal of initiative, thrive under autonomy, and have a passion for applying rigorous research to help people understand real problems.
+&lt;br/>&lt;br/>&lt;/p>
+&lt;h2 id="funding">Funding&lt;/h2>
+&lt;p>Scholarships are available but will be awarded through a competitive process. Stipend top-ups and paid research work might be available throughout your thesis.
+&lt;br/>&lt;br/>&lt;/p>
+&lt;h2 id="how-to-apply">How to Apply&lt;/h2>
+&lt;p>If you are interested, please send your CV and a cover letter to &lt;a href="mailto:Marian-Andrei.Rizoiu@uts.edu.au">Marian-Andrei.Rizoiu@uts.edu.au&lt;/a>. The cover letter should detail your academic track record, why you are interested in this topic and why you are a good match for the subject.&lt;/p></description></item><item><title>We spent six years scouring billions of links, and found the web is both expanding and shrinking</title><link>https://www.behavioral-ds.ml/blogpost/online_diversity/</link><pubDate>Fri, 02 Jul 2021 00:00:00 +0000</pubDate><guid>https://www.behavioral-ds.ml/blogpost/online_diversity/</guid><description>&lt;p>The online world is continuously expanding — always aggregating more services, more users and more activity. Last year, the number of websites registered on the &amp;ldquo;.com&amp;rdquo; domain &lt;a href="https://www.verisign.com/en_US/channel-resources/domain-registry-products/zone-file/index.xhtml">surpassed 150,000,000&lt;/a>.&lt;/p>
 &lt;p>However, more than a quarter of a century since its first commercial use, the growth of the online world is now slowing down in some key categories.&lt;/p>
 &lt;p>We conducted a multi-year research project analysing global trends in online diversity and dominance. &lt;a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0249993">Our research&lt;/a>, published in Public Library of Science, is the first to reveal some long-term trends in how businesses compete in the age of the web.&lt;/p>
 &lt;p>We saw a dramatic consolidation of attention towards a shrinking (but increasingly dominant) group of online organisations. So, while there is still growth in the functions, features and applications offered on the web, the number of entities providing these functions is shrinking.&lt;/p>
