@@ -63,6 +63,6 @@ Our research aims to make sense of large amounts of behavioral data, to understa
 * data mining, and
 * natural language processing
 
-If you're interested in working with us, <a href="/contact">get in touch</a>!
+The Behavioral Data Science lab has a <a href="/extra/phdopportunity" style="color:red;text-decoration:none">**PhD opportunity available**</a>. If you are interested in working with us, please <a href="/contact">get in touch</a>.
 
 <!--Our work is partly funded by grants from the Swiss National Science Foundation, the Swiss Data Science Center, Microsoft, and CROSS, and by generous awards from Google and Facebook.-->
