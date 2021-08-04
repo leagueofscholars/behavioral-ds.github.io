@@ -50,3 +50,12 @@ Scholarships are available but will be awarded through a competitive process. St
 
 ## How to Apply
 If you are interested, please send your CV and a cover letter to Marian-Andrei.Rizoiu@uts.edu.au. The cover letter should detail your academic track record, why you are interested in this topic and why you are a good match for the subject.
+<br/><br/>
+
+## References
+[Moro et al, Nat.Comm.’21] Moro, E., Frank, M. R., Pentland, A., Rutherford, A., Cebrian, M., & Rahwan, I. (2021). Universal resilience patterns in labor markets. Nature Communications, 12(1), 1972. https://doi.org/10.1038/s41467-021-22086-3 
+<br/><br/>
+[Dawson et al, PLOS ONE ‘21] Dawson, N., Williams, M.-A., & Rizoiu, M.-A. (2021). Skill-driven Recommendations for Job Transition Pathways. PLOS ONE. Retrieved from http://arxiv.org/abs/2011.11801 
+<br/><br/>
+[Kern et al, PNAS’19] Kern, M. L., McCarthy, P. X., Chakrabarty, D., & Rizoiu, M.-A. (2019). Social media-predicted personality traits and values can help match people to their ideal jobs. Proceedings of the National Academy of Sciences, 116(52), 26459–26464. https://doi.org/10.1073/pnas.1917942116 
+
