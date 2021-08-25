@@ -58,5 +58,7 @@ social:
 #                  "Visitors",
 #                  "Alumni"]
 user_groups:
-- PhD Students
+- Academics and Scientists
+
+weight: 10
 ---
