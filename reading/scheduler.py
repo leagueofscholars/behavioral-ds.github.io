@@ -11,13 +11,13 @@ date_object = date(2021, 3, 29)
 date_object += timedelta(days=1-date_object.isoweekday())
 slots = []
 while date_object.year == 2021:
-    if not pytimeNSW.is_public(date_object):
+    if not pytimeNSW.is_public(date_object) and not pytimeNSW.is_public_can(date_object):
         slots.append(date_object)
     date_object += timedelta(days=7)
     
 
 names = ["Quyu Kong", "Marian-Andrei Rizoiu", "Dima Galat", "Thomas Willinghanm", 
-         "Rohit Ram", "Pio Calderon", "Andrew Law",   "Duy Khuu", "Frankie Yuan"]
+         "Rohit Ram", "Pio Calderon", "Andrew Law", "Duy Khuu", "Frankie Yuan"]
 
 sched = pd.DataFrame(columns=["date", "presenter"])
 sched["date"] = slots
