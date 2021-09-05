@@ -22,7 +22,7 @@ Violent Crime?](http://paleo.sscnet.ucla.edu/BrantinghamEtAl-2020-JQC.pdf)",Mode
 16/08/21,Dima Galat,[All That's 'Human' Is Not Gold: Evaluating Human Evaluation of Generated Text](https://arxiv.org/pdf/2107.00061v2.pdf),An actionable proposal on how evaluations should be conducted,ACL21,,
 23/08/21,"Thomas Willinghanm, Dima Galat, and Frankie Yuan",3MT Series,,,,
 30/08/21,Marian-Andrei Rizoiu,"[TextAttack: A Framework for Adversarial Attacks, Data Augmentation, and Adversarial Training in NLP](https://aclanthology.org/2020.emnlp-demos.16.pdf)",A Python package to perform adversarial attacks for a number of tasks. It also allow adversarial training.,EMNLP’20 Demo,[1](https://github.com/QData/TextAttack),
-06/09/21,Thomas Willingham,,,,,
+06/09/21,Thomas Willingham,[Disrupting Model Training with Adversarial Shortcuts](https://arxiv.org/pdf/2106.06654v2.pdf),An approach to deliberately poisoning datasets for privacy or competitive purposes,ICML2021,,
 13/09/21,Quyu Kong,[Identifying Coordinated Accounts on Social Media through Hidden Influence and Group Behaviours](https://arxiv.org/abs/2008.11308),Detect coordinated accounts by jointly modeling account activities and hidden group behaviours based on Temporal Point Processes (TPP) and Gaussian Mixture Model (GMM).,KDD'21,[1](https://github.com/USC-Melady/AMDN-HAGE-KDD21),
 20/09/21,Andrew Law,,,,,
 27/09/21,Thomas Willingham,,,,,
