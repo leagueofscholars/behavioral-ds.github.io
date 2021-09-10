@@ -21,7 +21,7 @@ Violent Crime?](http://paleo.sscnet.ucla.edu/BrantinghamEtAl-2020-JQC.pdf)",Mode
 09/08/21,Frankie Yuan,[Detecting Troll Behavior via Inverse Reinforcement Learning: A Case Study of Russian Trolls in the 2016 US Election](https://arxiv.org/abs/2001.10570),Detection and analysis of Russian troll behaviour and insentives using inverse reinforcement learning.,ICWSM 2020,[1](https://github.com/luceriluc/Detecting-Troll-Behavior-via-Inverse-Reinforcement-Learning),
 16/08/21,Dima Galat,[All That's 'Human' Is Not Gold: Evaluating Human Evaluation of Generated Text](https://arxiv.org/pdf/2107.00061v2.pdf),An actionable proposal on how evaluations should be conducted,ACL21,,
 23/08/21,"Thomas Willinghanm, Dima Galat, and Frankie Yuan",3MT Series,,,,
-30/08/21,Marian-Andrei Rizoiu,"[TextAttack: A Framework for Adversarial Attacks, Data Augmentation, and Adversarial Training in NLP](https://aclanthology.org/2020.emnlp-demos.16.pdf)",A Python package to perform adversarial attacks for a number of tasks. It also allow adversarial training.,EMNLP’20 Demo,[1](https://github.com/QData/TextAttack),
+30/08/21,Marian-Andrei Rizoiu,"[TextAttack: A Framework for Adversarial Attacks, Data Augmentation, and Adversarial Training in NLP](https://aclanthology.org/2020.emnlp-demos.16.pdf)",A Python package to perform adversarial attacks for a number of tasks. It also allow adversarial training.,EMNLP'20 Demo,[1](https://github.com/QData/TextAttack),
 06/09/21,Thomas Willingham,,,,,
 13/09/21,Andrew Law,,,,,
 20/09/21,Quyu Kong,,,,,
