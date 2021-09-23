@@ -10,7 +10,7 @@ authors:
 superuser: true
 
 # Role/position
-role: Lecturer (assistant professor)
+role: Senior Lecturer<br/>(Assistant Professor)
 
 # Organizations/Affiliations
 organizations:
@@ -19,7 +19,7 @@ organizations:
 
 # Short bio (displayed in user profile at end of posts)
 body: |
-  Dr Marian-Andrei Rizoiu is a lecturer in Computer Science at the University of Technology Sydney. He is interested in stochastic behavioural modelling of human actions online, at the intersection of applied statistics, artificial intelligence and social data science. He leads the [Behavioral Data Science group](https://www.behavioral-ds.ml/), which studies human attention dynamics in the online environment, the emergence of influence and opinion polarisation.  
+  Dr Marian-Andrei Rizoiu is a Senior Lecturer in Behavioral Data Science at the University of Technology Sydney. He is interested in stochastic behavioural modelling of human actions online, at the intersection of applied statistics, artificial intelligence and social data science. He leads the [Behavioral Data Science lab](https://www.behavioral-ds.ml/), which studies human attention dynamics in the online environment, the emergence of influence and opinion polarisation.  
    
   His research has made several key contributions to online popularity prediction, real-time tracking and countering disinformation campaigns, and understanding shortages and mismatches in labour markets. First, he has developed theoretical models for online information diffusion, which can account for complex social phenomena, such as the rise and fall of online popularity, the spread of misinformation, or the adoption of disruptive technologies. Second, he built a skill-based real-time occupation transition recommender system usable in periods of massive disruptions (such as COVID-19). Third, he approached questions such as "Why did X become popular, but not Y?" and "How can problematic content be detected based solely on how it spreads?" with implications in detecting the spread of conspiracy theories and disinformation campaigns. Finally, he linked social media predicted personality profiles with worker occupations, applicable in building personalising career recommendations.  
   

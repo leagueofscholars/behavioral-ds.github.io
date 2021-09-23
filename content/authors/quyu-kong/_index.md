@@ -10,7 +10,7 @@ authors:
 superuser: false
 
 # Role/position
-role: Researcher
+role: Research Associate<br/>(postdoctoral researcher)
 
 # Organizations/Affiliations
 organizations:
