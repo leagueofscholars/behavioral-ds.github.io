@@ -1,4 +1,143 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Behavioral Data Science</title><link>https://www.behavioral-ds.ml/</link><atom:link href="https://www.behavioral-ds.ml/index.xml" rel="self" type="application/rss+xml"/><description>Behavioral Data Science</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>2021</copyright><lastBuildDate>Tue, 03 Aug 2021 00:00:00 +0000</lastBuildDate><image><url>https://www.behavioral-ds.ml/img/logo.png</url><title>Behavioral Data Science</title><link>https://www.behavioral-ds.ml/</link></image><item><title>PhD Opportunity</title><link>https://www.behavioral-ds.ml/extra/phdopportunity/</link><pubDate>Tue, 03 Aug 2021 00:00:00 +0000</pubDate><guid>https://www.behavioral-ds.ml/extra/phdopportunity/</guid><description>&lt;h2 id="summary">Summary&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Behavioral Data Science</title><link>https://www.behavioral-ds.ml/</link><atom:link href="https://www.behavioral-ds.ml/index.xml" rel="self" type="application/rss+xml"/><description>Behavioral Data Science</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>2021</copyright><lastBuildDate>Fri, 24 Sep 2021 00:00:00 +0000</lastBuildDate><image><url>https://www.behavioral-ds.ml/img/logo.png</url><title>Behavioral Data Science</title><link>https://www.behavioral-ds.ml/</link></image><item><title>Compute and storage resources</title><link>https://www.behavioral-ds.ml/extra/compute_resources/</link><pubDate>Fri, 24 Sep 2021 00:00:00 +0000</pubDate><guid>https://www.behavioral-ds.ml/extra/compute_resources/</guid><description>&lt;p>Our group has access to considerable computation and storage resources. This document describes these and how to access them. Each resource has its own use scenario, and some may be more adapted to specific problems than others (for example, if you want to set up a Twitter crawler, use a Nectar Virtual Machine for better uptime and to avoid security issues on the compute servers).
+We have four compute resources and each has attached a storage resource.&lt;/p>
+&lt;h2 id="compute-servers-and-frameworks">Compute servers and frameworks&lt;/h2>
+&lt;h3 id="ihpc-servers">iHPC servers&lt;/h3>
+&lt;p>&lt;strong>Link to resource&lt;/strong>: &lt;a href="ihpc.research.uts.edu.au">ihpc.research.uts.edu.au&lt;/a> (requires &lt;a href="https://vpn.uts.edu.au/">UTS VPN&lt;/a>)&lt;/p>
+&lt;p>&lt;strong>Quick description&lt;/strong>: iHPC stands for Interactive High-Performance Computing. In a nutshell, these are very large machines (around 60 cores, and terabytes of memory). The machines are hosted in UTS and require both a UTS affiliation and special access. The servers are grouped into clusters, some of which require special access.&lt;/p>
+&lt;p>Our group has a private cluster called &lt;em>hephaestos&lt;/em> which currently contains two machines (see print screen below). Our private cluster is accessible to BDS members only.&lt;/p>
+&lt;p>&lt;img src="https://www.behavioral-ds.ml/extra/compute_resources_content/compute_resources_1.png" width="100%" />&lt;/p>
+&lt;p>&lt;strong>Getting access&lt;/strong>: Request an iHPC account (see &lt;a href="ihpc.research.uts.edu.au">ihpc.research.uts.edu.au&lt;/a> for instructions). Mention the Behavioral Data Science group and Andrei in your request to be automatically added to the hephaestos access lists. &lt;strong>Make sure you read the documentation!&lt;/strong>&lt;/p>
+&lt;p>&lt;strong>Use case&lt;/strong>: the iHPC is designed for prototyping that requires large machines (Jupyter Notebook or RStudio), or for intermediary-size compute (for larger size see &lt;a href="#HPCC">UTS HPC&lt;/a> and &lt;a href="#NCI">NCI&lt;/a>). You can use iHPC using its Graphical User Interface (GUI) via NoMachine. You can also connect via console using:&lt;/p>
+&lt;p>&lt;code>ssh &amp;lt;user&amp;gt;@hephaestos1.eng.uts.edu.au&lt;/code>&lt;/p>
+&lt;p>For use with &lt;em>Jupyter Notebook&lt;/em> or &lt;em>RStudio Server&lt;/em>, you can redirect ports via SSH tunneling. Assuming the Jupyter Notebook/RStudio Server listens on port 8282, you can redirect that port by connecting to hephaestos1 using:&lt;/p>
+&lt;p>&lt;code>ssh -L 8282:localhost:8282 &amp;lt;user&amp;gt;@hephaestos1.eng.uts.edu.au&lt;/code>&lt;/p>
+&lt;p>after which you can connect the browser to your local machine to &lt;code>https://localhost:8282&lt;/code> and access the kernel on the distant machines. See &lt;a href="https://www.ssh.com/academy/ssh/tunneling/example">here for more details and examples&lt;/a>.
+&lt;br/>&lt;br/>&lt;/p>
+&lt;h3 id="nectar-virtual-machines">NeCTAR Virtual Machines&lt;/h3>
+&lt;p>&lt;strong>Link to resource&lt;/strong>: &lt;a href="https://dashboard.rc.nectar.org.au/">https://dashboard.rc.nectar.org.au/&lt;/a>&lt;/p>
+&lt;p>&lt;strong>Quick description&lt;/strong>: NeCTAR is an infrastructure for virtual machines (i.e. machines that can be spawned for a particular purpose), similar to Amazon Web Services. This is quite useful for crawling data with no downtime, hosting visualizers, and even computing. More details here: &lt;a href="https://ardc.edu.au/services/nectar-research-cloud/">https://ardc.edu.au/services/nectar-research-cloud/&lt;/a>&lt;/p>
+&lt;p>Our group has an allocation of 25 instances, 120 vCPUs, and 480 GB of RAM.&lt;/p>
+&lt;p>&lt;strong>Getting access&lt;/strong>: First activate your UTS/ANU/Data61 account here: &lt;a href="https://dashboard.rc.nectar.org.au/">https://dashboard.rc.nectar.org.au/&lt;/a>. Then flip Andrei the email address associated with the account, and I'll add you to the project. Note: once you have access, you need to switch projects using the project selector in the top-left corner to access the behavioral-ds allocation.&lt;/p>
+&lt;p>&lt;strong>Use case&lt;/strong>: You can easily spawn virtual machines, install stuff on them, play and destroy them. Each virtual machine acts as a computer, therefore you can install web interfaces, use it for compute (the larger flavors), and connect via SSH. The port forwarding trick described for iHPC also works for NeCTAR VMs.
+&lt;a name="HPCC">&lt;/a>&lt;br/>&lt;br/>&lt;/p>
+&lt;h3 id="uts-highperformance-computing-cluster-hpcc">UTS High-Performance Computing Cluster (HPCC)&lt;/h3>
+&lt;p>&lt;strong>Link to resource&lt;/strong>: &lt;a href="https://hpc.research.uts.edu.au/">https://hpc.research.uts.edu.au/&lt;/a>&lt;/p>
+&lt;p>&lt;strong>Usage status&lt;/strong>: &lt;a href="https://hpc.research.uts.edu.au/status/">https://hpc.research.uts.edu.au/status/&lt;/a>&lt;/p>
+&lt;p>&lt;strong>Quick description&lt;/strong>: HPCC is a typical high-performance computing cluster (a.k.a. super-computers), in which jobs run non-interactively. See &lt;a href="https://docs.hpc.qmul.ac.uk/intro/">here a schema of HPC clusters&lt;/a>. UTS HPCC uses PBS as the scheduler, and it is designed to be fully compatible with NCI. Its mission is to be a training or development site for larger HPC projects destined for NCI.&lt;/p>
+&lt;p>&lt;strong>Getting access&lt;/strong>: You need to request access to the HPCC. Email &lt;a href="mailto:eResearch-IT@uts.edu.au">&lt;a href="mailto:eResearch-IT@uts.edu.au">eResearch-IT@uts.edu.au&lt;/a>&lt;/a> to introduce yourself and your requirements. Make sure you mention Andrei and that you are part of the Behavioral DS group. Once you have access read the &lt;a href="https://hpc.research.uts.edu.au/getting_started/">HPC Getting Started&lt;/a> pages.&lt;/p>
+&lt;p>&lt;strong>Use case&lt;/strong>: As HPC systems stand, UTS HPCC is a small system, but very useful for mid- to largish-scale computations. You can access 600 cores and up to 6TB of memory. Usage-wise, UTS HPCC stands in between iHPC and the NCI. That is, once your compute grows too large for iHPC, you use HPCC to scale it up and prepare your scripts for NCI.
+&lt;a name="NCI">&lt;/a>&lt;br/>&lt;br/>&lt;/p>
+&lt;h3 id="national-computation-infrastructure-nci-supercomputer--gadi">National Computation Infrastructure (NCI) supercomputer &amp;ndash; Gadi&lt;/h3>
+&lt;p>&lt;strong>Link to resource&lt;/strong>: &lt;a href="https://nci.org.au/">https://nci.org.au/&lt;/a>&lt;/p>
+&lt;p>&lt;strong>Usage status&lt;/strong>: &lt;a href="https://nci.org.au/our-systems/status">https://nci.org.au/our-systems/status&lt;/a>&lt;/p>
+&lt;p>&lt;strong>Quick description&lt;/strong>: NCI’s Gadi is Australia’s supercomputer. Gadi has 3,200 compute nodes, 155,000 CPU cores, 567 Terabytes of memory, and 640 GPUs (as of 07/09/2021). It has a peak performance of 9 petaflops (by comparison, the largest supercomputer, Fugaku in Japan, has a &lt;a href="https://en.wikipedia.org/wiki/TOP500">peak performance of 442 petaflops&lt;/a>).&lt;/p>
+&lt;p>Gadi is a cross-institutional shared resource, and its usage requires credit (in NCI terms &lt;em>service units&lt;/em> (SU)). Our group has a varying allocation of SUs to be used for computing, which can be dynamically increased. Speak to Andrei if you believe you may require more than we have or even if you may use up all the exiting allocation (not leaving enough for the others).&lt;/p>
+&lt;p>&lt;strong>Getting access&lt;/strong>: You will need to &lt;a href="https://opus.nci.org.au/display/Help/How+to+create+an+NCI+user+account">request an NCI account&lt;/a> using your UTS/ANU/Data61 email address. Use our project code &lt;code>gh47: Tracking disinformation campaigns across social media (Marian-Andrei Rizoiu)&lt;/code> during the joining process. If you already have an account, simply request to join the project. You will subsequently use this project code for all computing. Make sure you have a read of the &lt;a href="https://opus.nci.org.au/display/Help/Gadi+User+Guide">Gadi User guide&lt;/a>.&lt;/p>
+&lt;p>**Use case: Use Gadi for the largest scale computes, which require years of sequential compute time. Ideally, you designed already your scripts using the &lt;a href="#HPCC">UTS HPCC&lt;/a>. Note that Gadi is less responsive than HPCC (and less forgiving with not respecting the limits and instructions).&lt;/p>
+&lt;p>There are several queues available for Gadi, depending on your usage requirements. These include &lt;em>normal&lt;/em> (day-to-day compute), &lt;em>express&lt;/em> (small batches that can be executed fast), &lt;em>hugemem&lt;/em> and &lt;em>megamem&lt;/em> (large memory requirement), and &lt;em>gpuvolta&lt;/em> (for deep learning).
+&lt;br/>&lt;br/>&lt;/p>
+&lt;h2 id="storage">Storage&lt;/h2>
+&lt;h3 id="ihpc-data-folder-1tb">iHPC data folder (1TB)&lt;/h3>
+&lt;p>iHPC home folders are limited to 32 GB. However, each iHPC user has a data folder of 1TB accessible at &lt;code>/data/&amp;lt;username&amp;gt;&lt;/code>. Put here all large files, including your anaconda and datasets. This data folder is on Network File System (NFS) and accessible from any iHPC machine.&lt;/p>
+&lt;h3 id="ihpc-project-mount-20tb">iHPC project mount (20TB)&lt;/h3>
+&lt;p>For shared files and datasets, our group has a project allocation of 20TB, accessible at &lt;code>/projects/BehavioralDS/&lt;/code>. All files in this folder are accessible by all group members.&lt;/p>
+&lt;h3 id="nectar-storage-12tb">Nectar storage (12TB)&lt;/h3>
+&lt;p>NeCTAR VMs have very little storage space (~30GB of disk). You can also create external volumes that can be attached to the VMs (each 50GB). For larger storage, our group has a 12TB NFS volume that needs to be attached using the following procedure.&lt;/p>
+&lt;ol start="0">
+&lt;li>
+&lt;p>&lt;strong>Send the IP address or hostname of the machine&lt;/strong> that you want to mount the Space storage to Intersect Operations (&lt;a href="mailto:help@intersect.org.au">&lt;a href="mailto:help@intersect.org.au">help@intersect.org.au&lt;/a>&lt;/a>). &lt;strong>Copy Andrei to the email!&lt;/strong>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>Install NFS and automount related packages (for Ubuntu)&lt;/strong>:&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;p>&lt;code>apt-get install nfs-common autofs rpcbind&lt;/code>&lt;/p>
+&lt;p>&lt;code>systemctl enable rpcbind&lt;/code>&lt;/p>
+&lt;p>&lt;code>systemctl start rpcbind&lt;/code>&lt;/p>
+&lt;p>&lt;code>systemctl enable autofs&lt;/code>&lt;/p>
+&lt;p>&lt;code>systemctl start autofs&lt;/code>&lt;/p>
+&lt;ol start="2">
+&lt;li>&lt;strong>Create Directories&lt;/strong>&lt;/li>
+&lt;/ol>
+&lt;p>&lt;code>mkdir -p /data/mounts&lt;/code>&lt;/p>
+&lt;ol start="3">
+&lt;li>&lt;strong>Create /etc/auto.data&lt;/strong>&lt;/li>
+&lt;/ol>
+&lt;p>&lt;code>echo &amp;quot;Q3530 -fstype=nfs,nfsvers=3 10.255.122.28:/gpfs/general00/pool9000/Q3530/Q3530&amp;quot; &amp;gt;&amp;gt; /etc/auto.data&lt;/code>&lt;/p>
+&lt;ol start="4">
+&lt;li>&lt;strong>Modify /etc/auto.master&lt;/strong>&lt;/li>
+&lt;/ol>
+&lt;p>Run the following command to insert mount point to /etc/auto.master file&lt;/p>
+&lt;p>&lt;code>echo &amp;quot;/data/mounts /etc/auto.data&amp;quot; &amp;gt;&amp;gt; /etc/auto.master&lt;/code>&lt;/p>
+&lt;ol start="5">
+&lt;li>&lt;strong>Restart autofs and create symlink&lt;/strong>&lt;/li>
+&lt;/ol>
+&lt;p>Restart autofs service to apply the above changes&lt;/p>
+&lt;p>&lt;code>systemctl restart autofs&lt;/code>&lt;/p>
+&lt;p>&lt;code>ln -s /data/mounts/Q3530 /data/Q3530&lt;/code>
+&lt;br/>&lt;br/>&lt;/p>
+&lt;h3 id="nci-storage-4tb">NCI storage (4TB)&lt;/h3>
+&lt;p>Our group has a storage allocation of 4TB on NCI. It can be accessed at &lt;code>/g/data/gh47/&lt;/code>. If you want to use this allocation in your PBS jobs, you need to explicitly ask for it in the submission script. For example, to indicate that credit should be used from gh47 and to access both the &lt;code>scratch&lt;/code> and the &lt;code>/g/data&lt;/code> allocation, one would add the following lines in the submission script:&lt;/p>
+&lt;p>&lt;code>#PBS -P gh47&lt;/code>&lt;/p>
+&lt;p>&lt;code>#PBS -l storage=scratch/gh47+g/data/gh47&lt;/code>&lt;/p></description></item><item><title>Onboarding</title><link>https://www.behavioral-ds.ml/extra/onboarding/</link><pubDate>Fri, 24 Sep 2021 00:00:00 +0000</pubDate><guid>https://www.behavioral-ds.ml/extra/onboarding/</guid><description>&lt;p>(this document is shamelessly adapted from &lt;a href="https://dlab.epfl.ch/onboarding/">Robert West’s excellent dlab onboarding page&lt;/a>)&lt;/p>
+&lt;p>If you’re new to the &lt;a href="https://www.behavioral-ds.ml/">Behavioral Data Science lab&lt;/a> (BDS), first of all: welcome! This page will help you get started by providing useful information on how to get set up and ready to roll. If you’re new not only to BDS but to UTS as a whole, see the bottom of this page for some additional useful pointers.
+&lt;br/>&lt;br/>&lt;/p>
+&lt;h2 id="compute-resources">Compute resources&lt;/h2>
+&lt;p>As a very first step, carefully read &lt;a href="https://www.behavioral-ds.ml/extra/compute_resources">this introduction&lt;/a> to our computing and storage resources: iHPC, UTS HPCC, Nectar, and NCI. It will tell you everything that’s necessary to get cracking and crunching with that exciting data!
+&lt;br/>&lt;br/>&lt;/p>
+&lt;p>&lt;a name="Group">&lt;/a>&lt;/p>
+&lt;h2 id="communication">Communication&lt;/h2>
+&lt;h3 id="groups-webpage">Group’s webpage&lt;/h3>
+&lt;p>Our group’s webpage is &lt;a href="https://www.behavioral-ds.ml/">https://www.behavioral-ds.ml/&lt;/a>. It lists the members, our news, our publications, and blog entries. We also use it to keep track of &lt;a href="#abcde">our reading group schedule&lt;/a>. Our website is collaborative, and every member needs to update it (for example to add their personal profile, or to fill in the reading details). The webpage is hosted on Github pages, and we update it by committing to the repository.&lt;/p>
+&lt;p>To add your profile to the &lt;a href="https://www.behavioral-ds.ml/people">lab's people page&lt;/a>, you need to fork the &lt;a href="https://github.com/behavioral-ds/behavioral-ds.github.io">lab's repository on GitHub&lt;/a>, edit it is to add your profile, and create a pull request. More instructions are in the repository’s README.
+&lt;br/>&lt;br/>&lt;/p>
+&lt;h3 id="slack">Slack&lt;/h3>
+&lt;p>Join the &lt;a href="https://behavioral-ds.slack.com/">BDS team on Slack&lt;/a>. We use Slack for all communications. The group’s philosophy is that we all are aware of the work of others, and we pitch in when we feel like it. The workspace is organized in public channels, one for each project.&lt;/p>
+&lt;p>Each BDS member is part of the channels they work on (usually one project). All research-oriented discussions go in the project channel (please keep the DM for only admin and personal issues). Feel free to roam around and peek at any public channel.&lt;/p>
+&lt;p>There are several public channels that you might want to peak at:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://behavioral-ds.slack.com/archives/CC1UMTHS7">#general&lt;/a> &amp;ndash; general announcements, usually admin- and social group-related&lt;/li>
+&lt;li>&lt;a href="https://behavioral-ds.slack.com/archives/C019G01GFE2">#o-data&lt;/a> &amp;ndash; datasets&lt;/li>
+&lt;li>&lt;a href="https://behavioral-ds.slack.com/archives/CNBBFBHHV">#compute-power&lt;/a> &amp;ndash; computation resources and issues&lt;/li>
+&lt;li>&lt;a href="https://behavioral-ds.slack.com/archives/CMZJRKSKS">#reading&lt;/a> &amp;ndash; what to read, and announcements about the reading group&lt;/li>
+&lt;li>&lt;a href="https://behavioral-ds.slack.com/archives/CC1G91JQZ">#random&lt;/a> &amp;ndash; non-work banter and water cooler conversation
+&lt;br/>&lt;br/>&lt;/li>
+&lt;/ul>
+&lt;h3 id="meetings">Meetings&lt;/h3>
+&lt;p>&lt;a href="https://medium.com/@jurgens_24580/reflections-on-strategies-for-successful-meetings-with-undergraduate-researchers-ae22306ecd8d">Here&lt;/a> is some good advice on how to make meetings with your advisor as effective and successful as possible. Please read it.&lt;/p>
+&lt;p>Where possible, in-person (offline) meetings are preferred. For online and mixed-mode meetings we use Zoom. When online, we will use Zoom’s Shared Whiteboard to take collective notes. If you have a Zoom-compatible tablet with a pen, it is recommended to install Zoom as drawing with a pen is considerably easier than with a mouse. Alternative environments (like Miro or Google Jamboard) can also be used.
+&lt;br/>&lt;br/>&lt;/p>
+&lt;h3 id="reading-group">Reading group&lt;/h3>
+&lt;p>We have a reading group that runs for one hour each week. The meeting runs mixed-mode, on Zoom and in-person in Sydney. During the meeting, we read papers and run group-oriented activities (such as three-minute thesis presentations and conference dry-runs). The meeting is run each week by a different member (see the &lt;a href="https://www.behavioral-ds.ml/reading/">online roster&lt;/a>). When it is your turn, you can populate the meeting details as described above (see &lt;a href="#Group">group’s webpage&lt;/a>).
+&lt;br/>&lt;br/>&lt;/p>
+&lt;h2 id="documenting-your-research">Documenting your research&lt;/h2>
+&lt;h3 id="keeping-notes">Keeping notes&lt;/h3>
+&lt;p>It is important that you keep thorough notes of your research. This will make it easier to remember the things you’ve done, the things you still need to do, important references you’ve come across, etc. It will also let you share your thoughts with the rest of the group, and it will make you a better, more disciplined researcher.&lt;/p>
+&lt;p>We recommend two ways of keeping notes, you will need to choose one. The first is a rolling dated Overleaf document, where each week is a section and under which you note your work and progress, including figures and interpretations. Keep the most recent on top (i.e. you add at the beginning of the document, not at the end). The second way is the app &lt;a href="https://www.notion.so/">Notion&lt;/a>, which has free academic plans with your UTS student number email address. Create a master page that you will share with Andrei. On the Master page link your reading list, meeting notes etc. (see an example print-screen). Note that we suggest using a dedicated tool for managing your reading and related work (such as Mendeley or Zotero).&lt;/p>
+&lt;p>&lt;img src="https://www.behavioral-ds.ml/extra/onboarding_content/onboarding_1.png" width="50%" />
+&lt;img src="https://www.behavioral-ds.ml/extra/onboarding_content/onboarding_2.png" width="75%" />&lt;/p>
+&lt;h3 id="writing-papers">Writing papers&lt;/h3>
+&lt;p>You can find some tips and tools for writing papers in LaTeX on &lt;a href="https://dlab.epfl.ch/onboarding/paper-writing">dlab’s tips for writing&lt;/a>.
+&lt;br/>&lt;br/>&lt;/p>
+&lt;h3 id="blog-posts">Blog posts&lt;/h3>
+&lt;p>Blog posts are a great way of publicizing your research results beyond good old (and slooow…) papers. They are also a channel for making what you’re doing accessible to the general public, rather than just to other academics.&lt;/p>
+&lt;p>Therefore, every paper published at BDS is expected to be accompanied by a blog post that is written in non-technical terms and easily accessible to non-experts, to be published on &lt;a href="https://www.behavioral-ds.ml/research">BDS’s research page&lt;/a>. You will need to select a category or shout if none is adequate.
+&lt;br/>&lt;br/>&lt;/p>
+&lt;h2 id="new-to-uts">New to UTS?&lt;/h2>
+&lt;p>The following pointers might help you get started if you’ve just arrived at UTS.
+&lt;br/>&lt;br/>&lt;/p>
+&lt;h3 id="wifi">Wifi&lt;/h3>
+&lt;p>On campus, the best wireless network to use is &lt;strong>UTS-Wifi&lt;/strong>. You can use it with your UTS student username and password. For Linux, check the below screen for configuration.&lt;/p>
+&lt;p>&lt;img src="https://www.behavioral-ds.ml/extra/onboarding_content/onboarding_3.png" width="75%" />&lt;/p>
+&lt;h3 id="vpn">VPN&lt;/h3>
+&lt;p>To access UTS resources, such as the iHPC compute servers, from outside of the UTS network, you need to use the &lt;a href="https://vpn.uts.edu.au/">UTS VPN&lt;/a>.
+&lt;br/>&lt;br/>&lt;/p>
+&lt;h3 id="uts-studentstaff-card">UTS student/staff card&lt;/h3>
+&lt;p>During your first days at UTS, you’ll get your &lt;a href="https://www.uts.edu.au/current-students/managing-your-course/your-student-info/student-id-cards">UTS student card&lt;/a>, which will serve to access the library and the UTS buildings. Once you have the card, make sure you let the &lt;a href="mailto:dsadmin@uts.edu.au">Data Science admins&lt;/a> know so that you get access to DSI HDR dedicated spaces (room CB02.11.141).
+&lt;br/>&lt;br/>&lt;/p>
+&lt;h3 id="uts-honorary-appointments">UTS Honorary appointments&lt;/h3>
+&lt;p>Group members who are not UTS staff nor students need to obtain honorary UTS appointments. An honorary staff has a UTS online account and can access internal systems, including the compute resources (note: not all compute resources require a UTS affiliation, check details above).&lt;/p>
+&lt;p>To get an Honorary appointment, Andrei needs to initiate the process with UTS admins, after which you will receive email instructions by email. Please make sure you fill in the online form ASAP, as the downstream admin process can take weeks. UTS Honorary members are considered staff in UTS systems.&lt;/p></description></item><item><title>PhD Opportunity</title><link>https://www.behavioral-ds.ml/extra/phdopportunity/</link><pubDate>Tue, 03 Aug 2021 00:00:00 +0000</pubDate><guid>https://www.behavioral-ds.ml/extra/phdopportunity/</guid><description>&lt;h2 id="summary">Summary&lt;/h2>
 &lt;ul>
 &lt;li>Rare PhD opportunity for research on the Future of Work and Labour Markets applying Data Science and Machine Learning techniques&lt;/li>
 &lt;li>Mentored by leading researchers and industrials in this space&lt;/li>
