@@ -16,7 +16,7 @@ We have four compute resources and each has attached a storage resource.
 
 Our group has a private cluster called *hephaestos* which currently contains two machines (see print screen below). Our private cluster is accessible to BDS members only.
 
-<img src="/extra/compute_resources_content/compute_resources_1.png" width="100%" />
+<img src="/extra/onboarding_content/compute.png" width="100%" />
 
 **Getting access**: Request an iHPC account (see [ihpc.research.uts.edu.au](ihpc.research.uts.edu.au) for instructions). Mention the Behavioral Data Science group and Andrei in your request to be automatically added to the hephaestos access lists. **Make sure you read the documentation!**
 
