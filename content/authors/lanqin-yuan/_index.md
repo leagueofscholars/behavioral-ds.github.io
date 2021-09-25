@@ -17,7 +17,7 @@ organizations:
 - name: University of Technology Sydney
 
 # Short bio (displayed in user profile at end of posts)
-bio: I am a PhD candidate at the University of Technology Sydney. My research is centered around the automatic detection of problematic content (hate speech, misinformation, and disinformation), modeling the spread of such content online, and exploring ways to address the spread of such content.
+bio: I am a PhD candidate at the University of Technology Sydney under the supervision of Dr Marian-Andrei Rizoiu. My research is centered around the automatic detection of problematic content (hate speech, misinformation, and disinformation), modeling the spread of problematic content, and exploring ways to address the spread of problematic content in online platforms.
 
 interests:
 - Machine Learning
