@@ -10,19 +10,19 @@ authors:
 superuser: false
 
 # Role/position
-role: Masters student
+role: PhD student
 
 # Organizations/Affiliations
 organizations:
-- name: Australian National University
+- name: University of Technology Sydney
 
 # Short bio (displayed in user profile at end of posts)
-bio: I am a postgraduate student pursuing a Master of Computing (Advanced) degree at the Australian National University, specialising in Machine learning. My research under Dr Marian-Andrei Rizoiu involves the use of transfer learning to improve the detection of hate speech in online text. Specifically, we seek to leverage multiple small datasets to create a generalised representation of hate which can be utilised by models and tasks downstream.
-
+bio: I am a PhD candidate at the University of Technology Sydney. My research is centered around the automatic detection of problematic content (hate speech, misinformation, and disinformation), modeling the spread of such content online, and exploring ways to address the spread of such content.
 
 interests:
 - Machine Learning
 - Artificial Intelligence
+- Reinforcement Learning
 - Data Mining
 - Data Streams
 
@@ -55,5 +55,5 @@ social:
 #                  "Visitors",
 #                  "Alumni"]
 user_groups:
-- Honours Students
+- PhD Students
 ---
