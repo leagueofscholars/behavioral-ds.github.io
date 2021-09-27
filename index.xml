@@ -1,4 +1,64 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Behavioral Data Science</title><link>https://www.behavioral-ds.ml/</link><atom:link href="https://www.behavioral-ds.ml/index.xml" rel="self" type="application/rss+xml"/><description>Behavioral Data Science</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>2021</copyright><lastBuildDate>Fri, 24 Sep 2021 00:00:00 +0000</lastBuildDate><image><url>https://www.behavioral-ds.ml/img/logo.png</url><title>Behavioral Data Science</title><link>https://www.behavioral-ds.ml/</link></image><item><title>Compute and storage resources</title><link>https://www.behavioral-ds.ml/extra/compute_resources/</link><pubDate>Fri, 24 Sep 2021 00:00:00 +0000</pubDate><guid>https://www.behavioral-ds.ml/extra/compute_resources/</guid><description>&lt;p>Our group has access to considerable computation and storage resources. This document describes these and how to access them. Each resource has its own use scenario, and some may be more adapted to specific problems than others (for example, if you want to set up a Twitter crawler, use a Nectar Virtual Machine for better uptime and to avoid security issues on the compute servers).
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Behavioral Data Science</title><link>https://www.behavioral-ds.ml/</link><atom:link href="https://www.behavioral-ds.ml/index.xml" rel="self" type="application/rss+xml"/><description>Behavioral Data Science</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>2021</copyright><lastBuildDate>Mon, 27 Sep 2021 00:00:00 +0000</lastBuildDate><image><url>https://www.behavioral-ds.ml/img/logo.png</url><title>Behavioral Data Science</title><link>https://www.behavioral-ds.ml/</link></image><item><title>Discovering coordinated disinformation via Hawkes processes</title><link>https://www.behavioral-ds.ml/blogpost/coordinated_disinfo_hawkes/</link><pubDate>Mon, 27 Sep 2021 00:00:00 +0000</pubDate><guid>https://www.behavioral-ds.ml/blogpost/coordinated_disinfo_hawkes/</guid><description>&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/kzGkvZRjnoI?start=70" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>&lt;/iframe>
+&lt;p>Recording of the presentation &amp;ldquo;Discovering the Strategies and Promotion Schedules of Coordinated Disinformation via Hawkes Intensity Processes&amp;rdquo; (Tim Graham, &lt;strong>Marian-Andrei Rizoiu&lt;/strong>, Axel Bruns, Dan Angus), presented at the &lt;a href="https://www.ecrea2021.eu/">European Communication Conference (ECREA) 2021&lt;/a>, 8 Sep. 2021.&lt;/p>
+&lt;h1 id="discovering-the-strategies-and-promotion-schedules-of-coordinated-disinformation-via-hawkes-intensity-processes">Discovering the Strategies and Promotion Schedules of Coordinated Disinformation via Hawkes Intensity Processes&lt;/h1>
+&lt;p>&lt;a href="https://www.qut.edu.au/about/our-people/academic-profiles/timothy.graham">Tim Graham&lt;/a>, Digital Media Research Centre, Queensland University of Technology&lt;br>
+&lt;a href="https://www.behavioral-ds.ml/authors/ma-rizoiu/">Marian-Andrei Rizoiu&lt;/a>, Data Science Institute, University of Technology Sydney&lt;br>
+&lt;a href="https://www.qut.edu.au/about/our-people/academic-profiles/a.bruns">Axel Bruns&lt;/a>, Digital Media Research Centre, Queensland University of Technology&lt;br>
+&lt;a href="https://www.qut.edu.au/about/our-people/academic-profiles/daniel.angus">Dan Angus&lt;/a>, Digital Media Research Centre, Queensland University of Technology&lt;/p>
+&lt;p>‘Fake news’ and broader ‘information disorders’ [6] such as mis- and disinformation have emerged as global issues that threaten to undermine democracy and authentic political communication on social media [1]. Increasingly sophisticated coordination strategies have intensified the scale and scope of the impact that disinformation has on public opinion and democratic trust. Howard et al. [3] found that coordinated disinformation operations are now occurring in 48 countries, and in 2019 the European External Action Service detected and exposed over 1,000 cases of disinformation within the European Union [2]. Whilst disinformation has attracted much scholarly attention, most studies to date have focussed on the diffusion and impact of individual content (e.g. ‘fake news’ articles) and the activity of individual accounts (e.g. bots and trolls).
+An emerging problem is to understand message coordination strategies, where content authored and distributed by agents (e.g. Twitter trolls) is governed and scheduled by some unknown principal actor [4]. We know that coordinated promotion (e.g. sharing, liking, retweeting) of ‘fake news’ articles by trolls and social bots can greatly increase and amplify the negative effects of these attempts to sow discord and manipulate public conversations about election candidates and partisan issues such as immigration and climate change. Likewise, it is evident that disinformation campaigns unfold via ‘collaborative work’ that co-opts and cultivates organic systems in order to produce desired effects such as increased polarisation, distrust in news media and confusion of the audience [7]. This makes identifying ‘inauthentic’ versus ‘organic’ activity ever more difficult, as they are intricately enmeshed in real-world disinformation campaigns.
+In this paper, we tackle the problem of inferring the coordinated promotion schedules of ‘fake news’ articles using a novel approach known as Hawkes Intensity Processes (HIP; see [5]). We analyse the diffusion of articles from ten major sources of hyperpartisan information and ‘fake news’ within over 16.5 million tweets that linked to content from these sites during July to September 2019. Using HIP, we uncover not only coordination strategies but also the promotion schedules of ‘fake news’ content, where agents (in this case Twitter accounts) are being centrally managed by principals (e.g. state operatives, government officials, etc.) in order to strategically promote ‘fake news’ content and maximise its virality and longevity in the social memory. This paper provides preliminary results from this ongoing research, highlighting the current challenges as well as open problems and gaps for future work.&lt;/p>
+&lt;h3 id="references">References&lt;/h3>
+&lt;p>[1] Benkler, Y., Faris, R., &amp;amp; Roberts, H. (2018). Network propaganda: Manipulation, disinformation, and radicalization in American politics. Oxford University Press.&lt;br>
+[2] European Commission. (2019). Action plan against disinformation: Report in progress. Retrieved 20 November 2019 from: &lt;a href="https://ec.europa.eu/commission/sites/beta-political/files/factsheet_disinfo_elex_140619_final.pdf">https://ec.europa.eu/commission/sites/beta-political/files/factsheet_disinfo_elex_140619_final.pdf&lt;/a>.&lt;br>
+[3] Howard, P. N., &amp;amp; Kollanyi, B. (2016). Bots, #StrongerIn, and #Brexit: Computational Propaganda during the UK-EU Referendum. SSRN Electronic Journal. doi:10.2139/ssrn.2798311&lt;br>
+[4] Keller, F. B., Schoch, D., Stier, S., &amp;amp; Yang, J. (2019). Political Astroturfing on Twitter: How to Coordinate a Disinformation Campaign. Political Communication, 1-25.&lt;br>
+[5] Rizoiu, M. A., Xie, L., Sanner, S., Cebrian, M., Yu, H., &amp;amp; Van Hentenryck, P. (2017, April). Expecting to be hip: Hawkes intensity processes for social media popularity. In Proceedings of the 26th International Conference on World Wide Web (pp. 735-744). International World Wide Web Conferences Steering Committee.&lt;br>
+[6] Wardle, C., &amp;amp; Derakhshan, H. (2017). Information disorder: Toward an interdisciplinary framework for research and policymaking. Council of Europe Report DGI (2017) 09.&lt;br>
+[7] Wilson, T., Zhou, K., &amp;amp; Starbird, K. (2018). Assembling Strategic Narratives: Information Operations as Collaborative Work within an Online Community. Proceedings of the ACM on Human-Computer Interaction, 2(CSCW), 183.&lt;/p>
+&lt;h2 id="the-panel-coordinated-inauthentic-behaviour-in-social-media-new-methods-and-findings">The panel: &amp;ldquo;Coordinated Inauthentic Behaviour in Social Media: New Methods and Findings&amp;rdquo;&lt;/h2>
+&lt;h3 id="panel-rationale">Panel Rationale&lt;/h3>
+&lt;p>Social media platforms are increasingly forced to address what Facebook now describes as ‘coordinated inauthentic behaviour’ (Gleicher 2018): online influence operations that seek to trick platform algorithms into promoting and recommending ‘problematic information’ (Jack 2017), to mislead the human users of such platforms into accepting and sharing such content, and thereby also to affect broader issue frames and news agendas in mainstream media coverage. Concerns about such coordinated inauthentic behaviour extend earlier fears about the influence of malignant social bots, but also transcend them: drawing on social bots as well as human labour, coordinated inauthentic behaviour is likely to involve a combination of manual and automated activity. This additional human factor also complicates the detection of such coordinated activities, and their distinction from genuine, organic, authentic coordinated actions.&lt;/p>
+&lt;p>This cross-national and interdisciplinary panel approaches the study of coordinated inauthentic behaviour from a number of directions. It outlines novel and innovative detection and analysis approaches for a number of leading social media platforms, and presents their results in the context of domestic and international political debates across several national contexts. Further, it also considers how mainstream journalism might report on and respond to such activities in order to protect news audiences from being affected by coordinated inauthentic behaviours.&lt;/p>
+&lt;p>The first two papers in this panel focus especially on coordinated inauthentic link-sharing practices. Paper 1 introduces Hawkes Intensity Processes (HIP), a novel technique for inferring the coordinated content promotion schedules of automated social media accounts, and applies this to a major dataset of 16.5 million tweets containing links to ten major sites identified as sources of hyperpartisan content and ‘fake news’. In doing so, it uncovers new networks of inauthentic Twitter actors. Paper 2 investigates similar coordinated link-sharing activity on Facebook in Italy during the 2018 Italian and 2019 European elections. It uncovers evidence for the involvement of dozens of pages, groups, and public profiles in such media manipulation attempts. Paper 3 complements this work by focussing especially on the temporal posting patterns in such coordinated activity. It employs the recurrence plotting technique to identify traces of inauthentic actors’ use of automated scheduling tools in systematically posting content to a network of apparently unrelated pages, focussing here especially on a group of far-right pages on Facebook. Paper 4 examines ten coordinated disinformation campaigns across the globe (e.g., Hong Kong, Russia, USA, Spain and Germany) and identifies important traits that help distinguish between those participating in the disinformation campaign and the regular users they try to imitate. Paper 5, finally, shifts our attention to a core target of such coordinated inauthentic behaviour: the journalists and editors whose perception of current political moods such influence operations often aim to affect. Drawing on a series of in-depth interviews with Danish news workers and related stakeholders, it examines their understanding of and responses to coordinated mis- and disinformation campaigns.&lt;/p>
+&lt;p>Collectively, these studies contribute substantially to advancing the methodological toolkit and extending the empirical evidence base for the study of coordinated inauthentic behaviour, while also not losing sight of the stakeholders that such work seeks to support. They offer an independent assessment of the nature and extent of the problem across several leading social media platforms, complementing the platform providers’ own investigations into such activities and identifying possible responses to such concerns for both social and mainstream media actors.&lt;/p>
+&lt;h3 id="the-papers-presented-are-presenters-bolded">The papers presented are (presenters bolded):&lt;/h3>
+&lt;ul>
+&lt;li>Discovering the Strategies and Promotion Schedules of Coordinated Disinformation via Hawkes Intensity Processes (Tim Graham, &lt;strong>Marian-Andrei Rizoiu&lt;/strong>, Axel Bruns, Dan Angus)&lt;/li>
+&lt;li>It Takes a Village to Manipulate the Media: Coordinated Link Sharing Behaviour during 2018 and 2019 Italian Elections (&lt;strong>Fabio Giglietto&lt;/strong>, Nicola Righetti, Luca Rossi, Giada Marino)&lt;/li>
+&lt;li>Recurrence Plotting for Detecting Duplicate Online Posting Activities (&lt;strong>Dan Angus&lt;/strong>, Tim Graham, Tobias Keller, Brenda Moon, Axel Bruns)&lt;/li>
+&lt;li>Astroturfing in Hong Kong and Elsewhere: Patterns of Coordination in Hidden Twitter Campaigns (&lt;strong>Franziska B. Keller&lt;/strong>, Sebastian Stier, David Schoch, JungHwan Yang)&lt;/li>
+&lt;/ul></description></item><item><title>Discovering coordinated disinformation via Hawkes processes</title><link>https://www.behavioral-ds.ml/theme2_content/coordinated_disinfo_hawkes/</link><pubDate>Mon, 27 Sep 2021 00:00:00 +0000</pubDate><guid>https://www.behavioral-ds.ml/theme2_content/coordinated_disinfo_hawkes/</guid><description>&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/kzGkvZRjnoI?start=70" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>&lt;/iframe>
+&lt;p>Recording of the presentation &amp;ldquo;Discovering the Strategies and Promotion Schedules of Coordinated Disinformation via Hawkes Intensity Processes&amp;rdquo; (Tim Graham, &lt;strong>Marian-Andrei Rizoiu&lt;/strong>, Axel Bruns, Dan Angus), presented at the &lt;a href="https://www.ecrea2021.eu/">European Communication Conference (ECREA) 2021&lt;/a>, 8 Sep. 2021.&lt;/p>
+&lt;h1 id="discovering-the-strategies-and-promotion-schedules-of-coordinated-disinformation-via-hawkes-intensity-processes">Discovering the Strategies and Promotion Schedules of Coordinated Disinformation via Hawkes Intensity Processes&lt;/h1>
+&lt;p>&lt;a href="https://www.qut.edu.au/about/our-people/academic-profiles/timothy.graham">Tim Graham&lt;/a>, Digital Media Research Centre, Queensland University of Technology&lt;br>
+&lt;a href="https://www.behavioral-ds.ml/authors/ma-rizoiu/">Marian-Andrei Rizoiu&lt;/a>, Data Science Institute, University of Technology Sydney&lt;br>
+&lt;a href="https://www.qut.edu.au/about/our-people/academic-profiles/a.bruns">Axel Bruns&lt;/a>, Digital Media Research Centre, Queensland University of Technology&lt;br>
+&lt;a href="https://www.qut.edu.au/about/our-people/academic-profiles/daniel.angus">Dan Angus&lt;/a>, Digital Media Research Centre, Queensland University of Technology&lt;/p>
+&lt;p>‘Fake news’ and broader ‘information disorders’ [6] such as mis- and disinformation have emerged as global issues that threaten to undermine democracy and authentic political communication on social media [1]. Increasingly sophisticated coordination strategies have intensified the scale and scope of the impact that disinformation has on public opinion and democratic trust. Howard et al. [3] found that coordinated disinformation operations are now occurring in 48 countries, and in 2019 the European External Action Service detected and exposed over 1,000 cases of disinformation within the European Union [2]. Whilst disinformation has attracted much scholarly attention, most studies to date have focussed on the diffusion and impact of individual content (e.g. ‘fake news’ articles) and the activity of individual accounts (e.g. bots and trolls).
+An emerging problem is to understand message coordination strategies, where content authored and distributed by agents (e.g. Twitter trolls) is governed and scheduled by some unknown principal actor [4]. We know that coordinated promotion (e.g. sharing, liking, retweeting) of ‘fake news’ articles by trolls and social bots can greatly increase and amplify the negative effects of these attempts to sow discord and manipulate public conversations about election candidates and partisan issues such as immigration and climate change. Likewise, it is evident that disinformation campaigns unfold via ‘collaborative work’ that co-opts and cultivates organic systems in order to produce desired effects such as increased polarisation, distrust in news media and confusion of the audience [7]. This makes identifying ‘inauthentic’ versus ‘organic’ activity ever more difficult, as they are intricately enmeshed in real-world disinformation campaigns.
+In this paper, we tackle the problem of inferring the coordinated promotion schedules of ‘fake news’ articles using a novel approach known as Hawkes Intensity Processes (HIP; see [5]). We analyse the diffusion of articles from ten major sources of hyperpartisan information and ‘fake news’ within over 16.5 million tweets that linked to content from these sites during July to September 2019. Using HIP, we uncover not only coordination strategies but also the promotion schedules of ‘fake news’ content, where agents (in this case Twitter accounts) are being centrally managed by principals (e.g. state operatives, government officials, etc.) in order to strategically promote ‘fake news’ content and maximise its virality and longevity in the social memory. This paper provides preliminary results from this ongoing research, highlighting the current challenges as well as open problems and gaps for future work.&lt;/p>
+&lt;h3 id="references">References&lt;/h3>
+&lt;p>[1] Benkler, Y., Faris, R., &amp;amp; Roberts, H. (2018). Network propaganda: Manipulation, disinformation, and radicalization in American politics. Oxford University Press.&lt;br>
+[2] European Commission. (2019). Action plan against disinformation: Report in progress. Retrieved 20 November 2019 from: &lt;a href="https://ec.europa.eu/commission/sites/beta-political/files/factsheet_disinfo_elex_140619_final.pdf">https://ec.europa.eu/commission/sites/beta-political/files/factsheet_disinfo_elex_140619_final.pdf&lt;/a>.&lt;br>
+[3] Howard, P. N., &amp;amp; Kollanyi, B. (2016). Bots, #StrongerIn, and #Brexit: Computational Propaganda during the UK-EU Referendum. SSRN Electronic Journal. doi:10.2139/ssrn.2798311&lt;br>
+[4] Keller, F. B., Schoch, D., Stier, S., &amp;amp; Yang, J. (2019). Political Astroturfing on Twitter: How to Coordinate a Disinformation Campaign. Political Communication, 1-25.&lt;br>
+[5] Rizoiu, M. A., Xie, L., Sanner, S., Cebrian, M., Yu, H., &amp;amp; Van Hentenryck, P. (2017, April). Expecting to be hip: Hawkes intensity processes for social media popularity. In Proceedings of the 26th International Conference on World Wide Web (pp. 735-744). International World Wide Web Conferences Steering Committee.&lt;br>
+[6] Wardle, C., &amp;amp; Derakhshan, H. (2017). Information disorder: Toward an interdisciplinary framework for research and policymaking. Council of Europe Report DGI (2017) 09.&lt;br>
+[7] Wilson, T., Zhou, K., &amp;amp; Starbird, K. (2018). Assembling Strategic Narratives: Information Operations as Collaborative Work within an Online Community. Proceedings of the ACM on Human-Computer Interaction, 2(CSCW), 183.&lt;/p>
+&lt;h2 id="the-panel-coordinated-inauthentic-behaviour-in-social-media-new-methods-and-findings">The panel: &amp;ldquo;Coordinated Inauthentic Behaviour in Social Media: New Methods and Findings&amp;rdquo;&lt;/h2>
+&lt;h3 id="panel-rationale">Panel Rationale&lt;/h3>
+&lt;p>Social media platforms are increasingly forced to address what Facebook now describes as ‘coordinated inauthentic behaviour’ (Gleicher 2018): online influence operations that seek to trick platform algorithms into promoting and recommending ‘problematic information’ (Jack 2017), to mislead the human users of such platforms into accepting and sharing such content, and thereby also to affect broader issue frames and news agendas in mainstream media coverage. Concerns about such coordinated inauthentic behaviour extend earlier fears about the influence of malignant social bots, but also transcend them: drawing on social bots as well as human labour, coordinated inauthentic behaviour is likely to involve a combination of manual and automated activity. This additional human factor also complicates the detection of such coordinated activities, and their distinction from genuine, organic, authentic coordinated actions.&lt;/p>
+&lt;p>This cross-national and interdisciplinary panel approaches the study of coordinated inauthentic behaviour from a number of directions. It outlines novel and innovative detection and analysis approaches for a number of leading social media platforms, and presents their results in the context of domestic and international political debates across several national contexts. Further, it also considers how mainstream journalism might report on and respond to such activities in order to protect news audiences from being affected by coordinated inauthentic behaviours.&lt;/p>
+&lt;p>The first two papers in this panel focus especially on coordinated inauthentic link-sharing practices. Paper 1 introduces Hawkes Intensity Processes (HIP), a novel technique for inferring the coordinated content promotion schedules of automated social media accounts, and applies this to a major dataset of 16.5 million tweets containing links to ten major sites identified as sources of hyperpartisan content and ‘fake news’. In doing so, it uncovers new networks of inauthentic Twitter actors. Paper 2 investigates similar coordinated link-sharing activity on Facebook in Italy during the 2018 Italian and 2019 European elections. It uncovers evidence for the involvement of dozens of pages, groups, and public profiles in such media manipulation attempts. Paper 3 complements this work by focussing especially on the temporal posting patterns in such coordinated activity. It employs the recurrence plotting technique to identify traces of inauthentic actors’ use of automated scheduling tools in systematically posting content to a network of apparently unrelated pages, focussing here especially on a group of far-right pages on Facebook. Paper 4 examines ten coordinated disinformation campaigns across the globe (e.g., Hong Kong, Russia, USA, Spain and Germany) and identifies important traits that help distinguish between those participating in the disinformation campaign and the regular users they try to imitate. Paper 5, finally, shifts our attention to a core target of such coordinated inauthentic behaviour: the journalists and editors whose perception of current political moods such influence operations often aim to affect. Drawing on a series of in-depth interviews with Danish news workers and related stakeholders, it examines their understanding of and responses to coordinated mis- and disinformation campaigns.&lt;/p>
+&lt;p>Collectively, these studies contribute substantially to advancing the methodological toolkit and extending the empirical evidence base for the study of coordinated inauthentic behaviour, while also not losing sight of the stakeholders that such work seeks to support. They offer an independent assessment of the nature and extent of the problem across several leading social media platforms, complementing the platform providers’ own investigations into such activities and identifying possible responses to such concerns for both social and mainstream media actors.&lt;/p>
+&lt;h3 id="the-papers-presented-are-presenters-bolded">The papers presented are (presenters bolded):&lt;/h3>
+&lt;ul>
+&lt;li>Discovering the Strategies and Promotion Schedules of Coordinated Disinformation via Hawkes Intensity Processes (Tim Graham, &lt;strong>Marian-Andrei Rizoiu&lt;/strong>, Axel Bruns, Dan Angus)&lt;/li>
+&lt;li>It Takes a Village to Manipulate the Media: Coordinated Link Sharing Behaviour during 2018 and 2019 Italian Elections (&lt;strong>Fabio Giglietto&lt;/strong>, Nicola Righetti, Luca Rossi, Giada Marino)&lt;/li>
+&lt;li>Recurrence Plotting for Detecting Duplicate Online Posting Activities (&lt;strong>Dan Angus&lt;/strong>, Tim Graham, Tobias Keller, Brenda Moon, Axel Bruns)&lt;/li>
+&lt;li>Astroturfing in Hong Kong and Elsewhere: Patterns of Coordination in Hidden Twitter Campaigns (&lt;strong>Franziska B. Keller&lt;/strong>, Sebastian Stier, David Schoch, JungHwan Yang)&lt;/li>
+&lt;/ul></description></item><item><title>Compute and storage resources</title><link>https://www.behavioral-ds.ml/extra/compute_resources/</link><pubDate>Fri, 24 Sep 2021 00:00:00 +0000</pubDate><guid>https://www.behavioral-ds.ml/extra/compute_resources/</guid><description>&lt;p>Our group has access to considerable computation and storage resources. This document describes these and how to access them. Each resource has its own use scenario, and some may be more adapted to specific problems than others (for example, if you want to set up a Twitter crawler, use a Nectar Virtual Machine for better uptime and to avoid security issues on the compute servers).
 We have four compute resources and each has attached a storage resource.&lt;/p>
 &lt;h2 id="compute-servers-and-frameworks">Compute servers and frameworks&lt;/h2>
 &lt;h3 id="ihpc-servers">iHPC servers&lt;/h3>
@@ -458,232 +518,7 @@ bs_pol.getLabeledUsers()
 &lt;p>While the future of work remains unclear, change is inevitable. New technologies, economic crises, and other factors will continue to shift labour demands causing workers to move between jobs. If labour transitions occur efficiently, significant productivity and equity benefits arise at all levels of the labour market; if transitions are slow, or fail, significant costs are borne to both the State and the individual. Therefore, it's in the interests of workers, firms, and governments that labour transitions are efficient and effective. The methods and systems we put forward here could significantly improve the achievement of these goals.&lt;/p>
 &lt;p>For the full technical details, please read the &lt;a href="https://arxiv.org/abs/2011.11801">pre-print&lt;/a>.&lt;/p>
 &lt;p>&lt;strong>Acknowledgements&lt;/strong>&lt;/p>
-&lt;p>We thank &lt;a href="https://www.linkedin.com/in/bleditaska?lipi=urn%3Ali%3Apage%3Ad_flagship3_pulse_read%3Bvr7rCfoNTVGsSR9hhmd%2FhQ%3D%3D">Bledi Taska&lt;/a> and &lt;a href="https://ca.linkedin.com/in/dmiskulin">Davor Miskulin&lt;/a> from Burning Glass Technologies for generously providing the job advertisements data for this research and for their valuable feedback. We also thank &lt;a href="https://fr.linkedin.com/in/broecke-stijn-36ba2048">Stijn Broecke&lt;/a> and other colleagues from the OECD for their ongoing input and guidance in the development of this work.&lt;/p></description></item><item><title>User Analysis on reshare cascades about COVID-19</title><link>https://www.behavioral-ds.ml/blogpost/user_analysis/</link><pubDate>Thu, 03 Dec 2020 00:00:00 +0000</pubDate><guid>https://www.behavioral-ds.ml/blogpost/user_analysis/</guid><description>&lt;p>We demonstrate in this blog post a tutorial on applying the tools for analyzing online information diffusions about Twitter users, &lt;a href="https://github.com/behavioral-ds/BirdSpotter">&lt;code>birdspotter&lt;/code>&lt;/a> and &lt;a href="https://github.com/behavioral-ds/evently">&lt;code>evently&lt;/code>&lt;/a>.&lt;/p>
-&lt;h2 id="dataset">Dataset&lt;/h2>
-&lt;p>In this tutorial, we apply two tools for analyzing Twitter users, on a COVID-19 retweet dataset. The dataset
-is curated by Chen, et al. One can obtain a copy of the tweet IDs from
-their &lt;a href="https://github.com/echen102/COVID-19-TweetIDs">project&lt;/a>. We
-only use the 31st of Janury sample of the whole dataset for
-demonstration purpose. The tweets can be recovered by &lt;code>hydration&lt;/code>
-from their IDs. We note that some tweets might have been deleted and in
-the end we manage to get 69.2% (1,489,877) of the original tweets.&lt;/p>
-&lt;h2 id="tools">Tools&lt;/h2>
-&lt;p>While &lt;code>BirdSpotter&lt;/code> captures the social influence and botness of Twitter
-users, &lt;code>evently&lt;/code> specifically models the temporal dynamics of online
-information diffusion. We leverage information provided by the tools to
-study the users in the COVID19 dataset.&lt;/p>
-&lt;pre>&lt;code class="language-r">library(evently)
-library(reticulate)
-birdspotter &amp;lt;- import('birdspotter')
-&lt;/code>&lt;/pre>
-&lt;h2 id="preprocessing-tweets">Preprocessing tweets&lt;/h2>
-&lt;p>At this step, we seek to extract diffusion cascades from the &lt;code>COVID-19&lt;/code>
-dataset for analyzing user influence and botness. A diffusion cascade
-consist of an initial tweet posted by a Twitter user and followed then
-by a sereis of retweets. A function provided by &lt;code>evently&lt;/code> allows one to
-obtain cascades from JSON formatted raw tweets. On the other hand, we
-initialize a &lt;code>BirdSpotter&lt;/code> instance and compute the influence and
-botness scores for all users in the
-dataset.&lt;/p>
-&lt;pre>&lt;code class="language-r">cascades &amp;lt;- parse_raw_tweets_to_cascades('corona_2020_01_31.jsonl', keep_user = T, keep_absolute_time = T)
-bs &amp;lt;- birdspotter$BirdSpotter('corona_2020_01_31.jsonl')
-labeled_users &amp;lt;- bs$getLabeledUsers()[, c('user_id', 'botness', 'influence')]
-&lt;/code>&lt;/pre>
-&lt;p>As we cannot publish &lt;code>corona_2020_01_31.jsonl&lt;/code> due to Twitter TOC, we
-have stored the results and load them below&lt;/p>
-&lt;pre>&lt;code class="language-r">load('corona_2020_01_31.rda')
-labeled_users &amp;lt;- read.csv('corona_31_botness_influence.csv', stringsAsFactors = F,
-colClasses=c(&amp;quot;character&amp;quot;,rep(&amp;quot;numeric&amp;quot;,3)))
-&lt;/code>&lt;/pre>
-&lt;p>We note that all user IDs have been encrypted. After obtaining the
-results, let’s first conduct some simple measurements on users and
-cascades.&lt;/p>
-&lt;pre>&lt;code class="language-r">library(ggplot2)
-# check the density of these two values
-mean_bot &amp;lt;- mean(labeled_users$botness, na.rm = T)
-ggplot(labeled_users, aes(botness)) +
-stat_density(geom = 'line') +
-geom_vline(xintercept = mean_bot, linetype=2, color = 'red') +
-geom_text(data=data.frame(), aes(x = mean_bot, y = 2, label= sprintf('mean: %s', round(mean_bot, 2))), color= 'red', angle=90, vjust=-0.11)
-&lt;/code>&lt;/pre>
-&lt;p>&lt;img src="README_files/figure-gfm/unnamed-chunk-4-1.png" alt="">&lt;!-- -->&lt;/p>
-&lt;pre>&lt;code class="language-r">mean_inf &amp;lt;- mean(labeled_users$influence)
-ggplot(labeled_users) +
-stat_ecdf(aes(influence, 1 - ..y..)) +
-scale_x_log10() +
-scale_y_log10() +
-ylab('CCDF') +
-geom_vline(xintercept = mean_inf, linetype=2, color = 'red') +geom_text(data=data.frame(), aes(x = mean_inf, y = 1e-3, label= sprintf('mean: %s', round(mean_inf, 2))), color= 'red', angle=90, vjust=-0.11)
-&lt;/code>&lt;/pre>
-&lt;pre>&lt;code>## Warning: Transformation introduced infinite values in continuous y-axis
-&lt;/code>&lt;/pre>
-&lt;p>&lt;img src="README_files/figure-gfm/unnamed-chunk-4-2.png" alt="">&lt;!-- -->&lt;/p>
-&lt;pre>&lt;code class="language-r">mean_value &amp;lt;- mean(sapply(cascades, nrow))
-ggplot(data.frame(size = sapply(cascades, nrow))) +
-stat_ecdf(aes(size, 1 - ..y..)) +
-scale_x_log10() + scale_y_log10() +
-geom_vline(xintercept = mean_value, linetype=2, color = 'red') +
-geom_text(data=data.frame(), aes(x = mean_value, y = 1e-3, label= sprintf('mean: %s', round(mean_value, 2))), color= 'red', angle=90, vjust=-0.11) +
-xlab('cascade size') +
-ylab('CCDF')
-&lt;/code>&lt;/pre>
-&lt;pre>&lt;code>## Warning: Transformation introduced infinite values in continuous y-axis
-&lt;/code>&lt;/pre>
-&lt;p>&lt;img src="README_files/figure-gfm/unnamed-chunk-4-3.png" alt="">&lt;!-- -->&lt;/p>
-&lt;pre>&lt;code class="language-r">mean_value2 &amp;lt;- mean(sapply(cascades, function(c) c$time[nrow(c)]))
-ggplot(data.frame(time = sapply(cascades, function(c) c$time[nrow(c)]))) +
-stat_ecdf(aes(time, 1 - ..y..)) +
-scale_x_continuous(trans = 'log1p', breaks = c(0, 100, 10000, 1000000), labels = c('0', '1e2', '1e4', '1e6')) +
-scale_y_log10() +
-geom_vline(xintercept = mean_value2, linetype=2, color = 'red') +
-geom_text(data=data.frame(), aes(x = mean_value2, y = 1e-3, label= sprintf('mean: %s', round(mean_value2, 2))), color= 'red', angle=90, vjust=-0.11) +
-xlab('cascade final event time')+
-ylab('CCDF')
-&lt;/code>&lt;/pre>
-&lt;pre>&lt;code>## Warning: Transformation introduced infinite values in continuous y-axis
-&lt;/code>&lt;/pre>
-&lt;p>&lt;img src="README_files/figure-gfm/unnamed-chunk-4-4.png" alt="">&lt;!-- -->&lt;/p>
-&lt;pre>&lt;code class="language-r">mean_value &amp;lt;- mean(labeled_users$activity)
-ggplot(data.frame(size = labeled_users$activity)) +
-stat_ecdf(aes(size, 1 - ..y..)) +
-scale_x_log10() +
-scale_y_log10() +
-geom_vline(xintercept = mean_value, linetype=2, color = 'red') +
-geom_text(data=data.frame(), aes(x = mean_value, y = 1e-3, label= sprintf('mean: %s', round(mean_value, 2))), color= 'red', angle=90, vjust=-0.11) + xlab('user activity')+ ylab('CCDF')
-&lt;/code>&lt;/pre>
-&lt;pre>&lt;code>## Warning: Transformation introduced infinite values in continuous y-axis
-&lt;/code>&lt;/pre>
-&lt;p>&lt;img src="README_files/figure-gfm/unnamed-chunk-4-5.png" alt="">&lt;!-- -->&lt;/p>
-&lt;h2 id="retrain-the-bot-detector">Retrain the bot detector&lt;/h2>
-&lt;p>If one find the botness scores are not accurate, &lt;code>birdspotter&lt;/code> provides
-a relabeling tool and a retrain API to learn from the given relabeled
-dataset&lt;/p>
-&lt;pre>&lt;code class="language-r"># output a file for mannual labeling
-bs$getBotAnnotationTemplate('users_to_label.csv')
-# Once annotated the botness detector can be trained with
-bs$trainClassifierModel('users_to_label.csv')
-&lt;/code>&lt;/pre>
-&lt;h2 id="fit-user-posted-cacsades-with-evently">Fit user posted cacsades with &lt;code>evently&lt;/code>&lt;/h2>
-&lt;p>We model a group of cascades initiated by a particular user jointly and
-treat the fitted model as a characterization of the user. In this
-example, we select two users for comparison.&lt;/p>
-&lt;pre>&lt;code class="language-r">selected_users &amp;lt;- c('369686755237813560', '174266868073402929')
-# fit Hawkes process on cascades initiated by the selected users
-user_cascades_fitted &amp;lt;- lapply(selected_users, function(user) {
-# select cascades that are initiated by the &amp;quot;selected_user&amp;quot;
-selected_cascades &amp;lt;- Filter(function(cascade) cascade$user[[1]] == user, cascades)
-# obtain the observation times;
-# note 1580515200 is 1st Feb when the observation stopped
-# as we only observed until the end of 31st Jan
-times &amp;lt;- 1580515200 - sapply(selected_cascades, function(cas) cas$absolute_time[1])
-# fit a model on the selected cascades;
-fit_series(data = selected_cascades, model_type = 'mPL', observation_time = times, cores = 10)
-})
-user_cascades_SEISMIC_fitted &amp;lt;- lapply(selected_users, function(user) {
-selected_cascades &amp;lt;- Filter(function(cascade) cascade$user[[1]] == user, cascades)
-times &amp;lt;- 1580515200 - sapply(selected_cascades, function(cas) cas$absolute_time[1])
-fit_series(data = selected_cascades, model_type = 'SEISMIC',
-observation_time = times)
-})
-# check the fitted kernel functions
-plot_kernel_function(user_cascades_fitted) +
-scale_color_discrete(labels = c(&amp;quot;@BobOngHugots&amp;quot;, &amp;quot;@Jaefans_Global&amp;quot;))
-&lt;/code>&lt;/pre>
-&lt;p>&lt;img src="README_files/figure-gfm/unnamed-chunk-6-1.png" alt="">&lt;!-- -->&lt;/p>
-&lt;p>The plot shows the fitted kernel functions of these two users which
-reflect their time-decaying influence of attracting followers to reshare
-their posts. We then demonstrate how to simulate new cascades&lt;/p>
-&lt;pre>&lt;code class="language-r">set.seed(134841)
-user_magnitude &amp;lt;- Filter(function(cascade) cascade$user[[1]] == selected_users[[1]], cascades)[[1]]$magnitude[1]
-# simulate a new cascade from @BobOngHugots
-sim_cascade &amp;lt;- generate_series(user_cascades_fitted[[1]], M = user_magnitude)
-plot_event_series(cascade = sim_cascade, model = user_cascades_fitted[[1]])
-&lt;/code>&lt;/pre>
-&lt;p>&lt;img src="README_files/figure-gfm/unnamed-chunk-7-1.png" alt="">&lt;!-- -->&lt;/p>
-&lt;pre>&lt;code class="language-r">selected_cascade &amp;lt;- Filter(function(cascade) cascade$user[1] == selected_users[[1]], cascades)[[1]]
-selected_time &amp;lt;- user_cascades_fitted[[1]]$observation_time[1]
-# simulate a cascade with a &amp;quot;selected_cascade&amp;quot; from @BobOngHugots
-sim_cascade &amp;lt;- generate_series(user_cascades_fitted[[1]], M = user_magnitude,
-init_history = selected_cascade)
-sprintf('%s new events simulated after cascade',
-nrow(sim_cascade[[1]]) - nrow(selected_cascade))
-&lt;/code>&lt;/pre>
-&lt;pre>&lt;code>## [1] &amp;quot;25 new events simulated after cascade&amp;quot;
-&lt;/code>&lt;/pre>
-&lt;pre>&lt;code class="language-r">predict_final_popularity(user_cascades_fitted[[1]],
-selected_cascade, selected_time)
-&lt;/code>&lt;/pre>
-&lt;pre>&lt;code>## [1] 458.303
-&lt;/code>&lt;/pre>
-&lt;pre>&lt;code class="language-r"># predict with SEISMIC model, assume we have fitted the SEISMIC model
-predict_final_popularity(user_cascades_SEISMIC_fitted[[1]],
-selected_cascade, selected_time)
-&lt;/code>&lt;/pre>
-&lt;pre>&lt;code>## [1] 729.923
-&lt;/code>&lt;/pre>
-&lt;pre>&lt;code class="language-r">get_branching_factor(user_cascades_fitted[[1]])
-&lt;/code>&lt;/pre>
-&lt;pre>&lt;code>## [1] 0.7681281
-&lt;/code>&lt;/pre>
-&lt;pre>&lt;code class="language-r">get_viral_score(user_cascades_fitted[[1]])
-&lt;/code>&lt;/pre>
-&lt;pre>&lt;code>## [1] 7.407763
-&lt;/code>&lt;/pre>
-&lt;h2 id="visualize-users-in-a-latent-space">Visualize users in a latent space&lt;/h2>
-&lt;p>We show a visualization of top 300 users posted most tweets using the
-features returned by &lt;code>evently&lt;/code> along with the botness and influence
-scores from &lt;code>birdspotter&lt;/code>.&lt;/p>
-&lt;pre>&lt;code class="language-r"># obtain observation times here again
-times &amp;lt;- 1580515200 - sapply(cascades, function(cas) cas$absolute_time[1])
-# indicate the grouping of each cascade with the user who started the cascade
-names(cascades) &amp;lt;- sapply(cascades, function(cas) cas$user[1])
-# fit Hawkes processes on all cascades first
-fitted_corona &amp;lt;- group_fit_series(cascades, model_type = 'mPL', observation_time = times)
-&lt;/code>&lt;/pre>
-&lt;p>The fitting procedure takes quite long so we again load the pre-fitted
-models here&lt;/p>
-&lt;pre>&lt;code class="language-r">load('fitted_models.rda')
-# choose the top 300 users who started most cacsades
-selected_users &amp;lt;- labeled_users$user_id[labeled_users$user_id %in%
-names(sort(sapply(fitted_corona, length), decreasing = T)[seq(300)])]
-# gather the stats for these users
-user_influences &amp;lt;- labeled_users$influence[labeled_users$user_id %in% selected_users]
-user_botness &amp;lt;- labeled_users$botness[labeled_users$user_id %in% selected_users]
-fitted_corona_selected &amp;lt;- fitted_corona[selected_users]
-# get the features
-features &amp;lt;- generate_features(fitted_corona_selected)
-# compute distances between users using manhattan distance
-features &amp;lt;- features[, -1] # remove the user id column
-distances &amp;lt;- dist(features, method = 'manhattan')
-library(tsne)
-positions &amp;lt;- tsne(distances, k = 2)
-&lt;/code>&lt;/pre>
-&lt;pre>&lt;code>## sigma summary: Min. : 0.34223375605395 |1st Qu. : 0.457223801885988 |Median : 0.489891425900637 |Mean : 0.500483006369232 |3rd Qu. : 0.538593613780411 |Max. : 0.676779919259545 |
-## Epoch: Iteration #100 error is: 14.1961110881254
-## Epoch: Iteration #200 error is: 0.490122133064818
-## Epoch: Iteration #300 error is: 0.474257867010761
-## Epoch: Iteration #400 error is: 0.472067779170087
-## Epoch: Iteration #500 error is: 0.471844181155159
-## Epoch: Iteration #600 error is: 0.471798834134577
-## Epoch: Iteration #700 error is: 0.471783207059971
-## Epoch: Iteration #800 error is: 0.471632929621924
-## Epoch: Iteration #900 error is: 0.47087861882558
-## Epoch: Iteration #1000 error is: 0.470873765976829
-&lt;/code>&lt;/pre>
-&lt;pre>&lt;code class="language-r">df &amp;lt;- data.frame(x = positions[,1], y = positions[,2],
-influence = user_influences, botness = user_botness)
-df &amp;lt;- cbind(df, data.frame(botornot = ifelse(df$botness &amp;gt; 0.6, 'Bot', 'Not Bot')))
-ggplot(df, aes(x, y, color = influence, shape = botornot, size = botornot)) +
-geom_point() +
-scale_shape_manual(values = c(15,1)) +
-scale_size_manual(values = c(1.5, 1.2)) +
-scale_color_gradient(low = '#56B1F7', high = '#132B43', trans = 'log10') +
-theme_void() + labs(size = NULL, shape = NULL) +
-theme(legend.direction = 'horizontal', legend.position = c(0.8, 0.2),
-legend.key.size = unit(.3, 'cm'), legend.text = element_text(size = 6),
-legend.title = element_text(size = 6), legend.spacing = unit(.05, 'cm'))
-&lt;/code>&lt;/pre>
-&lt;p>&lt;img src="README_files/figure-gfm/unnamed-chunk-10-1.png" alt="">&lt;!-- -->&lt;/p></description></item><item><title>User Analysis on reshare cascades about COVID-19</title><link>https://www.behavioral-ds.ml/theme2_content/user_analysis/</link><pubDate>Thu, 03 Dec 2020 00:00:00 +0000</pubDate><guid>https://www.behavioral-ds.ml/theme2_content/user_analysis/</guid><description>&lt;p>We demonstrate in this blog post a tutorial on applying the tools for analyzing online information diffusions about Twitter users, &lt;a href="https://github.com/behavioral-ds/BirdSpotter">&lt;code>birdspotter&lt;/code>&lt;/a> and &lt;a href="https://github.com/behavioral-ds/evently">&lt;code>evently&lt;/code>&lt;/a>.&lt;/p>
+&lt;p>We thank &lt;a href="https://www.linkedin.com/in/bleditaska?lipi=urn%3Ali%3Apage%3Ad_flagship3_pulse_read%3Bvr7rCfoNTVGsSR9hhmd%2FhQ%3D%3D">Bledi Taska&lt;/a> and &lt;a href="https://ca.linkedin.com/in/dmiskulin">Davor Miskulin&lt;/a> from Burning Glass Technologies for generously providing the job advertisements data for this research and for their valuable feedback. We also thank &lt;a href="https://fr.linkedin.com/in/broecke-stijn-36ba2048">Stijn Broecke&lt;/a> and other colleagues from the OECD for their ongoing input and guidance in the development of this work.&lt;/p></description></item><item><title>User Analysis on reshare cascades about COVID-19</title><link>https://www.behavioral-ds.ml/theme2_content/user_analysis/</link><pubDate>Thu, 03 Dec 2020 00:00:00 +0000</pubDate><guid>https://www.behavioral-ds.ml/theme2_content/user_analysis/</guid><description>&lt;p>We demonstrate in this blog post a tutorial on applying the tools for analyzing online information diffusions about Twitter users, &lt;a href="https://github.com/behavioral-ds/BirdSpotter">&lt;code>birdspotter&lt;/code>&lt;/a> and &lt;a href="https://github.com/behavioral-ds/evently">&lt;code>evently&lt;/code>&lt;/a>.&lt;/p>
 &lt;h2 id="dataset">Dataset&lt;/h2>
 &lt;p>In this tutorial, we apply two tools for analyzing Twitter users, on a COVID-19 retweet dataset. The dataset
 is curated by Chen, et al. One can obtain a copy of the tweet IDs from
