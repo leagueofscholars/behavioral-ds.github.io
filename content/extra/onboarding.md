@@ -5,7 +5,7 @@ profile: false
 ---
 (this document is shamelessly adapted from [Robert West’s excellent dlab onboarding page](https://dlab.epfl.ch/onboarding/))
 
-If you’re new to the [Behavioral Data Science lab](https://www.behavioral-ds.ml/) (BDS), first of all: welcome! This page will help you get started by providing useful information on how to get set up and ready to roll. If you’re new not only to BDS but to UTS as a whole, see the bottom of this page for some additional useful pointers.
+If you’re new to the [Behavioral Data Science lab](https://www.behavioral-ds.science/) (BDS), first of all: welcome! This page will help you get started by providing useful information on how to get set up and ready to roll. If you’re new not only to BDS but to UTS as a whole, see the bottom of this page for some additional useful pointers.
 <br/><br/>
 
 ## Compute resources
@@ -16,7 +16,7 @@ As a very first step, carefully read [this introduction](/extra/compute_resource
 ## Communication
 
 ### Group’s webpage
-Our group’s webpage is https://www.behavioral-ds.ml/. It lists the members, our news, our publications, and blog entries. We also use it to keep track of [our reading group schedule](#abcde). Our website is collaborative, and every member needs to update it (for example to add their personal profile, or to fill in the reading details). The webpage is hosted on Github pages, and we update it by committing to the repository.
+Our group’s webpage is https://www.behavioral-ds.science/. It lists the members, our news, our publications, and blog entries. We also use it to keep track of [our reading group schedule](#abcde). Our website is collaborative, and every member needs to update it (for example to add their personal profile, or to fill in the reading details). The webpage is hosted on Github pages, and we update it by committing to the repository.
 
 To add your profile to the [lab's people page](/people), you need to fork the [lab's repository on GitHub](https://github.com/behavioral-ds/behavioral-ds.github.io), edit it is to add your profile, and create a pull request. More instructions are in the repository’s README.
 <br/><br/>

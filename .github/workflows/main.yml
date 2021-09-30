@@ -15,7 +15,7 @@ jobs:
       uses: chabad360/hugo-gh-pages@master
       with:
         githubToken: ${{ secrets.DEPLOY_TOKEN }}
-        cname: www.behavioral-ds.ml
+        cname: www.behavioral-ds.science
         branch: main
         hugoVersion: extended_0.60.1
         
