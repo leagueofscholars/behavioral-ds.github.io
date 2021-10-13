@@ -29,6 +29,8 @@ For use with *Jupyter Notebook* or *RStudio Server*, you can redirect ports via 
 `ssh -L 8282:localhost:8282 <user>@hephaestos1.eng.uts.edu.au`
 
 after which you can connect the browser to your local machine to `https://localhost:8282` and access the kernel on the distant machines. See [here for more details and examples](https://www.ssh.com/academy/ssh/tunneling/example).
+
+**More details**: For detailed instructions on setting up remote Jupyter notebooks on iHPC, check out [this guide](/extra/ihpc_guide).
 <br/><br/>
 
 ### NeCTAR Virtual Machines
