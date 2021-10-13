@@ -1,4 +1,77 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Extras | Behavioral Data Science</title><link>https://www.behavioral-ds.science/extra/</link><atom:link href="https://www.behavioral-ds.science/extra/index.xml" rel="self" type="application/rss+xml"/><description>Extras</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>2021</copyright><lastBuildDate>Fri, 24 Sep 2021 00:00:00 +0000</lastBuildDate><image><url>https://www.behavioral-ds.science/img/logo.png</url><title>Extras</title><link>https://www.behavioral-ds.science/extra/</link></image><item><title>Compute and storage resources</title><link>https://www.behavioral-ds.science/extra/compute_resources/</link><pubDate>Fri, 24 Sep 2021 00:00:00 +0000</pubDate><guid>https://www.behavioral-ds.science/extra/compute_resources/</guid><description>&lt;p>Our group has access to considerable computation and storage resources. This document describes these and how to access them. Each resource has its own use scenario, and some may be more adapted to specific problems than others (for example, if you want to set up a Twitter crawler, use a Nectar Virtual Machine for better uptime and to avoid security issues on the compute servers).
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Extras | Behavioral Data Science</title><link>https://www.behavioral-ds.science/extra/</link><atom:link href="https://www.behavioral-ds.science/extra/index.xml" rel="self" type="application/rss+xml"/><description>Extras</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>2021</copyright><lastBuildDate>Wed, 13 Oct 2021 00:00:00 +0000</lastBuildDate><image><url>https://www.behavioral-ds.science/img/logo.png</url><title>Extras</title><link>https://www.behavioral-ds.science/extra/</link></image><item><title>Running Jupyter notebooks on iHPC</title><link>https://www.behavioral-ds.science/extra/ihpc_guide/</link><pubDate>Wed, 13 Oct 2021 00:00:00 +0000</pubDate><guid>https://www.behavioral-ds.science/extra/ihpc_guide/</guid><description>&lt;p>This is a reference guide for accessing the iHPC system for UTS, with a focus on running Python and Jupyter notebooks on iHPC and accessing them from the desktop browser on your local machine.
+&lt;br/>&lt;br/>&lt;/p>
+&lt;h2 id="some-helpful-references">Some Helpful References&lt;/h2>
+&lt;p>&lt;a href="https://ihpc.research.uts.edu.au/pages/documentation_rhel77/access_and_connectivity/ssh">This&lt;/a> is the reference for the website for remote access to the HPC at UTS.&lt;/p>
+&lt;p>&lt;a href="https://www.blopig.com/blog/2018/03/running-jupyter-notebook-on-a-remote-server-via-ssh/">This&lt;/a> is an excellent blog on using Jupyter Notebooks remotely.
+&lt;br/>&lt;br/>&lt;/p>
+&lt;h2 id="step-1--open-the-tunnel-to-ihpc">Step 1 - Open the Tunnel to iHPC&lt;/h2>
+&lt;p>Navigate to &lt;a href="https://vpn.uts.edu.au/vdesk/webtop.eui?webtop=/Common/webtop_vpn&amp;amp;webtop_type=webtop_full">this link&lt;/a>
+and open &lt;strong>Student VPN Tunnel&lt;/strong>. The F5 VPN App should open up in a new window - accept (yes) and the tunnel will open up.
+&lt;br/>&lt;br/>&lt;/p>
+&lt;h2 id="step-2--access-the-ihpc-command-line">Step 2 - Access the iHPC (command line)&lt;/h2>
+&lt;p>At the command line using use the following command to access the&lt;/p>
+&lt;pre>&lt;code class="language-.bash"># Generic command
+ssh username@...
+# Example command for my access
+ssh jwmurray@ihpc.eng.uts.edu.au
+&lt;/code>&lt;/pre>
+&lt;p>From here you will be asked for your password - input it as normal.
+&lt;br/>&lt;br/>&lt;/p>
+&lt;h2 id="step-3--connect-to-a-node-in-ihpc">Step 3 - Connect to a Node in iHPC&lt;/h2>
+&lt;p>Now you will be effectively working in a remote computing environment. Use the command &lt;code>cnode&lt;/code> to get a list of the nodes within iHPC.&lt;/p>
+&lt;p>Once you have a list of the nodes on the system you can see who is working in which node and what the usage rates are. To access a specific node you will need to have been granted access previously by the iHPC administrator. This is approved through a supervisor. The two nodes available for us to use are:&lt;/p>
+&lt;ul>
+&lt;li>hephaestos1&lt;/li>
+&lt;li>hephaestos2&lt;/li>
+&lt;/ul>
+&lt;p>To connect to one of the nodes the following code is used:&lt;/p>
+&lt;pre>&lt;code class="language-.bash">cnode hephaestos2 # this will give the detail of only this node
+ssh hephaestos2 # this will actually connect to the node
+&lt;/code>&lt;/pre>
+&lt;p>You now have access to the server environment and can establish a VENV based on this remote server.&lt;/p>
+&lt;p>There are two commands that will help navigation on the system&lt;/p>
+&lt;pre>&lt;code class="language-.bash">cd ~ # This will get you to your own folder (Data and Templates)
+cd / # This will take you to the root directory where all Data is stored.
+&lt;/code>&lt;/pre>
+&lt;p>The datasets for use are in the Behavioural DS project - the following command will take you there:&lt;/p>
+&lt;pre>&lt;code class="language-.bash">cd /projects/BehavioralDS # Data sets is the folder of interest in this one
+&lt;/code>&lt;/pre>
+&lt;p>You have now opened a ssh tunnel to IHPC, connected to a node and accessed the Data sets in the Behavioural DS project folder on the system.
+&lt;br/>&lt;br/>&lt;/p>
+&lt;h2 id="step-4--create-venv-for-python">Step 4 - Create VENV for Python&lt;/h2>
+&lt;p>Best practice is to create a VENV for Python for each project you run. This will enable a requirements file to be created easily for tracking the packages used in the analysis thereby making it easier for others to reproduce your work.&lt;/p>
+&lt;p>Create this VENV in your personal folder for ease. &lt;a href="https://python.land/virtual-environments/virtualenv">This link&lt;/a> has details on how to do this.&lt;/p>
+&lt;p>An example is below:&lt;/p>
+&lt;pre>&lt;code class="language-.bash">python3 -m venv my_env # make sure to use python3 as python2 doesn't have the venv command baked into it. my_env can be whatever you want to call it. Use something unique as it will be referenced when working in jupyter notebooks.
+&lt;/code>&lt;/pre>
+&lt;p>&lt;br/>&lt;br/>&lt;/p>
+&lt;h2 id="step-5--create-a-jupyter-notebook-host">Step 5 - Create a Jupyter Notebook host&lt;/h2>
+&lt;p>Now the VENV is created (using python 3.6.8 on iHPC) we can start the Jupyter notebook host we will access remotely. Before we can do this we need to install ipython and jupyter into the VENV we jsut created. &lt;a href="https://deeplearning.lipingyang.org/2017/10/14/intall-ipython-and-jupyter-in-a-virtualenv/">This blog&lt;/a> is a good reference for how to do it.&lt;/p>
+&lt;p>Once the VENV is established activate it with &lt;code>source myenv/bin/activate&lt;/code>. Once it is active we need to install iPython and Jupyter via &lt;code>pip3 install ...&lt;/code> into the environment we have created.&lt;/p>
+&lt;p>Once we have done this any new packages we need to use as part of the analysis can be loaded with &lt;code>pip3 install (package name)&lt;/code>. Ideally keep two terminal windows open, one for updated packages as required in the remote environment and one for your local machine.
+&lt;br/>&lt;br/>&lt;/p>
+&lt;h2 id="step-6--set-up-remote-jupyter-notebooks">Step 6 - Set up Remote Jupyter notebooks&lt;/h2>
+&lt;p>You'll need to set up the notebook environment on the remote server then establish the ssh environment then start it up on your local machine. Anything you save will be on the remote server, consider where notebooks are held and how to access them in the future.&lt;/p>
+&lt;p>&lt;a href="https://www.blopig.com/blog/2018/03/running-jupyter-notebook-on-a-remote-server-via-ssh/">This blog&lt;/a> has the details required to make this work.&lt;/p>
+&lt;p>Example code is below:&lt;/p>
+&lt;pre>&lt;code class="language-.bash">jupyter notebook --port=9000 --no-browser
+&lt;/code>&lt;/pre>
+&lt;p>If the port is already in use it cycles through increasing by one on the port number until it serves the notebooks. This is OK as others may have used port number.&lt;/p>
+&lt;p>We now have established a virtual environment for python on a remote system and are serving jupyter notebooks. We now need to access them from the desktop on our local machine.
+&lt;br/>&lt;br/>&lt;/p>
+&lt;h2 id="step-7--access-jupyter-notebooks-being-served-on-the-server">Step 7 - Access Jupyter Notebooks being served on the server&lt;/h2>
+&lt;p>Now we need to open up another terminal on our machine, one that will be for use in the local environment. The following command is an example of how this can be done.&lt;/p>
+&lt;pre>&lt;code class="language-.bash">ssh -N -f -L yyyy:localhost:xxxx jwmurray@ihpc.eng.uts.edu.au
+# yyyy is the number you will use on your local machine
+# xxxx is the port used to serve the notebooks remotely
+&lt;/code>&lt;/pre>
+&lt;p>&lt;br/>&lt;br/>&lt;/p>
+&lt;h2 id="step-8--open-the-notebooks-and-weave-magic">Step 8 - Open the notebooks and weave magic&lt;/h2>
+&lt;p>If everything has worked to this point you now have jupyter notebooks in a virtual environment being served from the powerful computers of iHPC. We just need to open up a browser and access jupyter from the local desktop. This is done in the usual manner with &lt;code>localhost:yyyy&lt;/code> in the browser of your web browser.&lt;/p>
+&lt;p>From here any work you do in the notebooks will be saved on the remote server in the folder from where you served the notebooks from.
+&lt;br/>&lt;br/>&lt;/p>
+&lt;h2 id="step-9--terminate-the-session">Step 9 - Terminate the session&lt;/h2>
+&lt;p>Consult &lt;a href="https://ihpc.research.uts.edu.au/pages/documentation_rhel77/access_and_connectivity/terminating">this link&lt;/a> for details on how to terminate the current session.&lt;/p></description></item><item><title>Compute and storage resources</title><link>https://www.behavioral-ds.science/extra/compute_resources/</link><pubDate>Fri, 24 Sep 2021 00:00:00 +0000</pubDate><guid>https://www.behavioral-ds.science/extra/compute_resources/</guid><description>&lt;p>Our group has access to considerable computation and storage resources. This document describes these and how to access them. Each resource has its own use scenario, and some may be more adapted to specific problems than others (for example, if you want to set up a Twitter crawler, use a Nectar Virtual Machine for better uptime and to avoid security issues on the compute servers).
 We have four compute resources and each has attached a storage resource.&lt;/p>
 &lt;h2 id="compute-servers-and-frameworks">Compute servers and frameworks&lt;/h2>
 &lt;h3 id="ihpc-servers">iHPC servers&lt;/h3>
@@ -11,7 +84,8 @@ We have four compute resources and each has attached a storage resource.&lt;/p>
 &lt;p>&lt;code>ssh &amp;lt;user&amp;gt;@hephaestos1.eng.uts.edu.au&lt;/code>&lt;/p>
 &lt;p>For use with &lt;em>Jupyter Notebook&lt;/em> or &lt;em>RStudio Server&lt;/em>, you can redirect ports via SSH tunneling. Assuming the Jupyter Notebook/RStudio Server listens on port 8282, you can redirect that port by connecting to hephaestos1 using:&lt;/p>
 &lt;p>&lt;code>ssh -L 8282:localhost:8282 &amp;lt;user&amp;gt;@hephaestos1.eng.uts.edu.au&lt;/code>&lt;/p>
-&lt;p>after which you can connect the browser to your local machine to &lt;code>https://localhost:8282&lt;/code> and access the kernel on the distant machines. See &lt;a href="https://www.ssh.com/academy/ssh/tunneling/example">here for more details and examples&lt;/a>.
+&lt;p>after which you can connect the browser to your local machine to &lt;code>https://localhost:8282&lt;/code> and access the kernel on the distant machines. See &lt;a href="https://www.ssh.com/academy/ssh/tunneling/example">here for more details and examples&lt;/a>.&lt;/p>
+&lt;p>&lt;strong>More details&lt;/strong>: For detailed instructions on setting up remote Jupyter notebooks on iHPC, check out &lt;a href="https://www.behavioral-ds.science/extra/ihpc_guide">this guide&lt;/a>.
 &lt;br/>&lt;br/>&lt;/p>
 &lt;h3 id="nectar-virtual-machines">NeCTAR Virtual Machines&lt;/h3>
 &lt;p>&lt;strong>Link to resource&lt;/strong>: &lt;a href="https://dashboard.rc.nectar.org.au/">https://dashboard.rc.nectar.org.au/&lt;/a>&lt;/p>
