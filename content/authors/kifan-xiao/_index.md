@@ -30,4 +30,7 @@ social:
  - icon: envelope
    icon_pack: fas
    link: "mailto:kifan.xiao@anu.edu.au"
+
+user_groups:
+- Honours Students
 ---
