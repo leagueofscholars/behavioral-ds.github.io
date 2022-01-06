@@ -1,0 +1,19 @@
+{
+    "grammarly.overrides": [
+        {
+            "files": [
+                "**/content/blogpost/icwsm2022/index.md"
+            ],
+            "config": {
+                "audience": "knowledgeable",
+                "dialect": "american",
+                "domain": "general",
+                "emotions": [],
+                "goals": [
+                    "inform",
+                    "convince"
+                ]
+            }
+        }
+    ]
+}
