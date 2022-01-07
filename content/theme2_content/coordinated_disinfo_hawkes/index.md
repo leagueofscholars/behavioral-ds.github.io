@@ -4,7 +4,7 @@ authors:
   - Marian-Andrei Rizoiu
 date: "2021-09-27"
 output: html_document
-categories: [Presentation]
+categories: [Presentation, Post]
 image:
   placement: 1
   focal_point: "Center"

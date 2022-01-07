@@ -5,7 +5,7 @@ authors:
 date: "2019-11-12"
 output: html_document
 tags: [R]
-categories: [Software]
+categories: [Software, Post]
 summary: "We introduce `evently`, an R package designed for simulating and fitting the Hawkes processes and the HawkesN processes."
 
 links:

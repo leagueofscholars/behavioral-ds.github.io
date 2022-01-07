@@ -3,7 +3,7 @@ title: "User Analysis on reshare cascades about COVID-19"
 authors:
   - Quyu Kong, Rohit Ram
 date: "2020-12-03"
-categories: [Software]
+categories: [Software, Post]
 commentable: true
 image:
   placement: 1

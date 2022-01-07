@@ -5,7 +5,7 @@ authors:
 date: "2021-03-09"
 output: html_document
 tags: [python]
-categories: [Software]
+categories: [Software, Post]
 summary: "We introduce `birdspotter`, an R tool that models Twitter users' attributes and labels them."
 
 links:

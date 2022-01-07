@@ -3,7 +3,7 @@ title: "We spent six years scouring billions of links, and found the web is both
 authors:
   - Paul X. McCarthy, Marian-Andrei Rizoiu
 date: "2021-07-02"
-categories: [Research]
+categories: [Research, Post]
 commentable: true
 image:
   placement: 1

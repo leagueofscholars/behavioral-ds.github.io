@@ -5,7 +5,7 @@ authors:
   - (edited by Marian-Andrei Rizoiu)
 date: "2021-12-13"
 output: html_document
-categories: [Research]
+categories: [Research, Post]
 image:
   placement: 1
   focal_point: "Center"
