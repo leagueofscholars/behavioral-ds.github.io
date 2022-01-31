@@ -4,20 +4,32 @@ name: Rui Zhang
 
 # Username (this should match the folder name)
 authors:
-- quyu-kong
+- rui-zhang
 
 # Is this the primary user of the site?
 superuser: false
 
 # Role/position
-role: PhD student
+role: Quantitative Intern @ Lingjun Invest
 
 # Organizations/Affiliations
 organizations:
-- name: Australian National University
+- name: (current) Lingjun Invest
+- name: (previous) Australian National University
 
 # Short bio (displayed in user profile at end of posts)
-bio: I am a Ph.D. student at Computational Media Lab & Data 61. Supervised by Marian-Andrei Rizoiu and Christian Walder. I am enjoying the current life which is full of maths.
+body: | 
+  Rui is a Ph.D. student from the Computational Media Lab at the Research School of Computer Science of The Australian National University and affiliated with Data61, CSIRO. I am supervised by Dr Christian Walder, Prof Lexing Xie and Dr Marian-Andrei Rizoiu.
+
+  My research interests include Gaussian process, kernel machines, point process and causal inference. My most recent work is on applications of kernel methods to causal inference. I will serve as a reviewer for NeurIPS 2021, ICLR 2022.
+
+  **Position at UTS:** Rui was a PhD student with the Computational Media Lab in ANU (and affiliated with Behavioral Data Science Lab @ UTS).
+  
+  **Next position after UTS:** Rui took a position of Quantitative Intern @ Lingjun Invest, one of the top hedge funds in China.
+
+bio: Rui is a Ph.D. student from the Computational Media Lab at the Research School of Computer Science of The Australian National University and affiliated with Data61, CSIRO. I am supervised by Dr Christian Walder, Prof Lexing Xie and Dr Marian-Andrei Rizoiu.
+
+  My research interests include Gaussian process, kernel machines, point process and causal inference. My most recent work is on applications of kernel methods to causal inference. I will serve as a reviewer for NeurIPS 2021, ICLR 2022.
 
 interests:
   - Non-parametric Bayesian Estimation 
@@ -57,5 +69,5 @@ social:
 #                  "Visitors",
 #                  "Alumni"]
 user_groups:
-- PhD Students
+- Alumni
 ---

@@ -10,13 +10,22 @@ authors:
 superuser: false
 
 # Role/position
-role: Undergraduate Honours student
+role: Software Engineer @ Zuora 
 
 # Organizations/Affiliations
 organizations:
-- name: Australian National University
+- name: (current) Zuora 
+- name: (previous) Australian National University
 
 # Short bio (displayed in user profile at end of posts)
+body: | 
+
+  I am an undergraduate student currently studying a bachelor of Advanced Computing at the ANU and undertaking an honours project under the supervision of Dr. Marian-Andrei Rizoiu. My honours research focuses on building stance detection for social media content concerning the contentious Brexit debate with the goal of uncovering the dynamics of user stance shift in online discussions of contentious issues. 
+
+  **Position at UTS:** Andrew was an Honours student with the Behavioral Data Science lab in UTS.
+
+  **Next position after UTS:** Andrew took a position of Software Engineer @ Zuora.
+  
 bio: I am an undergraduate student currently studying a bachelor of Advanced Computing at the ANU and undertaking an honours project under the supervision of Dr. Marian-Andrei Rizoiu. My honours research focuses on building stance detection for social media content concerning the contentious Brexit debate with the goal of uncovering the dynamics of user stance shift in online discussions of contentious issues.
 
 interests:
@@ -50,5 +59,5 @@ social:
 #                  "Visitors",
 #                  "Alumni"]
 user_groups:
-- Honours Students
+- Alumni
 ---

@@ -10,13 +10,22 @@ authors:
 superuser: false
 
 # Role/position
-role: Undergraduate Honours student
+role: Graduate researcher @ Australian Federal Government
 
 # Organizations/Affiliations
 organizations:
-- name: Australian National University
+- name: (current) Australian Federal Government.
+- name: (previous) Australian National University
 
 # Short bio (displayed in user profile at end of posts)
+body: | 
+
+  I am an undergraduate student at The Australian National University currently studying a double degree in Bachelor of Advanced Computing and Bachelor of Actuarial Studies, supervised by Dr Marian-Andrei Rizoiu. My research involves looking into opinion polarisation dynamics - specifically concerning the Brexit debate on social media. The main aim is to detect stance shifts along with determining if a user's future stance can be predicted based on the other users they have interacted with (who may have varying stances) and types of discussions they have been exposed to. 
+
+  **Position at UTS:** Dhuy was an Honours student with the Behavioral Data Science lab in UTS.
+
+  **Next position after UTS:** Dhuy was offered a graduate position with the Australian Federal Government.
+  
 bio: I am an undergraduate student at The Australian National University currently studying a double degree in Bachelor of Advanced Computing and Bachelor of Actuarial Studies, supervised by Dr Marian-Andrei Rizoiu. My research involves looking into opinion polarisation dynamics - specifically concerning the Brexit debate on social media. The main aim is to detect stance shifts along with determining if a user's future stance can be predicted based on the other users they have interacted with (who may have varying stances) and types of discussions they have been exposed to.
 
 interests:
@@ -50,5 +59,5 @@ social:
 #                  "Visitors",
 #                  "Alumni"]
 user_groups:
-- Honours Students
+- Alumni
 ---
