@@ -4,7 +4,7 @@ Date,Presenter,Paper,Why should we care,Appear in,Repo,Blogs
 24/01/22,Dima Galat,[Synthesizing Adversarial Negative Responses for Robust ResponseRanking and Evaluation](https://arxiv.org/abs/2106.05894),Context dependent garbage in - strong predictor out,[ACL2021](https://aclanthology.org/2021.findings-acl.338/),[1](https://github.com/prakharguptaz/Adv_gen_dialogue),
 31/01/22,Frankie Yuan,[Challenges in Detoxifying Language Models](https://arxiv.org/pdf/2109.07445.pdf),Side effects of trying to prevent certain language in language models, Findings of EMNLP 2021,,
 07/02/22,Rohit Ram,[Polarization and tipping points](https://www.pnas.org/content/pnas/118/50/e2102144118.full.pdf),An explanation for political polarization and why it might be difficult to reverse,PNAS,https://github.com/mongooma/polarizationTipping,
-14/02/22,Quyu Kong,,,,,
+14/02/22,Quyu Kong,[Learning Temporal Point Processes for Efficient Retrieval of Continuous Time Event Sequences](https://www.cse.iitd.ac.in/~srikanta/publication/aaai-22-a/aaai-22-a.pdf),A model to retrieve and rank a relevant set of event sequences for a given query sequence,AAAI 2022,[1](https://github.com/data-iitd/neuroseqret/),
 21/02/22,Callum Pastuszak,,,,,
 28/02/22,Thomas Willingham,,,,,
 07/03/22,Pio Calderon,,,,,
