@@ -17,7 +17,7 @@ organizations:
 - name: University of Technology Sydney
 
 # Short bio (displayed in user profile at end of posts)
-bio: Dima studies ways of revealing and understanding the nature of bias and misinformation.
+bio: Amelie studies the gap between prediction and explanation in decision making
 
 interests:
 - Active Learning
