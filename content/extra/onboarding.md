@@ -77,7 +77,7 @@ To access UTS resources, such as the iHPC compute servers, from outside of the U
 <br/><br/>
 
 ### UTS student/staff card
-During your first days at UTS, you’ll get your [UTS student card](https://www.uts.edu.au/current-students/managing-your-course/your-student-info/student-id-cards), which will serve to access the library and the UTS buildings. Once you have the card, you need to finalize all your Workspace Health and Safety training (and other compulsory modules) after which you will automatically get access to DSI HDR dedicated spaces (room CB02.11.141) and all the space of DSI (Bulding 2, levels 11 and 12) and School of Computer Science (Building 11, levels 6 and 7).
+During your first days at UTS, you’ll get your [UTS student card](https://www.uts.edu.au/current-students/managing-your-course/your-student-info/student-id-cards), which will serve to access the library and the UTS buildings. Once you have the card, you need to finalize your Safety and Wellbeing Essentials (via Rapid Global, use [login.uts.edu.au](https://login.uts.edu.au) to access this application) after which you will automatically get access to DSI HDR dedicated spaces (room CB02.11.141) and all the space of DSI (Bulding 2, levels 11 and 12) and School of Computer Science (Building 11, levels 6 and 7).
 <!--make sure you let the [Data Science admins](mailto:dsadmin@uts.edu.au) know so that -->
 <br/><br/>
 
