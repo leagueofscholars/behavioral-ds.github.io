@@ -432,7 +432,7 @@ We have four compute resources and each has attached a storage resource.&lt;/p>
 &lt;p>To add your profile to the &lt;a href="https://www.behavioral-ds.science/people">lab's people page&lt;/a>, you need to fork the &lt;a href="https://github.com/behavioral-ds/behavioral-ds.github.io">lab's repository on GitHub&lt;/a>, edit it is to add your profile, and create a pull request. More instructions are in the repository’s README.
 &lt;br/>&lt;br/>&lt;/p>
 &lt;h3 id="slack">Slack&lt;/h3>
-&lt;p>Join the &lt;a href="https://behavioral-ds.slack.com/">BDS team on Slack&lt;/a>. We use Slack for all communications. The group’s philosophy is that we all are aware of the work of others, and we pitch in when we feel like it. The workspace is organized in public channels, one for each project.&lt;/p>
+&lt;p>Join the &lt;a href="https://behavioral-ds.slack.com/">BDS team on Slack&lt;/a> by asking Andrei to send you an invite. We use Slack for all communications. The group’s philosophy is that we all are aware of the work of others, and we pitch in when we feel like it. The workspace is organized in public channels, one for each project.&lt;/p>
 &lt;p>Each BDS member is part of the channels they work on (usually one project). All research-oriented discussions go in the project channel (please keep the DM for only admin and personal issues). Feel free to roam around and peek at any public channel.&lt;/p>
 &lt;p>There are several public channels that you might want to peak at:&lt;/p>
 &lt;ul>
@@ -473,8 +473,9 @@ We have four compute resources and each has attached a storage resource.&lt;/p>
 &lt;p>To access UTS resources, such as the iHPC compute servers, from outside of the UTS network, you need to use the &lt;a href="https://vpn.uts.edu.au/">UTS VPN&lt;/a>.
 &lt;br/>&lt;br/>&lt;/p>
 &lt;h3 id="uts-studentstaff-card">UTS student/staff card&lt;/h3>
-&lt;p>During your first days at UTS, you’ll get your &lt;a href="https://www.uts.edu.au/current-students/managing-your-course/your-student-info/student-id-cards">UTS student card&lt;/a>, which will serve to access the library and the UTS buildings. Once you have the card, make sure you let the &lt;a href="mailto:dsadmin@uts.edu.au">Data Science admins&lt;/a> know so that you get access to DSI HDR dedicated spaces (room CB02.11.141).
-&lt;br/>&lt;br/>&lt;/p>
+&lt;p>During your first days at UTS, you’ll get your &lt;a href="https://www.uts.edu.au/current-students/managing-your-course/your-student-info/student-id-cards">UTS student card&lt;/a>, which will serve to access the library and the UTS buildings. Once you have the card, you need to finalize all your Workspace Health and Safety training (and other compulsory modules) after which you will automatically get access to DSI HDR dedicated spaces (room CB02.11.141) and all the space of DSI (Bulding 2, levels 11 and 12) and School of Computer Science (Building 11, levels 6 and 7).&lt;/p>
+&lt;!--make sure you let the [Data Science admins](mailto:dsadmin@uts.edu.au) know so that -->
+&lt;p>&lt;br/>&lt;br/>&lt;/p>
 &lt;h3 id="uts-honorary-appointments">UTS Honorary appointments&lt;/h3>
 &lt;p>Group members who are not UTS staff nor students need to obtain honorary UTS appointments. An honorary staff has a UTS online account and can access internal systems, including the compute resources (note: not all compute resources require a UTS affiliation, check details above).&lt;/p>
 &lt;p>To get an Honorary appointment, Andrei needs to initiate the process with UTS admins, after which you will receive email instructions by email. Please make sure you fill in the online form ASAP, as the downstream admin process can take weeks. UTS Honorary members are considered staff in UTS systems.&lt;/p></description></item><item><title>PhD Opportunity</title><link>https://www.behavioral-ds.science/extra/phdopportunity/</link><pubDate>Tue, 03 Aug 2021 00:00:00 +0000</pubDate><guid>https://www.behavioral-ds.science/extra/phdopportunity/</guid><description>&lt;h2 id="summary">Summary&lt;/h2>
