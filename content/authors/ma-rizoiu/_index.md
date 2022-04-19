@@ -19,16 +19,15 @@ organizations:
 
 # Short bio (displayed in user profile at end of posts)
 body: |
-  Dr Marian-Andrei Rizoiu is a Senior Lecturer in Behavioral Data Science at the University of Technology Sydney. 
-  He is a computer scientist with a deep interest in addressing research questions where behavioural data science and machine learning cross over. 
-  He leads the [Behavioral Data Science lab](https://www.behavioral-ds.science/), which tackles real-world issues such as online popularity prediction, countering disinformation campaigns and understanding shortages and mismatches in labour markets. 
+  Dr Marian-Andrei Rizoiu is a Senior Lecturer in Behavioral Data Science at the University of Technology Sydney, where he leads the [Behavioral Data Science lab](https://www.behavioral-ds.science/) group. 
+  He is a computer scientist interested in addressing research questions where human online behaviour and machine learning cross over. 
+  His research has made several key contributions to online popularity prediction, real-time tracking and countering disinformation campaigns, and understanding shortages and mismatches in labour markets.  
 
-  One major theme of his research is the development of theoretical models for online information diffusion, which can account for complex social phenomena. 
-  His models answer questions such as "Why did X become popular, but not Y?" and "How can problematic content be detected based solely on how it spreads?" and "How disruptive will new technology-X be on an existing industry?".  
-
-  Another major theme of his research is building skill-based real-time occupation transition recommender systems. 
-  These systems link social media predicted personality profiles with worker occupation attributes to build personalised career recommendations. 
-  His recommender systems answer questions like "Are some jobs better suited to one's personality?" and "Can one be happier and more engaged with a job that is aligned with their personality?". 
+  First, he developed theoretical models for online information diffusion, which can account for complex social phenomena. 
+  His models answer questions such as "Why did X become popular, but not Y?" and "How can problematic content be detected based solely on how it spreads?" and "How disruptive will new technology-X be on an existing industry?".
+  Second, he built skill-based real-time occupation transition recommender systems. 
+  These systems link social media predicted personality profiles with worker occupation attributes to construct personalised career recommendations. 
+  His recommender systems answer questions like "Are some jobs better suited to one's personality?" and "Can one be happier and more engaged with a job aligned with their personality?". 
   Individuals can use these recommender systems to ask: "What jobs can I readily perform based on my current skills?" and "What skills should I acquire to transition to a new job?"  
 
   Marian-Andrei's research receives funding from selective funders such as Facebook Research and Defence Science and Technology (DST). In addition, he publishes in the most selective venues, such as the PNAS, PLOS ONE, PLOS Computations Biology, WWW, NeurIPS, IJCAI, and CIKM. As a result, his work has received significant media attention—including 
