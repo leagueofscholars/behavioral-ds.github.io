@@ -54,6 +54,10 @@ title: "Publications"
             <a class="url_slides" target="_blank">
               <i class="far fa-newspaper" style="color:black;"></i></a>
           </span>
+          <span class="if url_video" style="margin-left: 5px; font-size:16px">
+            <a class="url_video" target="_blank">
+              <i class="fas fa-video" style="color:black;"></i></a>
+          </spans>
           <span class="if abstract" style="margin-left: 5px;">
             <div class="morepage" >
               <span class="bibtexkey"></span>
