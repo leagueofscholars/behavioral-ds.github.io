@@ -45,3 +45,9 @@ item:
     description: "[Frankie Yuan](../authors/lanqin-yuan/) started today his PhD on building detection models for online problematic speech (disinformation, misinformation, and hate speech). Welcome, Frankie!"
   - date: '2021-11-16'
     description: " :page_facing_up: The paper [Slipping to the Extreme: A Mixed Method to Explain How Extreme Opinions Infiltrate Online Discussions](https://arxiv.org/abs/2109.00302) by [Quyu](../authors/quyu-kong/) and [Andrei](../authors/ma-rizoiu/) and collaborators from the [School of Communication @UTS](https://www.uts.edu.au/study/communication/about-communication/welcome-school-communication) just got accepted in [16th International Conference on Web and Social Media (ICWSM'22)](https://www.icwsm.org/2022/index.html/)."
+  - date: '2022-02-21'
+    description: "[Daniela Elia](../authors/daniela-elia/) started today her PhD on augmenting skill and occupational ontologies with the demand on the employer's side. Welcome, Daniela!"
+  - date: '2022-02-28'
+    description: "[Amelie Girard](../authors/amelie-girard/) started today her PhD on how to bridge the gap between ML prediction, and explaining decisions (say in a marketing, consulting or HR context). Welcome, Amelie!"
+  - date: '2022-05-04'
+    description: " Check-out [the presentation video](https://www.youtube.com/watch?v=HwFq3ywanp4) for our paper [Slipping to the Extreme: A Mixed Method to Explain How Extreme Opinions Infiltrate Online Discussions](https://arxiv.org/abs/2109.00302), soon to be presented at [ICWSM'22](https://www.icwsm.org/2022/index.html/)."

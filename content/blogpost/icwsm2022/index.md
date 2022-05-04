@@ -13,6 +13,8 @@ image:
 summary: "ICWSM 2022 paper: \"Slipping to the Extreme: A Mixed-Method to Explain How Extreme Opinions Infiltrate Online Discussions\" "
 ---
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/HwFq3ywanp4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 In our [recent paper](https://arxiv.org/pdf/2109.00302.pdf) accepted at [ICWSM 2022](https://www.icwsm.org/2022/index.html/), we propose a complete solution to accelerate the qualitative analysis of problematic online speech — with a specific focus on opinions emerging from online communities — by leveraging machine learning algorithms.
 
 **Paper citation:**
