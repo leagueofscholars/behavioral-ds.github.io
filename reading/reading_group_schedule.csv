@@ -16,7 +16,7 @@ Date,Presenter,Paper,Why should we care,Appear in,Repo,Blogs
 18/04/22,--,No group meeting: public holiday (Easter Monday),,,,
 25/04/22,--,No group meeting: public holiday (ANZAC day),,,,
 02/05/22,Amelie Girard,[Fast Sparse Decision Tree Optimization via Reference Ensembles](https://arxiv.org/abs/2112.00798),Decision Trees are a family of interpretable models. When Models are used for high Stake decisions they need to be vetted properly, AAAI 2022,[1](https://github.com/ubc-systopia/gosdt-guesses),
-09/05/22,Quyu Kong,,,,,
+09/05/22,Quyu Kong,[CCGL: Contrastive Cascade Graph Learning](https://arxiv.org/pdf/2107.12576.pdf),A novel framework for information cascade graph learning in a contrastive self-supervised and task-agnostic way.,TKDE 2022,[1](https://github.com/Xovee/ccgl),
 16/05/22,Callum Pastuszak,,,,,
 23/05/22,Thomas Willingham,,,,,
 30/05/22,Marian-Andrei Rizoiu,,,,,
