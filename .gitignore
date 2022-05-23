@@ -3,3 +3,4 @@ public
 .Rproj.user
 *.Rproj
 .DS_Store
+.hugo_build.lock
