@@ -68,7 +68,7 @@ Gadi is a cross-institutional shared resource, and its usage requires credit (in
 
 **Getting access**: You will need to [request an NCI account](https://opus.nci.org.au/display/Help/How+to+create+an+NCI+user+account) using your UTS/ANU/Data61 email address. Use our project code `gh47: Tracking disinformation campaigns across social media (Marian-Andrei Rizoiu)` during the joining process. If you already have an account, simply request to join the project. You will subsequently use this project code for all computing. Make sure you have a read of the [Gadi User guide](https://opus.nci.org.au/display/Help/Gadi+User+Guide).
 
-**Use case: Use Gadi for the largest scale computes, which require years of sequential compute time. Ideally, you designed already your scripts using the [UTS HPCC](#HPCC). Note that Gadi is less responsive than HPCC (and less forgiving with not respecting the limits and instructions).
+**Use case**: Use Gadi for the largest scale computes, which require years of sequential compute time. Ideally, you designed already your scripts using the [UTS HPCC](#HPCC). Note that Gadi is less responsive than HPCC (and less forgiving with not respecting the limits and instructions).
 
 There are several queues available for Gadi, depending on your usage requirements. These include *normal* (day-to-day compute), *express* (small batches that can be executed fast), *hugemem* and *megamem* (large memory requirement), and *gpuvolta* (for deep learning). 
 <br/><br/>
