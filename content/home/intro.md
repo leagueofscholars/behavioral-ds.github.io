@@ -63,7 +63,7 @@ Our research aims to make sense of large amounts of behavioral data, to understa
 * data mining, and
 * natural language processing
 
-<a href="/extra/PostDoc_openning.pdf" style="color:red;text-decoration:none">**Two 1-Year Postdoc available**</a> in detecting and modelling mis-/dis-information spread. If you are interested in working with us, please <a href="/contact">get in touch</a>.
+<a href="/extra/PostDoc_openning.pdf" style="color:red;text-decoration:none">**Two 1-Year Postdoc**</a> and <a href="/extra/PhD_misinformation.pdf" style="color:red;text-decoration:none">multiple **funded PhD positions**</a> available in detecting and modelling mis-/dis-information spread. If you are interested in working with us, please <a href="/contact">get in touch</a>.
 <!--The Behavioral Data Science lab has a <a href="/extra/phdopportunity" style="color:red;text-decoration:none">**PhD opportunity available**</a>. If you are interested in working with us, please <a href="/contact">get in touch</a>.-->
 
 <!--Our work is partly funded by grants from the Swiss National Science Foundation, the Swiss Data Science Center, Microsoft, and CROSS, and by generous awards from Google and Facebook.-->
