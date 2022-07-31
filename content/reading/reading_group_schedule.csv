@@ -28,7 +28,7 @@ Date,Presenter,Paper,Why should we care,Appear in,Repo,Blogs
 11/7/2022,--,BDS social event: Gaddie pitching and project matching & VR room,,,,
 18/07/22,Rohit Ram,[TIMME: Twitter Ideology-detection via Multi-task Multi-relational Embedding](https://arxiv.org/pdf/2006.01321.pdf),A method for recovering political ideology based on different relations graphs based on a GCN approach.,KDD20,https://github.com/PatriciaXiao/TIMME,
 25/07/22,Elaine Gong,[The building blocks of economic complexity](https://www.pnas.org/doi/epdf/10.1073/pnas.0900943106),,,,
-1/8/2022,Pio Calderon,,,,,
+1/8/2022,Pio Calderon,[Information Interaction Profile of Choice Adoption](https://2021.ecmlpkdd.org/wp-content/uploads/2021/07/sub_45.pdf),A method to estimate the interaction profile between entities given sequences of contagions and exposures,ECML PKDD 2021,https://github.com/GaelPouxMedard/InterRate,
 8/8/2022,Marian-Andrei Rizoiu,,,,,
 15/08/22,Daniela Elia,,,,,
 22/08/22,Frankie Yuan,,,,,
