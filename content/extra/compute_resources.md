@@ -10,7 +10,7 @@ We have four compute resources and each has attached a storage resource.
 ## Compute servers and frameworks
 
 ### iHPC servers
-**Link to resource**: [ihpc.research.uts.edu.au](ihpc.research.uts.edu.au) (requires [UTS VPN](https://vpn.uts.edu.au/))
+**Link to resource**: [ihpc.research.uts.edu.au](https://ihpc.research.uts.edu.au/) (requires [UTS VPN](https://vpn.uts.edu.au/))
 
 **Quick description**: iHPC stands for Interactive High-Performance Computing. In a nutshell, these are very large machines (around 60 cores, and terabytes of memory). The machines are hosted in UTS and require both a UTS affiliation and special access. The servers are grouped into clusters, some of which require special access.
 
@@ -18,15 +18,15 @@ Our group has a private cluster called *hephaestos* which currently contains two
 
 <img src="/extra/onboarding_content/compute.png" width="100%" />
 
-**Getting access**: Request an iHPC account (see [ihpc.research.uts.edu.au](ihpc.research.uts.edu.au) for instructions). Mention the Behavioral Data Science group and Andrei in your request to be automatically added to the hephaestos access lists. **Make sure you read the documentation!**
+**Getting access**: Request an iHPC account (see [ihpc.research.uts.edu.au](https://ihpc.research.uts.edu.au/) for instructions). Mention the Behavioral Data Science group and Andrei in your request to be automatically added to the hephaestos access lists. **Make sure you read the documentation!**
 
 **Use case**: the iHPC is designed for prototyping that requires large machines (Jupyter Notebook or RStudio), or for intermediary-size compute (for larger size see [UTS HPC](#HPCC) and [NCI](#NCI)). You can use iHPC using its Graphical User Interface (GUI) via NoMachine. You can also connect via console using: 
 
-`ssh <user>@hephaestos1.eng.uts.edu.au`
+`ssh <user>@hephaestos1.ihpc.uts.edu.au`
 
 For use with *Jupyter Notebook* or *RStudio Server*, you can redirect ports via SSH tunneling. Assuming the Jupyter Notebook/RStudio Server listens on port 8282, you can redirect that port by connecting to hephaestos1 using: 
 
-`ssh -L 8282:localhost:8282 <user>@hephaestos1.eng.uts.edu.au`
+`ssh -L 8282:localhost:8282 <user>@hephaestos1.ihpc.uts.edu.au`
 
 after which you can connect the browser to your local machine to `https://localhost:8282` and access the kernel on the distant machines. See [here for more details and examples](https://www.ssh.com/academy/ssh/tunneling/example).
 
