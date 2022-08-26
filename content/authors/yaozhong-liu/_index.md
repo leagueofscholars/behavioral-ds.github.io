@@ -20,11 +20,18 @@ organizations:
 # Short bio (displayed in user profile at end of posts)
 body: | 
 
-  I am currently a undergradute student in Australian National University,devoting to complete bachelor's degree of Advanced Computing in College of Engineering & Computer Science. My honours project is about extracting emerging skills in online labour market which mainly applies Named Entity Recognition (NER) under the supervision of Dr. Marian-Andrei Rizoiu.
+  I am currently a undergradute student in Australian National University, devoting to complete bachelor's degree of Advanced Computing in College of Engineering & Computer Science. My honours project is about extracting emerging skills in online labour market which mainly applies Named Entity Recognition (NER) under the supervision of Dr. Marian-Andrei Rizoiu.
 
   **Position at UTS:** Yaozhong was an Honours student with the Behavioral Data Science lab in UTS.
 
   **Next position after UTS:** Yaozhong continued his undergraduate studies at the Australian National University.
+  
+  Honours thesis ([pdf](thesis.pdf)):
+  ```
+  Liu, Y. (2021). Labour dynamics in the age of automation: detecting 
+  emergent skills in labour markets from job ads description. Australian 
+  National University.
+  ```
  
 bio: I am currently a undergradute student in Australian National University,devoting to complete bachelor's degree of Advanced Computing in College of Engineering & Computer Science. My honours project is about extracting emerging skills in online labour market which mainly applies Named Entity Recognition (NER) under the supervision of Dr. Marian-Andrei Rizoiu.
 
