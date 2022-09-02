@@ -44,7 +44,7 @@ interests:
 - Artificial Intelligence
 - Social Data Science
 - Information Diffusion
-- Skill-based Job Trasitions
+- Skill-based Job Transitions
 
 
 # Social/Academic Networking
