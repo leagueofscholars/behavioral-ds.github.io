@@ -26,6 +26,12 @@ body: |
 
   **Next position after UTS:** Andrew took a position of Software Engineer @ Zuora.
   
+  Honours thesis ([pdf](andrew_law_thesis.pdf)):
+  ```
+  Law, A. (2021). Exposing the Stance of Reddit Users Towards Brexit. 
+  The Australian National University.
+  ```
+  
 bio: I am an undergraduate student currently studying a bachelor of Advanced Computing at the ANU and undertaking an honours project under the supervision of Dr. Marian-Andrei Rizoiu. My honours research focuses on building stance detection for social media content concerning the contentious Brexit debate with the goal of uncovering the dynamics of user stance shift in online discussions of contentious issues.
 
 interests:
