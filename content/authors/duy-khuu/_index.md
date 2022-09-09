@@ -26,6 +26,12 @@ body: |
 
   **Next position after UTS:** Dhuy was offered a graduate position with the Australian Federal Government.
   
+  Honours thesis ([pdf](duy-khuu-thesis.pdf)):
+  ```
+  Khuu, D. (2021). Polarisation and Influence: Investigating Brexit Opinion 
+  Dynamics on Reddit. The Australian National University.
+  ```
+  
 bio: I am an undergraduate student at The Australian National University currently studying a double degree in Bachelor of Advanced Computing and Bachelor of Actuarial Studies, supervised by Dr Marian-Andrei Rizoiu. My research involves looking into opinion polarisation dynamics - specifically concerning the Brexit debate on social media. The main aim is to detect stance shifts along with determining if a user's future stance can be predicted based on the other users they have interacted with (who may have varying stances) and types of discussions they have been exposed to.
 
 interests:

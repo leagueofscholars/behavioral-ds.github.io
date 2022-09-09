@@ -10,12 +10,20 @@ authors:
 superuser: false
 
 # Role/position
-role: Summer Research Student
+role: Graduate researcher @ Australian Federal Government
 
 # Organizations/Affiliations
 organization: Australian National University
 
 # Short bio (displayed in user profile at end of posts)
+body: | 
+
+  I am a student with the Australian National University Summer Research Program supervised by [Dr. Marian-Andre Rizoiu](../ma-rizoiu/) and [Quyu Kong](..quyu-kong/).
+
+  **Position at UTS:** Kifan was an Summer Research Program student with the Behavioral Data Science lab in UTS.
+
+  **Next position after UTS:** Kifan was offered a graduate position with the Australian Federal Government.
+  
 bio: I am a student with the Australian National University Summer Research Program supervised by Dr. Marian-Andre Rizoiu and Quyu Kong. 
 
 interests:
@@ -32,5 +40,5 @@ social:
    link: "mailto:kifan.xiao@anu.edu.au"
 
 user_groups:
-- Honours Students
+- Alumni
 ---
