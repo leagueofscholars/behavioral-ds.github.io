@@ -42,7 +42,7 @@ Date,Presenter,Paper,Why should we care,Appear in,Repo,Blogs
 17/10/22,Daniela Elia,[jobBERT: Understanding Job Titles through Skills](https://arxiv.org/pdf/2109.09605v1.pdf),"This paper presents a model to normalise job titles based on their skill content","FEAST, ECML-PKDD 2021 Workshop",,
 24/10/22,Frankie Yuan,[Unsupervised Domain Adaptation for Hate Speech Detection Using a Data Augmentation Approach](https://ojs.aaai.org/index.php/ICWSM/article/view/19340/19112),"This paper presents some interesting tricks for domain adaptation in low resource hate speech datasets through data augmentation. They tag sentences from the target domain to generate contextual templates, which they then fill with key terms they identify from the source domain.",ICWSM 2022,,
 31/10/22,Amelie Girard,,,,,
-7/11/2022,Rohit Ram,,,,,
+7/11/2022,Rohit Ram,[Fast Few shot Self-attentive Semi-supervised Political Inclination Prediction](https://arxiv.org/pdf/2209.10292.pdf),This paper uses a fairly sophisticated few shot architechture for detecting political inclincation and achieves SOTA performance,,,
 14/11/22,Elaine Gong,,,,,
 21/11/22,Pio Calderon,,,,,
 28/11/22,Marian-Andrei Rizoiu,,,,,
