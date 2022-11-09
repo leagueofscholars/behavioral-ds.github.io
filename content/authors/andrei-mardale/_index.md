@@ -20,27 +20,25 @@ organizations:
 # Short bio (displayed in user profile at end of posts)
 body: | 
 
-  I am an undergraduate student currently studying a bachelor of Advanced Computing at the ANU and undertaking an honours project under the supervision of Dr. Marian-Andrei Rizoiu. My honours research focuses on building stance detection for social media content concerning the contentious Brexit debate with the goal of uncovering the dynamics of user stance shift in online discussions of contentious issues. 
+  I am an undergraduate student currently studying in the Masters of Machine Learning and Data Mining at the University Jean Monnet in St Etienne, France. I am undertaking an Masters project under the supervision of Prof Christine Largeron and Dr Marian-Andrei Rizoiu. My Masters research focuses understanding online polarization based on teh structure of the social media discussions (here, Reddit discussions around Brexit).
 
-  **Position at UTS:** Andrew was an Honours student with the Behavioral Data Science lab in UTS.
+  **Position at UTS:** Andrei was an affiliate Masters student with the Behavioral Data Science lab at UTS.
 
-  **Next position after UTS:** Andrew took a position of Software Engineer @ Zuora.
+  **Next position after UTS:** Andrei took a position of Data Scientist @ Bolt.
   
-  Honours thesis ([pdf](andrei_mardale_thesis.pdf)):
+  Masters thesis ([pdf](andrei-mardale-thesis.pdf)):
+  ```
+  Mardale, A. (2019). Information Diffusion in Online Communities. 
+  Université Jean Monnet.
+  ```
   
-  <big><pre>
-  Law, A. (2021). Exposing the Stance of Reddit Users Towards Brexit. 
-  The Australian National University. <a href="andrei_mardale_thesis.pdf">pdf</a>
-  </pre></big>
   
-  
-bio: I am an undergraduate student currently studying a bachelor of Advanced Computing at the ANU and undertaking an honours project under the supervision of Dr. Marian-Andrei Rizoiu. My honours research focuses on building stance detection for social media content concerning the contentious Brexit debate with the goal of uncovering the dynamics of user stance shift in online discussions of contentious issues.
+bio: I am an undergraduate student currently studying in the Masters of Machine Learning and Data Mining at the University Jean Monnet in St Etienne, France. I am undertaking an Masters project under the supervision of Prof Christine Largeron and Dr Marian-Andrei Rizoiu. My Masters research focuses understanding online polarization based on teh structure of the social media discussions (here, Reddit discussions around Brexit).
 
 interests:
 - Machine Learning
-- Politics
-- Social Data Science
-- Software Engineering
+- Opinion Polarization
+- Data Science
 
 
 # Social/Academic Networking
