@@ -10,13 +10,27 @@ authors:
 superuser: false
 
 # Role/position
-role: Undergraduate Honours student
+role: Undergraduate Honours student @UTS
 
 # Organizations/Affiliations
 organizations:
-- name: University of Technology Sydney
+- name: (current) University of Technology Sydney 
+- name: (previous) University of Technology Sydney
 
 # Short bio (displayed in user profile at end of posts)
+body: | 
+
+  I am an Honours student studying my undergraduate degree in Computing Science at the University of Technology Sydney. I am currently undertaking my honours project; supervised by [Dr Marian-Andrei Rizoiu](../ma-rizoiu/) and co-supervised by [Dr Simon Knight](https://profiles.uts.edu.au/Simon.Knight), investigating the role of fact checks in counteracting disinformation on social media. 
+
+  **Position at UTS:** Callum was a Honours (Bachelors) student with the Behavioral Data Science lab at UTS.
+
+  **Next position after UTS:** Callum continued his graduate studies at UTS.
+  
+  Honours thesis ([pdf](callum-pastuszak-thesis.pdf)):
+  ```
+  Callum Pastuszak. (2022). The role of fact checks in counteracting 
+  disinformation on social media. University of Technology Sydney.
+  ```
 bio: I am an Honours student studying my undergraduate degree in Computing Science at the University of Technology Sydney. I am currently undertaking my honours project; supervised by Dr Marian-Andrei Rizoiu and co-supervised by Dr Simon Knight, investigating the role of fact checks in counteracting disinformation on social media. 
 
 interests:
@@ -30,9 +44,9 @@ interests:
 #   For an email link, use "fas" icon pack, "envelope" icon, and a link in the
 #   form "mailto:your-email@example.com" or "#contact" for contact widget.
 social:
-- icon: envelope
-  icon_pack: fas
-  link: "mailto:13195449@student.uts.edu.au"  # For a direct email link, use "mailto:test@example.org".
+- icon: linkedin
+  icon_pack: fab
+  link: https://www.linkedin.com/in/callum-pastuszak-668610249/
 
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
@@ -49,5 +63,5 @@ social:
 #                  "Visitors",
 #                  "Alumni"]
 user_groups:
-- Honours Students
+- Alumni
 ---
