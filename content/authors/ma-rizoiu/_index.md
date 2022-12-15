@@ -20,8 +20,8 @@ organizations:
 # Short bio (displayed in user profile at end of posts)
 body: |
     Dr Marian-Andrei Rizoiu is a Senior Lecturer leading the [Behavioral Data Science lab](https://www.behavioral-ds.science/) at the University of Technology Sydney. 
-    His interdisciplinary research crosses computer and social sciences, blending psycholinguistics, digital communication and stochastic modelling to understand online human behaviour.
-    Dr Rizoiu currently leads grants worth $1.8 million from the Commonwealth of Australia to detect and model the spread of mis- and disinformation and its weaponized counterparts -- information and influence operations.
+    His interdisciplinary research crosses computer and social sciences, blending psycholinguistics, digital communication and stochastic modelling to understand human attention dynamics in the online environment, the emergence of influence and opinion polarization.
+    Dr Rizoiu currently leads grants worth $1.8 million from the Commonwealth of Australia to detect and model the spread of mis- and disinformation and its weaponized counterparts – information and influence operations.
 
     Dr Rizoiu's research has made several key contributions to online popularity prediction, real-time tracking and countering disinformation campaigns, and understanding shortages and mismatches in labour markets.  
     First, he developed theoretical models for online information diffusion, which can account for complex social phenomena. 
