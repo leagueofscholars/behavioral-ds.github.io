@@ -5,34 +5,42 @@ from datetime import datetime, timedelta, date
 # its slightly hacky but it works -_('_')_-
 
 # in order of roster
-names = ["Amelie Girard",
+names = ["Frankie Yuan",
+         "Amelie Girard",
          "Rohit Ram",
-         "Quyu Kong",
-         "Callum Pastuszak",
-         "Thomas Willingham",
          "Pio Calderon",
          "Marian-Andrei Rizoiu",
          "Daniela Elia",
-         "Frankie Yuan"
+         "Elaine Gong"
          ]
 
 # start date
-date_object = date(2022, 5, 30)
+date_object = date(2023, 1, 9)
 date_object += timedelta(days=1-date_object.isoweekday())
 slots = []
-while date_object.year == 2022:
-    if not pytimeNSW.is_public(date_object) and not pytimeNSW.is_public_can(date_object):
-        slots.append(date_object)
+holidays = set()
+
+while date_object.year == 2023:
+    slots.append(date_object)
+    if pytimeNSW.is_public(date_object) or pytimeNSW.is_public_can(date_object):
+        holidays.add(date_object)
+	
     date_object += timedelta(days=7)
 
 i = 0
 for slot in slots:
-    date_str = str("{:02d}".format(slot.day)) + "/" + str("{:02d}".format(slot.month)) + "/" + str(slot.year)[2:]
-    pres_str = names[i]
-    # copy pasta this into the csv
-    print(date_str + "," + pres_str + ",,,,,")
+    if slot not in holidays:
+        date_str = str("{:02d}".format(slot.day)) + "/" + str("{:02d}".format(slot.month)) + "/" + str(slot.year)[2:]
+        pres_str = names[i]
+        # copy pasta this into the csv
+        print(date_str + "," + pres_str + ",,,,,")
 
-    i += 1
-    if i >= len(names):
-        i = 0
+        i += 1
+        if i >= len(names):
+            i = 0
+    else:
+        date_str = str("{:02d}".format(slot.day)) + "/" + str("{:02d}".format(slot.month)) + "/" + str(slot.year)[2:]
+        # copy pasta this into the csv
+        print(date_str + ",--," + "No reading due to public holiday,,,,," )
+
     
