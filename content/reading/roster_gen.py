@@ -5,17 +5,18 @@ from datetime import datetime, timedelta, date
 # its slightly hacky but it works -_('_')_-
 
 # in order of roster
-names = ["Frankie Yuan",
-         "Amelie Girard",
-         "Rohit Ram",
+names = ["Rohit Ram",
          "Pio Calderon",
          "Marian-Andrei Rizoiu",
          "Daniela Elia",
-         "Elaine Gong"
+         "Elaine Gong",
+         "Jooyoung Lee",
+         "Frankie Yuan",
+         "Amelie Girard"
          ]
 
 # start date
-date_object = date(2023, 1, 9)
+date_object = date(2023, 1, 23)
 date_object += timedelta(days=1-date_object.isoweekday())
 slots = []
 holidays = set()
@@ -41,6 +42,6 @@ for slot in slots:
     else:
         date_str = str("{:02d}".format(slot.day)) + "/" + str("{:02d}".format(slot.month)) + "/" + str(slot.year)[2:]
         # copy pasta this into the csv
-        print(date_str + ",--," + "No reading due to public holiday,,,,," )
+        print(date_str + ",--," + "No reading due to public holiday,,,," )
 
     
