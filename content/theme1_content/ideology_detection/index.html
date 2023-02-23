@@ -12,43 +12,55 @@ image:
   placement: 1
   focal_point: "Center"
   preview_only: true
-summary: "Last year, we presented an ideology detection paper to DHSS. In this post, we explain what we did, and the big takeaways."
+summary: "Last November 2022, we presented to the [Defence Human Sciences Symposium 2022](https://www.dst.defence.gov.au/event/defence-human-sciences-symposium-2022) our novel ideology detection pipeline. In this post, we explain the technology and the big takeaways."
 ---
 
-<script src="index_files/header-attrs/header-attrs.js"></script>
-<link href="index_files/anchor-sections/anchor-sections.css" rel="stylesheet" />
-<script src="index_files/anchor-sections/anchor-sections.js"></script>
 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/csWMgU7R52Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
 </iframe>
-<p>In this <a href="https://arxiv.org/pdf/2208.04097.pdf">working paper</a>, we propose a completely automatic end-to-end ideology detection pipeline, for the detection and psychosocial profiling of both left, right, and far-right ideological users. The pipeline fills a crucial gap by providing flexible methodology and tooling for understanding ideologies and alerting against extreme ideology-motivated (and potentially violent) activity.</p>
+<p>In this <a href="https://arxiv.org/pdf/2208.04097.pdf">our latest working paper</a>, we propose a completely automatic end-to-end ideology detection pipeline for the detection and psychosocial profiling of left-right political ideology, as well as far-right ideological users.
+The pipeline fills a crucial gap by providing flexible methodology and tooling for understanding ideologies and building early warning systems for extreme ideology-motivated (and potentially violent) activity.</p>
 <p><strong>Paper citation:</strong></p>
-<pre><code>Ram, R. and Rizoiu, M.A., 2022. You are what you browse: A robust framework for uncovering political ideology. arXiv preprint arXiv:2208.04097.</code></pre>
-<p>(see full paper here: <a href="https://arxiv.org/pdf/2208.04097.pdf">https://arxiv.org/pdf/2208.04097.pdf</a>)</p>
+<pre><code>Ram, R. and Rizoiu, M.A., 2022. You are what you browse: A robust framework for uncovering political ideology.
+arXiv preprint arXiv:2208.04097.</code></pre>
+<p>(<em>see full paper here: <a href="https://arxiv.org/pdf/2208.04097.pdf">https://arxiv.org/pdf/2208.04097.pdf</a></em>)</p>
 <div id="ideology-in-an-online-world" class="section level2">
 <h2>Ideology in an Online World</h2>
-<p>Ideology is the basis of how we make sense of much of the world, the opinions we hold, and the political actions we take. It is not a new concept and is often the context of unrest throughout history.
-However, in an online world, where the internet is a major source of information, and opinions spread quickly through social platforms; ideological spread and radicalization have entered a new paradigm.
-In particular, the anonymity and lack of accountability that are often associated with online communication set up a supportive environment for the spread of far-right ideologies and the radicalization of individuals into extremist groups.
-Far-right extremism is a form of ideology that advocates for ultranationalism, racism, and opposition to immigration and multiculturalism. These ideologies are strongly correlated with violence and terrorism, and pose a threat to individual and collective security.</p>
-<p>The Australian Security Intelligence Organisation (ASIO) has made comments raising concerns about the young age of Australians being radicalized, the use of online technologies and the rise of extremist movements in Australia <span class="citation">(<a href="#ref-asio" role="doc-biblioref"><span>“Director-General’s Annual Threat Assessment”</span> 2021</a>)</span>. They have further suggested that during the COVID period, up to 30-40% of their caseload was devoted to far-right extremism, up from 10-15% in 2016 <span class="citation">(<a href="#ref-guardian1" role="doc-biblioref">Karp 2020</a>)</span>.</p>
-<p>Unfortunately, ideologically motivated violent extremism continues to be an issue in Australia. On December 12th, 2022, two Queensland police officers were killed while performing routine duties <span class="citation">(<a href="#ref-guardian2" role="doc-biblioref">Gillespie and McGowan 2022</a>)</span>. Later investigations would uncover that the three people, who killed the officers, were active online in producing deep-state and religious conspiratorial content. The content has since been taken down from mainstream social platforms but continues to be shared on conspiratorial websites.
-Online content often serves as a lead indicator of violent extremism (as was the case in this incident and the Christchurch Mosque Shootings three years prior). However, the tools to identify and understand the psychosocial characteristics of these extreme individuals and communities are lacking.</p>
-<p>In this work, we build an end-to-end ideology detection pipeline and build psychosocial profiles of ideological groups. We find that right-wing individuals tend to use moral-vice language quantifiably more the left-wing individuals, and that far-right individuals’ use of grievance language (violence, hate, paranoia, etc.) is significantly different from moderates.</p>
+<p>Ideology determines how we make sense of much of the world, our opinions, and our political actions.
+It is not a new concept; throughout history, it served as the context for unrest.
+However, ideological spread and radicalization have entered a new paradigm in our ever-connected world. The internet is a significant source of information and spreads opinions quickly through social platforms.
+In particular, the anonymity and lack of accountability often associated with online communication set up a supportive environment for spreading far-right ideologies and radicalizing individuals into extremist groups.
+Far-right extremism is a form of ideology that advocates for ultranationalism, racism, and opposition to immigration and multiculturalism.
+These ideologies strongly correlate with violence and terrorism and threaten individual and collective security.</p>
+<p>The Australian Security Intelligence Organisation (ASIO) raised concerns about Australians being radicalized very young and the rise of extremist movements in Australia through online technologies <span class="citation">(<a href="#ref-asio" role="doc-biblioref"><span>“Director-General’s Annual Threat Assessment”</span> 2021</a>)</span>.
+ASIO claimed that during the COVID period, 30-40% of their caseload was devoted to far-right extremism, up from 10-15% in 2016 <span class="citation">(<a href="#ref-guardian1" role="doc-biblioref">Karp 2020</a>)</span>.</p>
+<p>Unfortunately, Ideologically Motivated Violent Extremism (IMVE) continues to be an issue in Australia.
+On December 12th, 2022, two Queensland police officers were killed while performing routine duties <span class="citation">(<a href="#ref-guardian2" role="doc-biblioref">Gillespie and McGowan 2022</a>)</span>.
+Later investigations would uncover that the three people, who killed the officers, were active online in producing deep-state and religious conspiratorial content.
+Their content has since been removed from mainstream social platforms but continues to be shared on conspiratorial websites.
+Such extreme-leaning content often serves as a lead indicator of violent extremism (as was the case in this incident and the Christchurch Mosque Shootings three years prior). However, the tools to identify and understand the psychosocial characteristics of these extreme individuals and communities are lacking.</p>
+<p>In this work, we build an end-to-end ideology detection pipeline and psychosocial profiles of ideological groups.
+We find that right-leaning individuals tend to use moral-vice language more than left-leaning and that far-right individuals’ grievance language (violence, hate, paranoia, etc.) significantly differs from the moderates.</p>
 </div>
 <div id="signals-of-ideology" class="section level2">
 <h2>Signals of Ideology</h2>
-<p>In online social settings, researchers face numerous barriers that prevent traditional methods; directly asking users’ for their ideologies has dubious success, infringes on platform T&amp;Cs, and does not scale to online populations. The alternative of manual expert inference of users’ ideologies through their activity, also does not scale.</p>
-<p>Instead, in an effort to reduce expert labor to feasible levels, researchers infer ideologies from signals in user behavior. We dub these signals –<em>ideological proxies</em>—, and they include using political hashtags, retweeting politicians, or following political parties.</p>
-<p>Importantly, these <em>ideological proxies</em> for online users can still require laborious labeling by context-specific experts! For example, the hashtag <em>#ScottyFromMarketing</em> requires an up-to-date expert in Australian politics to uncover that it expresses an anti-right-wing ideology. For many researchers:
+<p>In online social settings, researchers face numerous barriers that prevent using traditional methods.
+Directly asking users for their ideologies has dubious success, infringes on platform T&amp;Cs, and does not scale to online populations.
+Inferring users’ ideologies from their activity also does not scale as the data requires is prohibitively expensive and tedious to compile.</p>
+<p>Instead, to reduce expert labor to feasible levels, researchers infer ideologies from signals in user behavior – such as whether they use political hashtags, retweet politicians, or follow political parties.
+We dub these signals <em>ideological proxies</em>.</p>
+<p>Importantly, these <em>ideological proxies</em> for online users can still require laborious labeling by context-specific experts.
+For example, the hashtag <em>#ScottyFromMarketing</em> requires an up-to-date expert in Australian politics to uncover that it expresses an anti-right-wing ideology.
+For many researchers:
 - access to contextual experts is difficult,
 - labeling of signals is still laborious and expensive,
-- and, switches in contexts require relabelling (exasperating the above problems).</p>
-<p>Unfortunately, such context-switches are common for practitioners, and each new dataset can have contextual changes in time, country, social platform, etc.
-This problem is exemplified in Figure <a href="#fig:teaser">1</a> below wherein each of the contexts, the <em>ideological proxy</em> can only be transferred in narrow circumstances (represented by the green dotted regions).
-As such, we desire an <em>ideological proxy</em> that is robust to changes in context, requires no expert labeling and is valid with respect to a gold standard.</p>
-<div class="figure"><span id="fig:teaser"></span>
+- and context switches require relabelling (exasperating the above problems).</p>
+<p>Unfortunately, such context switches are commonplace, as the context changes with time, country, or social platform.
+Figure <a href="#fig:teaser">1</a> showcases the problem: most commonly used <em>ideological proxies</em> can only be transferred in narrow circumstances (represented by the green dotted regions).
+For example, following political parties is country-dependent, politicians come and go with time, and hashtags are platform-dependent.
+As such, we desire an <em>ideological proxy</em> that is robust to changes in context, requires no expert labeling and is true to the gold standard.</p>
+<div class="figure"><span style="display:block;" id="fig:teaser"></span>
 <img src="teaser_v2.svg" alt="Schema showing that not all ideological proxies can context-switch." width="700px" />
 <p class="caption">
 Figure 1: Schema showing that not all ideological proxies can context-switch.
@@ -56,40 +68,53 @@ Figure 1: Schema showing that not all ideological proxies can context-switch.
 </div>
 <!-- ![Not all ideological proxies can context-switch](teaser.png) -->
 <p>Furthermore, the <em>ideological proxies</em> are often sparse among users; however, we would ideally like to detect influence amongst the entire population of users (as taking only active users could bias our inferences).
-We further desire a method for inferring the ideology of (potentially inactive) users, who don’t have any direct <em>ideological proxy</em> information.</p>
+We further desire a method for inferring the ideology of (potentially inactive) users without direct <em>ideological proxy</em> information.</p>
 </div>
 <div id="our-solution-you-are-what-you-browse" class="section level2">
 <h2>Our Solution: You are what you browse</h2>
-<p>Our solution is a large-scale end-to-end ideology detection pipeline, that can be used to profile entire populations of users. The solution has two main components; the media proxy and the inference architecture. The media proxy allows for labeling a subset of users, and the inference architecture allows for propagating these labels to the remaining users via socially-informed homophilic lenses.</p>
+<p>Our solution is a large-scale end-to-end ideology detection pipeline that can be used to profile entire populations of users.
+The solution has two main components; the media proxy and the inference architecture.
+The media proxy allows for labeling a subset of users, and the inference architecture allows for propagating these labels to the remaining users via socially-informed homophilic lenses.</p>
 <div id="the-media-proxy" class="section level3">
 <h3>The Media Proxy</h3>
-<p>For the first part of our work, we generate a proxy based on media-sharing behavior which satisfies the desiderata.</p>
-<p>Briefly, the media proxy is generated via two datasets of media slant (although many media slant datasets are widely available). The first is a large survey of media consumption behaviors conducted by Reuters <span class="citation">(<a href="#ref-newman2019reuters" role="doc-biblioref">Newman et al. 2019</a>)</span>, in a variety of countries in 2020 and 2021, where participants report the media publications they consume and their own political ideology. We define the slant of a media source for each country and year, as the average ideology of the participants who consume it. The second dataset is the Allsides Media Bias Dataset <span class="citation">(<a href="#ref-sides2018media" role="doc-biblioref">Sides 2018</a>)</span> which contains an expert-curated set of media publications. The Allsides dataset contains mostly American-based media; conversely, Reuters lists the major media for a range of countries. Given that each country and time period will have a different conception of ideologies, we calibrate Reuter’s media slants to approximate the Allsides (minimizing the mean-squared error). Figure <a href="#fig:slants">2</a> shows the slants for each media website within the Reuters dataset.</p>
-<div class="figure"><span id="fig:slants"></span>
+<p>For the first part of our work, we generate a proxy based on media-sharing behavior, which satisfies the desiderata.</p>
+<p>We generate the media proxy via two media slant datasets (although many are widely available).
+The first is an extensive survey of media consumption behaviors conducted by Reuters <span class="citation">(<a href="#ref-newman2019reuters" role="doc-biblioref">Newman et al. 2019</a>)</span> in several countries in 2020 and 2021.
+Participants reported the media publications they consume and their own political ideology.
+We estimate the slant of a media source for each country and year as the average ideology of the participants who consume it.
+The second dataset is the Allsides Media Bias Dataset <span class="citation">(<a href="#ref-sides2018media" role="doc-biblioref">Sides 2018</a>)</span>, which contains an expert-curated set of media publications.
+The Allsides dataset contains mostly American-based media; conversely, Reuters covers the major media outlets in each country.
+Given that each country and period will have a different conception of ideologies, we calibrate Reuter’s media slants to approximate the Allsides (minimizing the mean-squared error). Figure <a href="#fig:slants">2</a> shows the slants for each media website within the Reuters dataset.</p>
+<div class="figure"><span style="display:block;" id="fig:slants"></span>
 <img src="url_slants.svg" alt="Plot showing the slants for various media websites." width="700px" />
 <p class="caption">
 Figure 2: Plot showing the slants for various media websites.
 </p>
 </div>
 <!-- ![The slants for various media websites](./url_slants.png) -->
-<p>We finally define the media slant of a media website, as its average over the country, year, and sources, and we define the ideology of a user as the average ideology of the media they share.</p>
-<p>The schema above exemplifies how the media proxy resolves the issue of context switching; namely, since the media proxy is applicable across many contexts, it can be used widely in a fully automatic fashion. This allows us to create an end-to-end ideology detection pipeline.</p>
-<p>We further define methods to classify far-right users from their media-sharing behaviors, which we don’t address here but are described fully in the paper.</p>
+<!-- We finally define the media slant of a media website, as its average over the country, year, and sources, and  -->
+<p>Finally, we quantify a user’s ideology as the average ideology of their shared media.</p>
+<p>The media proxy resolves the issue of context switching; since it is applicable across many contexts and can be used widely in a fully automated fashion.
+This allows us to create an end-to-end ideology detection pipeline.</p>
+<p>We further define methods to classify far-right users from their media-sharing behaviors, which we fully describe in the paper.</p>
 </div>
 <div id="the-inference-architecture" class="section level3">
 <h3>The Inference Architecture</h3>
-<p>For the second part of our work, we define an inference architecture that allows us to infer the ideological labels of the remaining users. Our inference architecture relies on the sociological principle of homophily, where we hypothesize that similar users will share a similar ideology. We measure homophily through three distinct lenses;</p>
+<p>In the second part of our work, we define an inference architecture that allows inferring the ideological labels of the remaining users – e.g., users who do not share any URLs.
+Our inference architecture relies on the sociological principle of homophily, where we hypothesize that similar users will share a similar ideology.
+We measure homophily through three distinct lenses;</p>
 <ol style="list-style-type: decimal">
 <li><em>Lexical</em>: Users with similar language will have similar ideology</li>
-<li><em>Hashtag</em>: Users who participate in similar topics of discussion with share similar ideology</li>
+<li><em>Hashtag</em>: Users who participate in similar topics of discussion share a similar ideology</li>
 <li><em>Resharing</em>: Users who consume similar content (signaled via resharing of other users) will share a similar ideology</li>
 </ol>
-<p>Through these lenses, we utilize an AutoML model, FLAML <span class="citation">(<a href="#ref-wang2021flaml" role="doc-biblioref">Wang et al. 2021</a>)</span> (with the LightGBM architecture), trained on users identified via an ideological proxy, to propagate the labels to the remaining users and generate a full ideological profile for a dataset.</p>
+<p>Through these lenses, we utilize an AutoML model, FLAML <span class="citation">(<a href="#ref-wang2021flaml" role="doc-biblioref">Wang et al. 2021</a>)</span> (with the LightGBM architecture), trained on users identified via an ideological proxy to propagate the labels to the remaining users and generate a complete ideological profile for a dataset.</p>
 </div>
 </div>
 <div id="the-data" class="section level2">
 <h2>The Data</h2>
-<p>We utilize several large-scale datasets from a variety of platforms, to showcase the relative ease of applying our end-to-end pipeline. The datasets’ characteristics are described in Table <a href="#tab:datasets">1</a>.
+<p>We utilize several large-scale datasets from various platforms to showcase the relative ease of applying our end-to-end pipeline.
+The datasets’ characteristics are described in Table <a href="#tab:datasets">1</a>.
 <!-- For evaluation purposes, we use \#QandA based on the popular ABC panel show. --></p>
 <table>
 <caption><span id="tab:datasets">Table 1: </span>The datasets used through-out the analysis, with the number of users, posts, and affliated country.</caption>
@@ -137,49 +162,59 @@ Figure 2: Plot showing the slants for various media websites.
 <!-- ![The datasets we apply our pipeline on](datasets.png) -->
 <div id="psychosocial-profiles-of-the-ideological-groups" class="section level3">
 <h3>Psychosocial profiles of the Ideological Groups</h3>
-<p>Large-scale profiling of entire online populations gives us significant insights into the characteristics of online populations. We apply our inferred ideological labels of online users, in two critical ways:</p>
+<p>Large-scale profiling of entire online populations gives us significant insights into the characteristics of online populations.
+We apply our inferred ideological labels of online users in two critical ways:</p>
 <ol style="list-style-type: decimal">
 <li>We derive a method for distinguishing the left and the right in terms of their moral language.</li>
 <li>We derive a method for distinguishing moderate and extreme ideologies in terms of their grievance language.</li>
 </ol>
 <p><strong>Distinguishing Left and Right</strong>:
 We utilize the FrameAxis <span class="citation">(<a href="#ref-mokhberian2020moral" role="doc-biblioref">Mokhberian et al. 2020</a>)</span> methodology to metricize each user’s association with each of the five Moral Foundations <span class="citation">(<a href="#ref-graham2013moral" role="doc-biblioref">Graham et al. 2013</a>)</span> in terms of their vice and virtue axes.
-Given the measures of the Moral Foundations in the user language, we can start to detect in what way the left and the right differ. To do this we find the mean vice and virtue scores for each ideological group and compare these to the neutral group. Figure <a href="#fig:mft">3</a> shows the outcome of this analysis on the SocialSense dataset.</p>
-<div class="figure"><span id="fig:mft"></span>
+Given the measures of the Moral Foundations in the user language, we can start to detect in what way the left and the right differ.
+To do this, we find each ideological group’s mean vice and virtue scores and compare these to the neutral group.
+Figure <a href="#fig:mft">3</a> shows the outcome of this analysis on the SocialSense dataset.</p>
+<div class="figure"><span style="display:block;" id="fig:mft"></span>
 <img src="mft_diff_plot.svg" alt="Plot of the moral foundations of ideological groups in the SocialSense dataset, showing that the left prefer virtue and the right prefer vice language." width="700px" />
 <p class="caption">
 Figure 3: Plot of the moral foundations of ideological groups in the SocialSense dataset, showing that the left prefer virtue and the right prefer vice language.
 </p>
 </div>
 <!-- ![Plot showing that the left prefer virtue and the right prefer vice language](mft_diff_plot.png) -->
-<p>We see that the left prefers the language of virtue, while the right prefers the language of vice. This trend is largely consistent across all datasets.</p>
-<p><strong>Distinguishing Moderates and Extremes</strong>: We similarly generate measures via the Grievance Dictionary <span class="citation">(<a href="#ref-van2021grievance" role="doc-biblioref">Van der Vegt et al. 2021</a>)</span>, which is a threat assessment tool designed to highlight potential threats through their language. Similar to the previous plot, we investigate the distribution of grievance scores for the ideological groups, but here we measure the difference between distributions with the Signed KL-divergence (a measure of the difference in the location and shape of distributions). Figure <a href="#fig:grievance">4</a> shows the results for the Ausvotes dataset.</p>
-<div class="figure"><span id="fig:grievance"></span>
+<p>We see that the left prefers the language of virtue, while the right prefers the language of vice.
+This trend is largely consistent across all datasets.</p>
+<p><strong>Distinguishing Moderates and Extremes</strong>: We similarly generate measures via the Grievance Dictionary <span class="citation">(<a href="#ref-van2021grievance" role="doc-biblioref">Van der Vegt et al. 2021</a>)</span>, a threat assessment tool designed to highlight potential threats through their language.
+Similar to the previous plot, we investigate the distribution of grievance scores for the ideological groups.
+However, here we measure the difference between distributions with the Signed KL-divergence (a measure of the difference in the location and shape of distributions).
+Figure <a href="#fig:grievance">4</a> shows the results for the Ausvotes dataset.</p>
+<div class="figure"><span style="display:block;" id="fig:grievance"></span>
 <img src="grievance_diff_plot.svg" alt="Plot of the grievance categories of ideological groups in the #Ausvotes dataset, showing that the far-right is significantly different." width="700px" />
 <p class="caption">
 Figure 4: Plot of the grievance categories of ideological groups in the #Ausvotes dataset, showing that the far-right is significantly different.
 </p>
 </div>
 <!-- ![Plot showing that the far-right use grievance language](grievance_diff_plot.png) -->
-<p>We observe that the far-right’s usage of grievance language is significantly different from the moderate ideological groups. This adds evidence to the growing concern that members of the far-right may participate in violent behavior.</p>
+<p>We observe that the far-right’s usage of grievance language is significantly different from the moderate ideological groups.
+This adds evidence to the growing concern that members of the far-right may vent their frustration participate in violent behavior.</p>
 </div>
 </div>
 <div id="conclusion" class="section level2">
 <h2>Conclusion</h2>
 <p>In this work, we build a fully automatic end-to-end ideology detection pipeline for left-right and far-right detection.
 Importantly, with the pipeline, we can show the differences between the left and right, and moderates and extremes in terms of psychosocial language, across a range of diverse datasets.</p>
+<div id="references" class="section level3 unnumbered">
+<h3>References</h3>
 <div id="refs" class="references csl-bib-body hanging-indent">
 <div id="ref-asio" class="csl-entry">
 <span>“Director-General’s Annual Threat Assessment.”</span> 2021. <em>ASIO</em>. <a href="https://www.asio.gov.au/resources/speeches-and-statements/director-generals-annual-threat-assessment-2021">https://www.asio.gov.au/resources/speeches-and-statements/director-generals-annual-threat-assessment-2021</a>.
 </div>
 <div id="ref-guardian2" class="csl-entry">
-Gillespie, Eden, and Michael McGowan. 2022. <span>“Queensland Shooting: Gareth and Stacey Train Published YouTube Video After Killing Police Officers.”</span> <a href="https://www.theguardian.com/australia-news/2022/dec/16/queensland-shooting-gareth-and-stacey-train-youtube-video-published-after-killing-police">https://www.theguardian.com/australia-news/2022/dec/16/queensland-shooting-gareth-and-stacey-train-youtube-video-published-after-killing-police</a>; The Guardian.
+Gillespie, Eden, and Michael McGowan. 2022. <span>“Queensland Shooting: Gareth and Stacey Train Published YouTube Video After Killing Police Officers.”</span> <a href="https://www.theguardian.com/australia-news/2022/dec/16/queensland-shooting-gareth-and-stacey-train-youtube-video-published-after-killing-police" class="uri">https://www.theguardian.com/australia-news/2022/dec/16/queensland-shooting-gareth-and-stacey-train-youtube-video-published-after-killing-police</a>; The Guardian.
 </div>
 <div id="ref-graham2013moral" class="csl-entry">
 Graham, Jesse, Jonathan Haidt, Sena Koleva, Matt Motyl, Ravi Iyer, Sean P Wojcik, and Peter H Ditto. 2013. <span>“Moral Foundations Theory: The Pragmatic Validity of Moral Pluralism.”</span> In <em>Advances in Experimental Social Psychology</em>, 47:55–130. Elsevier.
 </div>
 <div id="ref-guardian1" class="csl-entry">
-Karp, Paul. 2020. <span>“Asio Reveals up to 40% of Its Counter-Terrorism Cases Involve Far-Right Violent Extremism.”</span> <a href="https://www.theguardian.com/australia-news/2020/sep/22/asio-reveals-up-to-40-of-its-counter-terrorism-cases-involve-far-right-violent-extremism">https://www.theguardian.com/australia-news/2020/sep/22/asio-reveals-up-to-40-of-its-counter-terrorism-cases-involve-far-right-violent-extremism</a>; The Guardian.
+Karp, Paul. 2020. <span>“Asio Reveals up to 40% of Its Counter-Terrorism Cases Involve Far-Right Violent Extremism.”</span> <a href="https://www.theguardian.com/australia-news/2020/sep/22/asio-reveals-up-to-40-of-its-counter-terrorism-cases-involve-far-right-violent-extremism" class="uri">https://www.theguardian.com/australia-news/2020/sep/22/asio-reveals-up-to-40-of-its-counter-terrorism-cases-involve-far-right-violent-extremism</a>; The Guardian.
 </div>
 <div id="ref-mokhberian2020moral" class="csl-entry">
 Mokhberian, Negar, Andrés Abeliuk, Patrick Cummings, and Kristina Lerman. 2020. <span>“Moral Framing and Ideological Bias of News.”</span> In <em>International Conference on Social Informatics</em>, 206–19. Springer.
@@ -195,6 +230,7 @@ Van der Vegt, Isabelle, Maximilian Mozes, Bennett Kleinberg, and Paul Gill. 2021
 </div>
 <div id="ref-wang2021flaml" class="csl-entry">
 Wang, Chi, Qingyun Wu, Markus Weimer, and Erkang Zhu. 2021. <span>“FLAML: A Fast and Lightweight Automl Library.”</span> <em>Proceedings of Machine Learning and Systems</em> 3: 434–47.
+</div>
 </div>
 </div>
 </div>
