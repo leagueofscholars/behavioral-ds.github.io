@@ -19,6 +19,8 @@ summary: "Last November 2022, we presented to the [Defence Human Sciences Sympos
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/csWMgU7R52Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
+Also check out [Rohit](../authors/rohit-ram/)'s and [Andrei](../authors/ma-rizoiu/)'s article that just appeared in The Conversation: [Can ideology-detecting algorithms catch online extremism before it takes hold?](https://theconversation.com/can-ideology-detecting-algorithms-catch-online-extremism-before-it-takes-hold-200629)
+
 In this [our latest working paper](https://arxiv.org/pdf/2208.04097.pdf), we propose a completely automatic end-to-end ideology detection pipeline for the detection and psychosocial profiling of left-right political ideology, as well as far-right ideological users. 
 The pipeline fills a crucial gap by providing flexible methodology and tooling for understanding ideologies and building early warning systems for extreme ideology-motivated (and potentially violent) activity.
 
