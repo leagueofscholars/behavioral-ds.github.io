@@ -28,7 +28,7 @@ body: |
     His models answer questions such as "Why did X become popular, but not Y?" and "How can problematic content be detected based solely on how it spreads?".
     Second, he built skill-based real-time occupation transition recommender systems. 
     These systems link social media-predicted personality profiles with occupation skill requirements to construct personalized career recommendations. 
-    His recommender systems answer questions like "Are some jobs better suited to one's personality?" and "Can one be happier and more engaged with a job aligned with their personality?". 
+    His recommender systems answer questions like "Are some jobs better suited to one's personality?" and "Can one be happier and more engaged with a job aligned with their personality?".
     Individuals can use these recommender systems to ask: "What jobs can I readily perform based on my current skills?" and "What skills should I acquire to transition to a new job?"  
 
     Marian-Andrei's research receives funding from selective funders such as 
