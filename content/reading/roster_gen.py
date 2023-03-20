@@ -6,24 +6,24 @@ from datetime import datetime, timedelta, date
 
 # in order of roster
 names = ["Rohit Ram",
+         "Frankie Yuan",
+         "Amelie Girard",
          "Pio Calderon",
          "Marian-Andrei Rizoiu",
          "Daniela Elia",
          "Elaine Gong",
-         "Jooyoung Lee",
-         "Frankie Yuan",
-         "Amelie Girard"
+         "Jooyoung Lee"
          ]
 
 # start date
-date_object = date(2023, 1, 23)
+date_object = date(2023, 10, 23)
 date_object += timedelta(days=1-date_object.isoweekday())
 slots = []
 holidays = set()
 
 while date_object.year == 2023:
     slots.append(date_object)
-    if pytimeNSW.is_public(date_object) or pytimeNSW.is_public_can(date_object):
+    if pytimeNSW.is_public(date_object):
         holidays.add(date_object)
 	
     date_object += timedelta(days=7)
