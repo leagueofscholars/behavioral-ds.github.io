@@ -10,14 +10,21 @@ authors:
 superuser: false
 
 # Role/position
-role: Research Associate<br/>(postdoctoral researcher)
+role: Research Scientist @ Alibaba DAMO Academy
 
 # Organizations/Affiliations
 organizations:
-- name: Australian National University
-- name: University of Technology Sydney
+- name: (current) Alibaba DAMO Academy
+- name: (previous) University of Technology Sydney
 
 # Short bio (displayed in user profile at end of posts)
+body: | 
+  Quyu is a postdoctoral researcher in the Behavioral Data Science at the University of Technology Sydney, supervised by Dr Marian-Andrei Rizoiu. His current research focuses on building online information diffusion models for detecting online disinformation.
+
+  **Position at UTS:** Quyu was a PhD student, then a Research Associate (postdoctoral researcher) with the Behavioral Data Science lab.
+  
+  **Next position after UTS:** Quyu took a position of Research Scientist @ Alibaba DAMO Academy.
+  
 # bio: I am a Ph.D. student from the Computational Media Lab at the Research School of Computer Science of The Australian National University and affiliated with Data61, CSIRO. I am supervised by Dr Marian-Andrei Rizoiu, Prof Lexing Xie and Dr Stephen Wan. My current research focuses on modeling information diffusion in social media. Specifically, I am working on understanding the connection between epidemic models and self-exciting point processes and quantifying online diffusions with tools from the connection. 
 bio: Quyu is a postdoctoral reseracher in the Behavioral Data Science at the University of Technology Sydney, supervised by Dr Marian-Andrei Rizoiu. His current research focuses on building online information diffusion models for detecting online disinformation.
 
@@ -59,7 +66,7 @@ social:
 #                  "Visitors",
 #                  "Alumni"]
 user_groups:
-- Academics and Scientists
+- Alumni
 
 weight: 10
 ---

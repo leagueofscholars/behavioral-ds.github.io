@@ -17,6 +17,21 @@ organizations:
 - name: Australian National University
 
 # Short bio (displayed in user profile at end of posts)
+body: | 
+
+  I am an undergraduate honours student at The Australian National University studying a Bachelor of Advanced Computing, specialising in Systems & Architecture and Intelligent Systems. I am supervised by Dr Marian-Andrei Riziou, on a project looking at disinformation campaigns in the Australian political context. My research seeks to answer the question of whether there is a 'formula' to create an effective disinformation campaign, with a special focus on analysis of the content of the posts users who are engaging in a disinformation campaign make.
+
+  **Position at UTS:** Thomas was an Honours student with the Behavioral Data Science lab in UTS.
+
+  **Next position after UTS:** Thomas continued his undergraduate studies at the Australian National University.
+  
+  Honours thesis ([pdf](thesis.pdf)):
+  ```
+  Willingham, T. (2021). Detecting Disinformation and Information Warfare 
+  on Social Media. Australian National University. 
+  https://doi.org/10.13140/RG.2.2.12134.70729
+  ```
+ 
 bio: I am an undergraduate honours student at The Australian National University studying a Bachelor of Advanced Computing, specialising in Systems & Architecture and Intelligent Systems. I am supervised by Dr Marian-Andrei Riziou, on a project looking at disinformation campaigns in the Australian political context. My research seeks to answer the question of whether there is a 'formula' to create an effective disinformation campaign, with a special focus on analysis of the content of the posts users who are engaging in a disinformation campaign make.
 
 interests:
@@ -49,5 +64,5 @@ social:
 #                  "Visitors",
 #                  "Alumni"]
 user_groups:
-- Honours Students
+- Alumni
 ---
