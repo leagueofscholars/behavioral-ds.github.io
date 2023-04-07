@@ -60,7 +60,7 @@ interests:
 social:
  - icon: envelope
    icon_pack: fas
-   link: "mailto:Marian-Andrei.Rizoiu@uts.edu.au"  # For a direct email link, use "mailto:test@example.org".
+   link: "mailto:Marian-Andrei.Rizoiu@uts.edu.au"
  - icon: twitter
    icon_pack: fab
    link: https://twitter.com/andrei_rizoiu
