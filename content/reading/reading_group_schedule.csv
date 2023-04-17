@@ -18,7 +18,7 @@ Date,Presenter,Paper,Why should we care,Appear in,Repo,Blogs
 01/05/23,Elaine Gong,,,,,
 08/05/23,Jooyoung Lee,,,,,
 15/05/23,Frankie Yuan,,,,,
-22/05/23,Amelie Girard,,,,,
+22/05/23,Amelie Girard,[Causal Machine Learning: A Survey and Open Problems](https://arxiv.org/pdf/2206.15475.pdf),The paper discusses Causal Machine Learning (CausalML) which is a set of machine learning methods that use a structural causal model (SCM) to formalize the data-generation process. This approach enables the analysis of the effects of interventions and counterfactuals. The paper categorizes the methods into five groups: (1)causal supervised learning (2)causal generative modeling (3)causal explanations (4)causal fairness and (5)causal reinforcement learning. The authors provide a systematic comparison of the methods in each category and discuss open problems. The paper also reviews applications in computer vision natural language processing and graph representation learning. The authors conclude with an overview of causal benchmarks and a critical discussion of the state of the field along with recommendations for future work.,,,
 29/05/23,Pio Calderon,,,,,
 05/06/23,Marian-Andrei Rizoiu,,,,,
 12/06/23,--,No reading due to public holiday,,,,
