@@ -10,7 +10,7 @@ authors:
 superuser: false
 
 # Role/position
-role: Senior Research Associate @ Faethm AI
+role: Senior Economist @ Burning Glass Institute
 <!--role: PhD student-->
 
 # Organizations/Affiliations
@@ -26,7 +26,7 @@ body: |
 
   **Position at UTS:** Nik was a PhD student with the Behavioral Data Science lab in UTS.
   
-  **Next position after UTS:** Nik took a position of Senior Research Associate @ Faethm AI
+  **Next position after UTS:** Nik took a position of Senior Economist @ Burning Glass Institute
 
 bio: Nik's Doctoral research is on the changing labour market dynamics in Australia. He analyses issues such as skill shortages, job transitions, and emerging technology adoption in the Australian labour market.
 
