@@ -7,6 +7,10 @@ date: "2023-10-13"
 output: html_document
 tags: []
 categories: [Research, blogpost]
+image:
+  placement: 1
+  focal_point: "Center"
+  preview_only: true
 summary: "We introduce the Opinion Market Model (OMM) as a testbed to measure the impact of positive interventions on online opinion dynamics."
 
 links:
@@ -39,7 +43,7 @@ Evaluating the feasibility and effectiveness of positive interventions requires 
 
 The Opinion Market Model (OMM) models online opinion dynamics resulting from inter-opinion interactions and positive interventions' influence. Drawing an analogy from economic markets, the model views opinions as analogous to economic goods. Just as goods can compete or reinforce each other's market share, online opinions can engage in similar dynamics—competing for limited online attention or complementing each other. This analogy allows for applying market share attraction models [11], aiding in understanding opinion interactions and their competition for users' attention in the online realm.
 
-<img src="./omm_1.png"  width="60%">
+<img src="./featured.png"  width="60%">
 
 <p style="text-align: center;"><em>Figure 1. The OMM as a two-tier model of the online opinion ecosystem.</em></p>
 
