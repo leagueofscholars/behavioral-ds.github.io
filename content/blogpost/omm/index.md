@@ -28,9 +28,11 @@ In this blog post, we delve into OMM's structure and demonstrate its ability to 
 
 **Paper citation:**
 ```
-Calderon, Pio, Rohit Ram, and Marian-Andrei Rizoiu. "Opinion Market Model: Stemming Far-Right Opinion Spread using Positive Interventions." In ICWSM 2024.
+Calderon, Pio, Rohit Ram, and Marian-Andrei Rizoiu. "Opinion Market Model: 
+Stemming Far-Right Opinion Spread using Positive Interventions." In 
+International AAAI Conference on Web and Social Media (ICWSM) 2024.
 ```
-(_see full paper here: [https://arxiv.org/pdf/2208.04097.pdf](https://arxiv.org/pdf/2208.06620.pdf)_)
+(_see full paper here: [https://arxiv.org/pdf/2208.06620.pdf](https://arxiv.org/pdf/2208.06620.pdf)_)
 
 ## Interventions in the Online Opinion Ecosystem
 
