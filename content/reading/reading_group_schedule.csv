@@ -43,7 +43,7 @@ Date,Presenter,Paper,Why should we care,Appear in,Repo,Blogs
 30/10/23,--, No reading (bi-weekly),,,,
 06/11/23,Pio Calderon,[The Geometry of Misinformation: Embedding Twitter Networks of Users WhoSpread Fake News in Geometrical Opinion Spaces](https://ojs.aaai.org/index.php/ICWSM/article/view/22183/21962),"This paper studies fake news sharers by leveraging multidimensional ideological embeddings, representing stances/attitudes towards multiple issues, not just the traditional left-right polarization.",ICWSM 2023,,
 13/11/23,--, No reading (bi-weekly),,,,
-20/11/23,Frankie Yuan,,,,,
+20/11/23,Matthew Ghannoum,[Fast and Accurate Network Embeddings via Very Sparse Random Projection](https://dl.acm.org/doi/abs/10.1145/3357384.3357879),"FastRP is a node embedding algorithm that uses Random Projections. Not only does FastRP achieve comparable performance to existing methods such as DeepWalk and Node2Vec, but in this paper it is shown to be over 4000 times faster.",Proceedings of the 28th ACM International Conference on Information and Knowledge Management,,
 27/11/23,--, No reading (bi-weekly),,,,
 04/12/23,Jooyoung Lee,,,,,
 11/12/23,--, No reading (bi-weekly),,,,
