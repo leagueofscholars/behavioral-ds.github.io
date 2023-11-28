@@ -14,7 +14,7 @@ We have four compute resources and each has attached a storage resource.
 
 **Quick description**: iHPC stands for Interactive High-Performance Computing. In a nutshell, these are very large machines (around 60 cores, and terabytes of memory). The machines are hosted in UTS and require both a UTS affiliation and special access. The servers are grouped into clusters, some of which require special access.
 
-Our group has a private cluster called *hephaestos* which currently contains two machines (see print screen below). Our private cluster is accessible to BDS members only.
+Our group has a private cluster called *hephaestos* which currently contains three machines (see print screen below). Our private cluster is accessible to BDS members only.
 
 <img src="/extra/onboarding_content/compute.png" width="100%" />
 
