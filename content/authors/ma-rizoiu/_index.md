@@ -10,7 +10,7 @@ authors:
 superuser: true
 
 # Role/position
-role: Senior Lecturer<br/>(Assistant Professor)
+role: Associate Professor
 
 # Organizations/Affiliations
 organizations:
@@ -21,11 +21,12 @@ organizations:
 body: |
     <iframe width="695" height="391" src="https://www.youtube.com/embed/sowWZDatO5w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     
-    Dr Marian-Andrei Rizoiu is a Senior Lecturer leading the [Behavioral Data Science lab](https://www.behavioral-ds.science/) at the University of Technology Sydney. 
+    Marian-Andrei Rizoiu is an Associate Professor leading the [Behavioral Data Science lab](https://www.behavioral-ds.science/) at the University of Technology Sydney. 
     His interdisciplinary research crosses computer and social sciences, blending psycholinguistics, digital communication and stochastic modelling to understand human attention dynamics in the online environment, the emergence of influence and opinion polarization.
-    Dr Rizoiu currently leads grants worth $1.8 million from the Commonwealth of Australia to detect and model the spread of mis- and disinformation and its weaponized counterparts – information and influence operations.
+    Marian-Andrei is the recipient of the prestigious Excellence Award and Academic of the Year at the [2023 Australian Defence Industry Awards](https://www.defenceconnect.com.au/australian-defence-industry-awards/winners/2023-winners-and-finalists).
+    He currently leads grants worth $1.8 million from the Commonwealth of Australia to detect and model the spread of mis- and disinformation and its weaponized counterparts – information and influence operations.
 
-    Dr Rizoiu's research has made several key contributions to online popularity prediction, real-time tracking and countering disinformation campaigns, and understanding shortages and mismatches in labour markets.
+    Marian-Andrei's research has made several key contributions to online popularity prediction, real-time tracking and countering disinformation campaigns, and understanding shortages and mismatches in labour markets.
     First, he developed theoretical models for online information diffusion, which can account for complex social phenomena. 
     His models answer questions such as "Why did X become popular, but not Y?" and "How can problematic content be detected based solely on how it spreads?".
     Second, he built skill-based real-time occupation transition recommender systems. 
