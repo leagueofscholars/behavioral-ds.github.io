@@ -1,36 +1,40 @@
 from pytimeNSW import pytimeNSW
 from datetime import datetime, timedelta, date
+import holidays
 
 # this script generates the reading group roster for an entire year starting at the start date and skipping public holidays
 # its slightly hacky but it works -_('_')_-
 
 # in order of roster
-names = ["Rohit Ram",
-         "Frankie Yuan",
-         "Amelie Girard",
-         "Pio Calderon",
-         "Marian-Andrei Rizoiu",
-         "Daniela Elia",
+names = ["Marian-Andrei Rizoiu",
+         #"Rohit Ram",
+         #"Amelie Girard",
          "Elaine Gong",
+         "Pio Calderon",
+         # "Daniela Elia",
+         "Frankie Yuan",
          "Jooyoung Lee"
          ]
 
 # start date
-date_object = date(2023, 10, 23)
+date_object = date(2024, 1, 22)
 date_object += timedelta(days=1-date_object.isoweekday())
 slots = []
-holidays = set()
+holiday_dates = set()
 
-while date_object.year == 2023:
+while date_object.year == 2024:
     slots.append(date_object)
-    if pytimeNSW.is_public(date_object):
-        holidays.add(date_object)
+    print()
+    if date_object in holidays.AU(subdiv="NSW"):
+        holiday_dates.add(date_object)
 	
-    date_object += timedelta(days=7)
+    date_object += timedelta(days=14)
+
+print(holiday_dates)
 
 i = 0
 for slot in slots:
-    if slot not in holidays:
+    if slot not in holiday_dates :
         date_str = str("{:02d}".format(slot.day)) + "/" + str("{:02d}".format(slot.month)) + "/" + str(slot.year)[2:]
         pres_str = names[i]
         # copy pasta this into the csv
