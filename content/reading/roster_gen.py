@@ -17,7 +17,7 @@ names = ["Marian-Andrei Rizoiu",
          ]
 
 # start date
-date_object = date(2024, 1, 15)
+date_object = date(2024, 1, 22)
 date_object += timedelta(days=1-date_object.isoweekday())
 slots = []
 holiday_dates = set()
