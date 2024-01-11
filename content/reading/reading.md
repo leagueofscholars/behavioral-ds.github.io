@@ -5,7 +5,7 @@ widget: "blank"
 headless: true 
 title: "Reading Group"
 subtitle: "A reference document used to keep track of the reading group meetings.
-Pull requests are welcome. [Meeting Link]( https://utsmeet.zoom.us/j/82259009551?pwd=VGowZGtjQXJXZE4yQU4wVmtZVWhVZz09)"
+Pull requests are welcome. [Meeting Link](https://zoom.uts.edu.au/j/89979742414)"
 
 design:
  columns: "1"
