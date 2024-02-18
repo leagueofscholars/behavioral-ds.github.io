@@ -1,7 +1,7 @@
 Date,Presenter,Paper,Why should we care,Appear in,Repo,Blogs
 22/01/24,Marian-Andrei Rizoiu,[Causally estimating the effect of YouTube's recommender system using counterfactual bots](https://arxiv.org/pdf/2308.10398.pdf),"One of the first studies to estimate the effects of the YouTube recommender system on radicalisation using counterfactual viewing series, using bots.",arXiv,,
 05/02/24,Rohit Ram,CA3 Dry Run,,,,
-19/02/24,Elaine Gong,,,,,
+19/02/24,Elaine Gong,[E-BERT: Efficient-Yet-Effective Entity Embeddings for BERT](https://aclanthology.org/2020.findings-emnlp.71.pdf),"It introduces E-BERT, which aligns Wikipedia2Vec entity vectors with BERT's wordpiece vector space, enabling the use of entity vectors as if they were wordpiece vectors.",Association for Computational Linguistics,2020,
 04/03/24,Pio Calderon,,,,,
 18/03/24,Frankie Yuan,,,,,
 01/04/24,--,No reading due to public holiday,,,,
